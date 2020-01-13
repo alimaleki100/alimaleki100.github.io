@@ -22,4 +22,8 @@ body {
     border: 2px solid black;
     border-radius: 25px;
   }
+  p.links {
+    color: orangered;
+    text-align: left;
+}
 }
