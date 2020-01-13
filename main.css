@@ -26,4 +26,8 @@ body {
     color: orangered;
     text-align: left;
 }
+span.firmName {
+  text-decoration: underline;
+
+}
 }
