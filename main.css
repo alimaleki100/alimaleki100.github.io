@@ -26,9 +26,22 @@ body {
     color: orangered;
     text-align: left;
 }
+p.resume {
+  color: orangered;
+  text-align: center;
+}
 span.firmName {
   text-decoration: underline;
   border: 2px solid black;
 
+}
+a.internal {
+  background-color: powderblue;
+  color: black;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  
 }
 }
