@@ -33,6 +33,7 @@ p.resume {
 span.firmName {
   text-decoration: underline;
   border: 2px solid black;
+  font-size:5vw
 
 }
 a.internal {
