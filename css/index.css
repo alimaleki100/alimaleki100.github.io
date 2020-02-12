@@ -1,0 +1,105 @@
+
+body{
+  color:#212121;
+background-color:#fafafa;
+font-family: Merriweather,Georgia,serif;
+font-size: 1.6em;
+font-weight: 300;
+line-height: 1.8em;
+}
+nav.navigation{
+  height: 6rem;
+  width:100%
+}
+.navigation-title{
+  letter-spacing: .1rem;
+text-transform: uppercase;
+}
+
+
+.navigation a{
+  display: inline;
+font-size: 1.6rem;
+font-family: Lato,Helvetica,sans-serif;
+font-weight: 700;
+line-height: 6rem;
+color:#212121;
+}
+.navigation-item{
+float: right;
+margin: 0;
+position: relative;
+}
+
+.navigation-list{
+  float: right;
+  list-style: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.navigation{
+  float: right;
+  list-style: none;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+
+.content {
+
+    margin-top: 1.6rem;
+    margin-bottom: 3.2rem;
+}
+
+.centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    margin: 0 auto;
+    max-width: 90rem;
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.centered .about {
+    text-align: center;
+}
+
+.avatar img {
+    width: 20rem;
+    height: auto;
+    border-radius: 50%;
+}
+img {
+    max-width: 100%;
+}
+img {
+    border-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Lato,Helvetica,sans-serif;
+    font-weight: 700;
+    color: #000;
+margin: 6.4rem 0 3.2rem;
+}
+.info{
+  margin-top: -40px;
+}
+
+.centered .about ul li {
+    display: inline-block;
+    position: relative;
+}
+i{
+  color: black;
+  font-size:1.73em;
+  margin-left: 5px;
+  margin-right: 5px;
+}
