@@ -33,33 +33,73 @@
                 <h1>CoronaVirus(Covid19) Twitter Sentiment Analysis Project</h1>
                 <hr class='seperator'>
               </header>
+              <p>
+                <h4>
+                Project Overview
+              </h4>
+              This projects contains works fora personal project on analysis
+              of  tweets about CoronaVirus2019 outbreak. In this project,
+               we have extracted tweets with Corona search key.
+               Tweets were clustered and classified to delete Irrelevant tweets.
+               An EDA and sentiment analysis using textblob were performed on
+               dataset.
+               <h4>
+              Data Gathering
+             </h4>
+             You can use dataGathering-twint.py script to gather tweets or use
+             twint CLI command: twint -s corona -o output.csv --csv -l en --unt 2020-04-15 since 2020-01-01
+             the current tweet sample was gathered by twint CLI command.
+             The used data set consists 1.8M tweets with 'corona' keyword since
+              2020/01/01 until 2020/03/11.
+              <h4>
+             Results
+            </h4>
+            <div class="avatar">
+              <img src="pics/wordCloud.png" alt="Ali">
+            </div>
+            <h5>
+           Exploratory Analysis
+         </h5>
+       </p>
+        <p>
+         Number of Tweets: 1.853.096
+       </p>
+       <p>
+         Average of Retweets Count: 3.7<br>
+         <br>
+           Count of Tweets by Date:
+         <div class="avatar">
+           <img src="pics/tweetsByDate.png" alt="Ali">
+         </div>
 
-        <footer>
-          <div class="info">
+         <br>
+           Count of ReTweets by Date:
+         <div class="avatar">
+           <img src="pics/retweetsByDate.png" alt="Ali">
+         </div>
 
-            <ul>
-              <li>
-                <a href="mailto:ali.maleki100@gmail.com" aria-label='Email' target="_blank" title='Send me an email'>
-                  <i class="fas fa-envelope"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/in/ali-maleki/" aria-label='LinkedIn' target="_blank" title="Check my Linkedin Profile">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/alimaleki100" aria-label='Github' target="_blank" title="Check my Github repos">
-                  <i class="fab fa-github"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://twitter.com/a_maleki" aria-label='Github' target="_blank" title="Check my Tweets">
-                  <i class="fab fa-twitter"></i>
-                </a>
-              </li>
-            </ul>
+         <br>
+           Count of Tweets by hour:
+         <div class="avatar">
+           <img src="pics/tweetsByHour.png" alt="Ali">
+         </div>
 
-          </div>
-        </footer>
-        </body>
+
+         <br>
+           Count of ReTweets by Hour:
+         <div class="avatar">
+           <img src="pics/RetweetsByDate.png" alt="Ali">
+         </div>
+
+         <h5>
+        Sentiment Analysis
+      </h5>
+      Polarity and Subjectivity :<br>
+      <div class="avatar">
+        <img src="pics/polarity.subjectivity.png" alt="Ali">
+      </div>
+<br>
+      Daily Polarity LineChart :<br>
+      <div class="avatar">
+        <img src="pics/PolarityLineChart.png" alt="Ali">
+      </div>
