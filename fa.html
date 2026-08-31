@@ -1,0 +1,1352 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" class="scroll-smooth" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>علی ملکی | مشاوره استراتژیک تحویل پروژه‌های فناوری و داده</title>
+  <meta name="description" content="مشاوره مستقل و رهبری فرکشنال برای سازمان‌های بزرگ و در حال رشد؛ جهت ساختاردهی تیم‌ها، رفع گلوگاه‌های دلیوری و اجرای پیش‌بینی‌پذیر نقشه‌های راه کلیدی.">
+  <meta name="keywords" content="علی ملکی, مشاور تحول دیجیتال, رهبر فرکشنال محصول, مدیریت چابک, مربیگری چابک, تیم های چابک محصول و مهندسی, PMP, هوش تجاری, Azure, Databricks, اطلس کوپکو, اسنپ">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="alternate icon" href="favicon.svg">
+
+  <!-- Google Fonts Preconnect & Stylesheet (Vazirmatn, Plus Jakarta Sans & JetBrains Mono) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Vazirmatn:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['class', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              400: '#818cf8',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+            },
+            cyanAccent: '#06b6d4',
+            emeraldAccent: '#10b981',
+          },
+          fontFamily: {
+            sans: ['"Vazirmatn"', '"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Custom Styles (v1 Design System + Persian RTL) -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="persian bg-[var(--bg-primary)] text-[var(--text-primary)] antialiased transition-colors duration-300">
+
+  <!-- Ambient Glow Effects -->
+  <div class="ambient-bg" aria-hidden="true">
+    <div class="ambient-orb ambient-orb-1"></div>
+    <div class="ambient-orb ambient-orb-2"></div>
+    <div class="ambient-orb ambient-orb-3"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <!-- Header / Navigation (Persian RTL) -->
+  <header class="fixed top-0 left-0 right-0 z-50 nav-blur">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo / Name -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-cyan-500 flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-indigo-500/20 group-hover:scale-105 transition-transform">
+          AM
+        </div>
+        <div>
+          <span class="font-bold text-lg text-[var(--text-primary)] tracking-tight block">علی ملکی</span>
+          <span class="text-xs text-[var(--text-muted)] block">مشاور تحول دیجیتال و محصولات داده</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-[var(--text-secondary)]">
+        <a href="#services" class="nav-link hover:text-[var(--text-primary)] transition-colors">خدمات مشاوره</a>
+        <a href="#case-studies" class="nav-link hover:text-[var(--text-primary)] transition-colors">نمونه پروژه‌ها و نتایج</a>
+        <a href="#playbook" class="nav-link hover:text-[var(--text-primary)] transition-colors">پلی‌بوک دلیوری</a>
+        <a href="#companies-resume" class="nav-link hover:text-[var(--text-primary)] transition-colors">سوابق شغلی و رزومه</a>
+        <a href="#contact" class="nav-link hover:text-[var(--text-primary)] transition-colors text-indigo-400 font-semibold flex items-center gap-1.5">
+          <i class="fas fa-paper-plane text-xs"></i> تماس با من
+        </a>
+      </nav>
+
+      <!-- Action Buttons, Language & Theme Switcher -->
+      <div class="hidden sm:flex items-center gap-3">
+        
+        <!-- Language Switcher (EN) -->
+        <a href="index.html" class="px-3 py-1.5 rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-secondary)] hover:bg-[var(--bg-tertiary)] hover:border-[var(--border-focus)] text-xs font-bold text-indigo-400 flex items-center gap-1.5 transition-all" title="Switch to English">
+          <i class="fas fa-globe text-xs"></i>
+          <span class="font-mono">English</span>
+        </a>
+
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" class="w-10 h-10 rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-secondary)] flex items-center justify-center hover:border-[var(--border-focus)] transition-colors theme-toggle-btn" aria-label="تغییر حالت تاریک/روشن">
+          <i id="theme-icon" class="fas fa-sun text-amber-400"></i>
+        </button>
+
+        <!-- Primary CTA -->
+        <button class="open-call-modal btn-primary px-4 py-2.5 rounded-xl text-xs font-bold tracking-wide flex items-center gap-2">
+          <span>درخواست مشاوره</span>
+          <i class="fas fa-arrow-left text-[10px]"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button id="mobile-menu-btn" class="md:hidden w-10 h-10 rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-secondary)] flex items-center justify-center text-[var(--text-primary)]" aria-label="منوی موبایل">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-b border-[var(--border-subtle)] bg-[var(--bg-secondary)] px-6 py-5 flex flex-col gap-4 shadow-xl">
+      <div class="flex items-center justify-between pb-3 border-b border-[var(--border-subtle)]">
+        <span class="text-xs text-[var(--text-muted)] font-mono">Language / زبان</span>
+        <a href="index.html" class="px-3 py-1 rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-xs font-bold text-indigo-400 flex items-center gap-1.5">
+          <i class="fas fa-globe"></i> Switch to English
+        </a>
+      </div>
+      <a href="#services" class="nav-link text-sm py-2 text-[var(--text-secondary)] hover:text-white">خدمات مشاوره</a>
+      <a href="#case-studies" class="nav-link text-sm py-2 text-[var(--text-secondary)] hover:text-white">نمونه پروژه‌ها و نتایج</a>
+      <a href="#playbook" class="nav-link text-sm py-2 text-[var(--text-secondary)] hover:text-white">پلی‌بوک دلیوری</a>
+      <a href="#companies-resume" class="nav-link text-sm py-2 text-[var(--text-secondary)] hover:text-white">سوابق شغلی و رزومه</a>
+      <a href="#contact" class="nav-link text-sm py-2 text-indigo-400 font-semibold hover:text-white flex items-center gap-2">
+        <i class="fas fa-paper-plane text-xs"></i> تماس با من
+      </a>
+      <div class="pt-4 border-t border-[var(--border-subtle)] flex flex-col gap-3">
+        <button class="open-call-modal btn-primary w-full py-2.5 rounded-xl text-xs font-bold flex items-center justify-center gap-2">
+          <span>درخواست جلسه مشاوره استراتژیک</span>
+          <i class="fas fa-arrow-left text-[10px]"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="relative z-10 pt-28 pb-20 overflow-hidden">
+
+    <!-- ==========================================================================
+         SECTION 1: HERO HEADER (Persian)
+         ========================================================================== -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-14 lg:pt-12 lg:pb-18">
+      <div class="max-w-4xl mx-auto text-center space-y-6">
+        
+        <!-- Badge / Pill Tag -->
+        <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-300 text-xs font-semibold tracking-wide">
+          <span class="pulse-dot"></span>
+          <span>مشاور تحول دیجیتال و داده | MBA | PMP®</span>
+        </div>
+
+        <!-- Main Headline -->
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.25] text-[var(--text-primary)]">
+          مشاوره استراتژیک برای <span class="gradient-text-indigo">تحویل پروژه‌های اثرگذار فناوری و داده</span>.
+        </h1>
+
+        <!-- Sub-headline -->
+        <p class="text-lg sm:text-xl lg:text-2xl text-[var(--text-secondary)] font-normal leading-relaxed max-w-3xl mx-auto">
+          مشاوره مستقل و رهبری فرکشنال برای سازمان‌های بزرگ و در حال رشد؛ جهت ساختاردهی تیم‌ها، رفع گلوگاه‌های دلیوری و اجرای پیش‌بینی‌پذیر نقشه‌های راه کلیدی.
+        </p>
+
+        <!-- Key Metric Highlights (3-Column Mini Bar) -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-3 max-w-3xl mx-auto text-right">
+          
+          <div class="metric-card">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-xs text-[var(--text-muted)] font-medium">سابقه و تجربه</span>
+              <div class="w-6 h-6 rounded-lg bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-xs">
+                <i class="fas fa-briefcase"></i>
+              </div>
+            </div>
+            <div class="text-2xl sm:text-3xl font-extrabold text-[var(--text-primary)] font-mono mb-1">+۷ سال</div>
+            <p class="text-xs text-[var(--text-secondary)] leading-snug">رهبری تحول دیجیتال و داده در مقیاس سازمانی</p>
+          </div>
+
+          <div class="metric-card">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-xs text-[var(--text-muted)] font-medium">مقیاس پلتفرم</span>
+              <div class="w-6 h-6 rounded-lg bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-xs">
+                <i class="fas fa-users"></i>
+              </div>
+            </div>
+            <div class="text-2xl sm:text-3xl font-extrabold text-[var(--text-primary)] font-mono mb-1">+۵۰۰K DAU</div>
+            <p class="text-xs text-[var(--text-secondary)] leading-snug">تجربه هدایت پلتفرم‌های پرتردد در مقیاس ۵۰M+ کاربر</p>
+          </div>
+
+          <div class="metric-card">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-xs text-[var(--text-muted)] font-medium">حوزه اثرگذاری</span>
+              <div class="w-6 h-6 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xs">
+                <i class="fas fa-globe"></i>
+              </div>
+            </div>
+            <div class="text-2xl sm:text-3xl font-extrabold text-[var(--text-primary)] mb-1">بین‌المللی</div>
+            <p class="text-xs text-[var(--text-secondary)] leading-snug">پروژه‌های داده و نرم‌افزار در سراسر جهان</p>
+          </div>
+
+        </div>
+
+        <!-- Trusted Ecosystems (1 Row Trust Bar) -->
+        <div class="pt-1">
+          <div class="inline-flex flex-nowrap items-center justify-center gap-4 sm:gap-6 px-4 py-2.5 rounded-2xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] text-xs text-[var(--text-secondary)] font-medium overflow-x-auto max-w-full">
+            <div class="flex items-center gap-2 shrink-0">
+              <i class="fas fa-industry text-indigo-400"></i>
+              <span>اطلس کوپکو</span>
+            </div>
+            <span class="text-[var(--text-muted)] opacity-40 shrink-0">•</span>
+            <div class="flex items-center gap-2 shrink-0">
+              <i class="fas fa-rocket text-cyan-400"></i>
+              <span>اسنپ (۵۰M+ کاربر)</span>
+            </div>
+            <span class="text-[var(--text-muted)] opacity-40 shrink-0">•</span>
+            <div class="flex items-center gap-2 shrink-0">
+              <i class="fas fa-network-wired text-emerald-400"></i>
+              <span>پارس‌پویش فناور</span>
+            </div>
+            <span class="text-[var(--text-muted)] opacity-40 shrink-0">•</span>
+            <div class="flex items-center gap-2 shrink-0">
+              <i class="fas fa-chart-line text-amber-400"></i>
+              <span>بورس کالای ایران</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Call to Actions -->
+        <div class="flex flex-wrap items-center justify-center gap-4 pt-3">
+          <button class="open-call-modal btn-primary px-8 py-4 rounded-xl font-bold text-sm tracking-wide flex items-center gap-2.5 shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/40">
+            <i class="fas fa-calendar-check"></i>
+            <span>درخواست جلسه مشاوره استراتژیک</span>
+          </button>
+          
+          <a href="#case-studies" class="btn-secondary px-7 py-4 rounded-xl font-semibold text-sm flex items-center gap-2">
+            <span>مشاهده نمونه پروژه‌ها و نتایج</span>
+            <i class="fas fa-arrow-down text-xs"></i>
+          </a>
+
+          <button class="open-cv-modal btn-secondary px-5 py-4 rounded-xl font-semibold text-sm flex items-center gap-2">
+            <i class="fas fa-file-pdf text-red-400"></i>
+            <span>دانلود رزومه ۱ صفحه‌ای (PDF)</span>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 2: REFINED 4-PILLAR SERVICE STRUCTURE (Persian)
+         ========================================================================== -->
+    <section id="services" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 scroll-mt-24">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+        <span class="text-xs uppercase font-bold tracking-widest text-indigo-400 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20">ساختار ۴ ستونی خدمات مشاوره</span>
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">خدمات تخصصی مشاوره و راهبری</h2>
+        <p class="text-base text-[var(--text-secondary)]">
+          مدل‌های همکاری هدفمند برای سازمان‌های مقیاس‌بزرگ و تیم‌های پیشرو در حوزه مهندسی، محصول و داده.
+        </p>
+      </div>
+
+      <!-- 4-Pillar Services Grid Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+        
+        <!-- Pillar 1: Fractional Product & Delivery Leadership -->
+        <div class="glass-card p-6 sm:p-8 flex flex-col justify-between group border-r-4 border-r-indigo-500">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-bold text-indigo-400 uppercase tracking-wider">ستون ۰۱</span>
+              <div class="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center border border-indigo-500/20 group-hover:scale-110 transition-transform">
+                <i class="fas fa-chess-queen"></i>
+              </div>
+            </div>
+            
+            <h3 class="text-xl font-bold text-[var(--text-primary)] mb-2">رهبری فرکشنال محصول و دلیوری</h3>
+            
+            <!-- Target Teams Badge -->
+            <div class="mb-4">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-[var(--bg-tertiary)] border border-[var(--border-subtle)] text-[11px] text-indigo-300 font-semibold">
+                <i class="fas fa-users-gear text-indigo-400 text-xs"></i>
+                <span>تیم‌های هدف: تیم‌های مهندسی، محصول و داده</span>
+              </span>
+            </div>
+
+            <!-- Core Value Statement (Always Visible) -->
+            <div class="p-4 rounded-xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] space-y-1.5 text-xs">
+              <span class="text-emerald-400 font-bold block flex items-center gap-1.5">
+                <i class="fas fa-bullseye text-xs"></i> ارزش کلیدی:
+              </span>
+              <p class="text-[var(--text-primary)] leading-relaxed font-medium">
+                ساختاردهی به حاکمیت دلیوری، هم‌راستاسازی نقشه‌های راه بین‌تیمی با OKRهای مدیران ارشد و مدیریت ریسک‌های فنی و تجاری.
+              </p>
+            </div>
+
+            <!-- Interactive Accordion Toggle Button -->
+            <button class="pillar-toggle-btn w-full mt-3 py-2.5 px-4 rounded-xl bg-[var(--bg-tertiary)] border border-[var(--border-subtle)] hover:border-indigo-500/40 text-xs font-semibold text-[var(--text-secondary)] hover:text-white flex items-center justify-between transition-all" aria-expanded="false">
+              <span class="flex items-center gap-2">
+                <i class="fas fa-list-check text-indigo-400"></i>
+                <span>مشاهده خروجی‌ها و اقدامات تحویل</span>
+              </span>
+              <i class="fas fa-chevron-down text-[10px] transition-transform duration-300"></i>
+            </button>
+
+            <!-- Expandable Deliverables Content (Initially Hidden) -->
+            <div class="pillar-details-content hidden pt-3 space-y-2 text-xs border-t border-[var(--border-subtle)] mt-3">
+              <div class="space-y-1.5 text-[var(--text-secondary)]">
+                <div class="flex items-start gap-2">
+                  <i class="fas fa-check text-indigo-400 mt-1 shrink-0 text-[10px]"></i>
+                  <span>هم‌راستاسازی OKRهای اجرایی با بکلگ استراتژیک و نقشه‌های راه دپارتمانی.</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <i class="fas fa-check text-indigo-400 mt-1 shrink-0 text-[10px]"></i>
+                  <span>ارزیابی ریتم‌های دلیوری بین‌تیمی و حذف اصطکاک‌ها و گلوگاه‌ها.</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <i class="fas fa-check text-indigo-400 mt-1 shrink-0 text-[10px]"></i>
+                  <span>چارچوب‌های اولویت‌بندی رفع بدهی فنی در برابر ارزش تجاری محصول.</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <i class="fas fa-check text-indigo-400 mt-1 shrink-0 text-[10px]"></i>
+                  <span>مشاوره تخصصی در استخدام و چینش تیم‌های کلیدی مهندسی و محصول.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-[var(--border-subtle)] flex items-center justify-between">
+            <span class="text-xs text-[var(--text-muted)]">۱ الی ۲ روز در هفته به صورت پاره‌وقت ارشد</span>
+            <button class="open-call-modal text-xs font-bold text-indigo-400 hover:text-indigo-300 flex items-center gap-1.5">
+              بررسی محدوده همکاری <i class="fas fa-arrow-left text-[10px]"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Pillar 2: Team Coaching & Capability Building -->
+        <div class="glass-card p-6 sm:p-8 flex flex-col justify-between group border-r-4 border-r-amber-500">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-bold text-amber-400 uppercase tracking-wider">ستون ۰۲</span>
+              <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center border border-amber-500/20 group-hover:scale-110 transition-transform">
+                <i class="fas fa-user-graduate"></i>
+              </div>
+            </div>
+            
+            <h3 class="text-xl font-bold text-[var(--text-primary)] mb-2">کوچینگ و توانمندسازی تیم‌ها</h3>
+            
+            <!-- Target Teams Badge -->
+            <div class="mb-4">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-[var(--bg-tertiary)] border border-[var(--border-subtle)] text-[11px] text-amber-300 font-semibold">
+                <i class="fas fa-users text-amber-400 text-xs"></i>
+                <span>تیم‌های هدف: توسعه‌دهندگان، مدیران محصول داده، تحلیل‌گران و مهندسان</span>
+              </span>
+            </div>
+
+            <!-- Core Value Statement (Always Visible) -->
+            <div class="p-4 rounded-xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] space-y-1.5 text-xs">
+              <span class="text-emerald-400 font-bold block flex items-center gap-1.5">
+                <i class="fas fa-bullseye text-xs"></i> ارزش کلیدی:
+              </span>
+              <p class="text-[var(--text-primary)] leading-relaxed font-medium">
+                ارتقای مهارت‌های تیم‌های فنی در کشف محصول، پذیرش مسئولیت ارزش تجاری و برقراری ارتباطات ساختاریافته با ذی‌نفعان.
+              </p>
+            </div>
+
+            <!-- Interactive Accordion Toggle Button -->
+            <button class="pillar-toggle-btn w-full mt-3 py-2.5 px-4 rounded-xl bg-[var(--bg-tertiary)] border border-[var(--border-subtle)] hover:border-amber-500/40 text-xs font-semibold text-[var(--text-secondary)] hover:text-white flex items-center justify-between transition-all" aria-expanded="false">
+              <span class="flex items-center gap-2">
+                <i class="fas fa-list-check text-amber-400"></i>
+                <span>مشاهده خروجی‌ها و اقدامات تحویل</span>
+              </span>
+              <i class="fas fa-chevron-down text-[10px] transition-transform duration-300"></i>
+            </button>
+
+            <!-- Expandable Deliverables Content (Initially Hidden) -->
+            <div class="pillar-details-content hidden pt-3 space-y-2 text-xs border-t border-[var(--border-subtle)] mt-3">
+              <div class="space-y-1.5 text-[var(--text-secondary)]">
+                <div class="flex items-start gap-2">
+                  <i class="fas fa-check text-amber-400 mt-1 shrink-0 text-[10px]"></i>
+                  <span>کارگاه‌های عملی کشف محصول (Product Discovery) و Story Mapping.</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <i class="fas fa-check text-amber-400 mt-1 shrink-0 text-[10px]"></i>
+                  <span>منتورینگ اختصاصی برای مدیران محصول داده، تحلیل‌گران و مهندسان نرم‌افزار.</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <i class="fas fa-check text-amber-400 mt-1 shrink-0 text-[10px]"></i>
+                  <span>ترجمه خروجی‌های پیچیده فنی/داده به بازگشت سرمایه تجاری برای مدیران.</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <i class="fas fa-check text-amber-400 mt-1 shrink-0 text-[10px]"></i>
+                  <span>استانداردسازی ارتباطات غیرهم‌زمان (Async) و مدیریت ساختاریافته ذی‌نفعان.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-[var(--border-subtle)] flex items-center justify-between">
+            <span class="text-xs text-[var(--text-muted)]">جلسات منتورینگ ۱ به ۱ و کارگاه‌های تخصصی</span>
+            <button class="open-call-modal text-xs font-bold text-amber-400 hover:text-amber-300 flex items-center gap-1.5">
+              بررسی محدوده همکاری <i class="fas fa-arrow-left text-[10px]"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Pillar 3: Pragmatic Agile Adoption & Delivery Rituals -->
+        <div class="glass-card p-6 sm:p-8 flex flex-col justify-between group border-r-4 border-r-emerald-500">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider">ستون ۰۳</span>
+              <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center border border-emerald-500/20 group-hover:scale-110 transition-transform">
+                <i class="fas fa-repeat"></i>
+              </div>
+            </div>
+            
+            <h3 class="text-xl font-bold text-[var(--text-primary)] mb-2">پذیرش عمل‌گرایانه چابک و ریتم‌های دلیوری</h3>
+            
+            <!-- Target Teams Badge -->
+            <div class="mb-4">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-[var(--bg-tertiary)] border border-[var(--border-subtle)] text-[11px] text-emerald-300 font-semibold">
+                <i class="fas fa-laptop-code text-emerald-400 text-xs"></i>
+                <span>تیم‌های هدف: تیم‌های نرم‌افزار، تضمین کیفیت (QA)، داده و دواپس (DevOps)</span>
+              </span>
+            </div>
+
+            <!-- Core Value Statement (Always Visible) -->
+            <div class="p-4 rounded-xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] space-y-1.5 text-xs">
+              <span class="text-emerald-400 font-bold block flex items-center gap-1.5">
+                <i class="fas fa-bullseye text-xs"></i> ارزش کلیدی:
+              </span>
+              <p class="text-[var(--text-primary)] leading-relaxed font-medium">
+                پیاده‌سازی چارچوب‌های ناب اسکرام/کانبان، رفع گلوگاه‌های اسپرینت، استقرار سرعت تحویل پیش‌بینی‌پذیر و بهینه‌سازی چرخه‌های انتشار.
+              </p>
+            </div>
+
+            <!-- Interactive Accordion Toggle Button -->
+            <button class="pillar-toggle-btn w-full mt-3 py-2.5 px-4 rounded-xl bg-[var(--bg-tertiary)] border border-[var(--border-subtle)] hover:border-emerald-500/40 text-xs font-semibold text-[var(--text-secondary)] hover:text-white flex items-center justify-between transition-all" aria-expanded="false">
+              <span class="flex items-center gap-2">
+                <i class="fas fa-list-check text-emerald-400"></i>
+                <span>مشاهده خروجی‌ها و اقدامات تحویل</span>
+              </span>
+              <i class="fas fa-chevron-down text-[10px] transition-transform duration-300"></i>
+            </button>
+
+            <!-- Expandable Deliverables Content (Initially Hidden) -->
+            <div class="pillar-details-content hidden pt-3 space-y-2 text-xs border-t border-[var(--border-subtle)] mt-3">
+              <div class="space-y-1.5 text-[var(--text-secondary)]">
+                <div class="flex items-start gap-2">
+                  <i class="fas fa-check text-emerald-400 mt-1 shrink-0 text-[10px]"></i>
+                  <span>جلسات و مراسم سفارشی اسکرام و کانبان بدون جلسات زائد و فرساینده.</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <i class="fas fa-check text-emerald-400 mt-1 shrink-0 text-[10px]"></i>
+                  <span>محاسبه خط‌پایه سرعت تیم (Velocity) و تثبیت تخمین‌های اسپرینت.</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <i class="fas fa-check text-emerald-400 mt-1 shrink-0 text-[10px]"></i>
+                  <span>همگام‌سازی خطوط انتشار خودکار (CI/CD) و ارزیابی کیفیت تحویل.</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <i class="fas fa-check text-emerald-400 mt-1 shrink-0 text-[10px]"></i>
+                  <span>پیگیری دقیق آیتم‌های رترواسپکتیو و مرور مستمر توانمندی‌های تیم.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-[var(--border-subtle)] flex items-center justify-between">
+            <span class="text-xs text-[var(--text-muted)]">دوره‌های تشخیصی ۴ الی ۶ هفته‌ای و استقرار ریتم</span>
+            <button class="open-call-modal text-xs font-bold text-emerald-400 hover:text-emerald-300 flex items-center gap-1.5">
+              بررسی محدوده همکاری <i class="fas fa-arrow-left text-[10px]"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Pillar 4: Data Governance & KPI Architecture -->
+        <div class="glass-card p-6 sm:p-8 flex flex-col justify-between group border-r-4 border-r-cyan-500">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-bold text-cyan-400 uppercase tracking-wider">ستون ۰۴</span>
+              <div class="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center border border-cyan-500/20 group-hover:scale-110 transition-transform">
+                <i class="fas fa-sitemap"></i>
+              </div>
+            </div>
+            
+            <h3 class="text-xl font-bold text-[var(--text-primary)] mb-2">حاکمیت داده و معماری شاخص‌های کلیدی</h3>
+            
+            <!-- Target Teams Badge -->
+            <div class="mb-4">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-[var(--bg-tertiary)] border border-[var(--border-subtle)] text-[11px] text-cyan-300 font-semibold">
+                <i class="fas fa-chart-pie text-cyan-400 text-xs"></i>
+                <span>تیم‌های هدف: مدیران ارشد، تیم‌های هوش تجاری (BI) و تحلیل داده</span>
+              </span>
+            </div>
+
+            <!-- Core Value Statement (Always Visible) -->
+            <div class="p-4 rounded-xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] space-y-1.5 text-xs">
+              <span class="text-emerald-400 font-bold block flex items-center gap-1.5">
+                <i class="fas fa-bullseye text-xs"></i> ارزش کلیدی:
+              </span>
+              <p class="text-[var(--text-primary)] leading-relaxed font-medium">
+                طراحی درخت متریک‌های آبشاری، معماری گزارش‌دهی سلف‌سرویس و استقرار حاکمیت چابک داده برای پیوند خروجی‌های فنی به درآمدهای تجاری.
+              </p>
+            </div>
+
+            <!-- Interactive Accordion Toggle Button -->
+            <button class="pillar-toggle-btn w-full mt-3 py-2.5 px-4 rounded-xl bg-[var(--bg-tertiary)] border border-[var(--border-subtle)] hover:border-cyan-500/40 text-xs font-semibold text-[var(--text-secondary)] hover:text-white flex items-center justify-between transition-all" aria-expanded="false">
+              <span class="flex items-center gap-2">
+                <i class="fas fa-list-check text-cyan-400"></i>
+                <span>مشاهده خروجی‌ها و اقدامات تحویل</span>
+              </span>
+              <i class="fas fa-chevron-down text-[10px] transition-transform duration-300"></i>
+            </button>
+
+            <!-- Expandable Deliverables Content (Initially Hidden) -->
+            <div class="pillar-details-content hidden pt-3 space-y-2 text-xs border-t border-[var(--border-subtle)] mt-3">
+              <div class="space-y-1.5 text-[var(--text-secondary)]">
+                <div class="flex items-start gap-2">
+                  <i class="fas fa-check text-cyan-400 mt-1 shrink-0 text-[10px]"></i>
+                  <span>معماری درخت شاخص‌های کلیدی (North Star Metric Tree).</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <i class="fas fa-check text-cyan-400 mt-1 shrink-0 text-[10px]"></i>
+                  <span>طراحی مدل‌های داده سلف‌سرویس (Power BI) با مرجعیت واحد داده.</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <i class="fas fa-check text-cyan-400 mt-1 shrink-0 text-[10px]"></i>
+                  <span>نقشه‌های راه مهاجرت به پلتفرم‌های مدرن داده (Azure / Databricks).</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <i class="fas fa-check text-cyan-400 mt-1 shrink-0 text-[10px]"></i>
+                  <span>حاکمیت سبک و چابک کیفیت داده و کنترل سطوح دسترسی سازمانی.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-[var(--border-subtle)] flex items-center justify-between">
+            <span class="text-xs text-[var(--text-muted)]">مدرن‌سازی داده و حاکمیت شاخص‌ها</span>
+            <button class="open-call-modal text-xs font-bold text-cyan-400 hover:text-cyan-300 flex items-center gap-1.5">
+              بررسی محدوده همکاری <i class="fas fa-arrow-left text-[10px]"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 3: FEATURED CASE STUDIES (Persian)
+         ========================================================================== -->
+    <section id="case-studies" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 scroll-mt-24">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+        <span class="text-xs uppercase font-bold tracking-widest text-emerald-400 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20">شواهد اجرایی و نتایج تجاری</span>
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">پروژه‌های شاخص و مطالعه موردی</h2>
+        <p class="text-base text-[var(--text-secondary)]">
+          بررسی عمیق تحولات دنیای واقعی بر اساس چارچوب «زمینه پروژه ← اقدامات کلیدی ← دست‌آوردها و بازگشت سرمایه».
+        </p>
+      </div>
+
+      <div class="space-y-10">
+        
+        <!-- Case Study 1: Atlas Copco -->
+        <div class="glass-card p-8 sm:p-10 border border-indigo-500/30">
+          <div class="flex flex-col lg:flex-row lg:items-center justify-between pb-6 border-b border-[var(--border-subtle)] gap-4 mb-6">
+            <div>
+              <span class="text-xs font-bold text-indigo-400 uppercase tracking-wider block mb-1">مطالعه موردی ۰۱</span>
+              <h3 class="text-2xl sm:text-3xl font-bold text-[var(--text-primary)]">تحول ابری و مدرن‌سازی تحلیلی سازمانی</h3>
+              <p class="text-xs text-[var(--text-muted)] font-medium mt-1">صنعت بین‌المللی (اطلس کوپکو • محصولات داده SAP زنجیره تأمین و لجستیک جهانی)</p>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-lg bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 text-xs font-bold font-mono">Azure & Databricks</span>
+              <span class="px-3 py-1 rounded-lg bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 text-xs font-bold">مدرن‌سازی SAP</span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Context -->
+            <div class="p-5 rounded-2xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] space-y-2.5">
+              <div class="flex items-center gap-2 text-xs font-bold text-red-400">
+                <i class="fas fa-circle-exclamation"></i> زمینه و چالش اولیه
+              </div>
+              <p class="text-xs text-[var(--text-secondary)] leading-relaxed">
+                گزارش‌دهی‌های سنتی پراکنده و داده‌های عملیاتی ناسازگار میان واحدهای خرید و لجستیک در اروپا و هند.
+              </p>
+            </div>
+
+            <!-- Action -->
+            <div class="p-5 rounded-2xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] space-y-2.5">
+              <div class="flex items-center gap-2 text-xs font-bold text-indigo-400">
+                <i class="fas fa-gears"></i> اقدامات و راهکار اجرایی
+              </div>
+              <p class="text-xs text-[var(--text-secondary)] leading-relaxed">
+                رهبری تحول و مهاجرت داده از SAP به پلتفرم‌های کلود Azure و Databricks هم‌زمان با هم‌راستاسازی نیازمندی‌های منطقه‌ای.
+              </p>
+            </div>
+
+            <!-- Impact -->
+            <div class="p-5 rounded-2xl bg-gradient-to-b from-indigo-950/40 to-[var(--bg-secondary)] border border-indigo-500/30 space-y-2.5">
+              <div class="flex items-center gap-2 text-xs font-bold text-emerald-400">
+                <i class="fas fa-chart-line"></i> دست‌آوردها و بازدهی تجاری
+              </div>
+              <p class="text-xs text-[var(--text-primary)] leading-relaxed font-medium">
+                دستیابی به رشد فصلی حدود ۱۰٪ در ضریب نفوذ داشبوردها و ایجاد شفافیت عملیاتی یکپارچه در سطح چندمنطقه‌ای.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Case Study 2: Snapp! Super-App -->
+        <div class="glass-card p-8 sm:p-10 border border-cyan-500/30">
+          <div class="flex flex-col lg:flex-row lg:items-center justify-between pb-6 border-b border-[var(--border-subtle)] gap-4 mb-6">
+            <div>
+              <span class="text-xs font-bold text-cyan-400 uppercase tracking-wider block mb-1">مطالعه موردی ۰۲</span>
+              <h3 class="text-2xl sm:text-3xl font-bold text-[var(--text-primary)]">هاب یکپارچه جریان کار عملیاتی (Order Center)</h3>
+              <p class="text-xs text-[var(--text-muted)] font-medium mt-1">سوپراپ اسنپ (راکِت اینترنت • بیش از ۵۰ میلیون کاربر و ۳ میلیون سفر روزانه)</p>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-lg bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 text-xs font-bold font-mono">500K+ DAU</span>
+              <span class="px-3 py-1 rounded-lg bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-bold">۸۷٪ تحقق OKR</span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Context -->
+            <div class="p-5 rounded-2xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] space-y-2.5">
+              <div class="flex items-center gap-2 text-xs font-bold text-red-400">
+                <i class="fas fa-circle-exclamation"></i> زمینه و چالش اولیه
+              </div>
+              <p class="text-xs text-[var(--text-secondary)] leading-relaxed">
+                مدیریت دلیوری و هم‌راستاسازی جریان‌های کاری پیچیده در پلتفرمی با حجم تراکنش و کاربر میلیونی بسیار بالا.
+              </p>
+            </div>
+
+            <!-- Action -->
+            <div class="p-5 rounded-2xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] space-y-2.5">
+              <div class="flex items-center gap-2 text-xs font-bold text-cyan-400">
+                <i class="fas fa-gears"></i> اقدامات و راهکار اجرایی
+              </div>
+              <p class="text-xs text-[var(--text-secondary)] leading-relaxed">
+                هدایت استراتژی و اجرای محصول داده برای مرکز سفارشات متمرکز (Order Center) و پیاده‌سازی ریتم‌های ساختاریافته OKR.
+              </p>
+            </div>
+
+            <!-- Impact -->
+            <div class="p-5 rounded-2xl bg-gradient-to-b from-cyan-950/40 to-[var(--bg-secondary)] border border-cyan-500/30 space-y-2.5">
+              <div class="flex items-center gap-2 text-xs font-bold text-emerald-400">
+                <i class="fas fa-chart-line"></i> دست‌آوردها و بازدهی تجاری
+              </div>
+              <p class="text-xs text-[var(--text-primary)] leading-relaxed font-medium">
+                پشتیبانی پایدار از ۵۰۰ هزار کاربر فعال روزانه و ثبت نرخ ۸۷٪ در تحقق اهداف فصلی اسکوادهای محصول.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Case Study 3: Iran Mercantile Exchange & Parspooyesh -->
+        <div class="glass-card p-8 sm:p-10 border border-emerald-500/30">
+          <div class="flex flex-col lg:flex-row lg:items-center justify-between pb-6 border-b border-[var(--border-subtle)] gap-4 mb-6">
+            <div>
+              <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider block mb-1">مطالعه موردی ۰۳</span>
+              <h3 class="text-2xl sm:text-3xl font-bold text-[var(--text-primary)]">زیرساخت ملی هوش تجاری و موتور اعتبارسنجی</h3>
+              <p class="text-xs text-[var(--text-muted)] font-medium mt-1">پروژه‌های کلان و دولتی (بورس کالای ایران و پارس‌پویش / پایگاه داده کشاورزی ایران (ICADB))</p>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-lg bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-bold font-mono">۱۲,۰۰۰+ شرکت</span>
+              <span class="px-3 py-1 rounded-lg bg-amber-500/10 text-amber-400 border border-amber-500/20 text-xs font-bold">۹۶٪ تحقق برنامه</span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Context -->
+            <div class="p-5 rounded-2xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] space-y-2.5">
+              <div class="flex items-center gap-2 text-xs font-bold text-red-400">
+                <i class="fas fa-circle-exclamation"></i> زمینه و چالش اولیه
+              </div>
+              <p class="text-xs text-[var(--text-secondary)] leading-relaxed">
+                فرآیندهای دستی کند، اتلاف زمان در ارزیابی شرکت‌ها و نیاز به تجمیع داده‌های کلان در سطح ملی.
+              </p>
+            </div>
+
+            <!-- Action -->
+            <div class="p-5 rounded-2xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] space-y-2.5">
+              <div class="flex items-center gap-2 text-xs font-bold text-emerald-400">
+                <i class="fas fa-gears"></i> اقدامات و راهکار اجرایی
+              </div>
+              <p class="text-xs text-[var(--text-secondary)] leading-relaxed">
+                مدیریت دلیوری موتور ارزیابی اعتباری بورس کالا و هدایت تیم طرح پایگاه داده کشاورزی ایران (ICADB).
+              </p>
+            </div>
+
+            <!-- Impact -->
+            <div class="p-5 rounded-2xl bg-gradient-to-b from-emerald-950/40 to-[var(--bg-secondary)] border border-emerald-500/30 space-y-2.5">
+              <div class="flex items-center gap-2 text-xs font-bold text-emerald-400">
+                <i class="fas fa-chart-line"></i> دست‌آوردها و بازدهی تجاری
+              </div>
+              <p class="text-xs text-[var(--text-primary)] leading-relaxed font-medium">
+                مکانیزه‌سازی فرآیند ارزیابی ریسک برای بیش از ۱۲,۰۰۰ حساب شرکتی و دستیابی به ۹۶٪ اهداف برنامه‌ریزی‌شده.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 4: DELIVERY PLAYBOOK (Persian)
+         ========================================================================== -->
+    <section id="playbook" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 scroll-mt-24">
+      
+      <div class="glass-card p-8 sm:p-12 border border-[var(--border-focus)]">
+        
+        <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+          <span class="text-xs uppercase font-bold tracking-widest text-cyan-400 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20">متدولوژی و مدل اجرا</span>
+          <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">پلی‌بوک دلیوری («نحوه همکاری»)</h2>
+          <p class="text-base text-[var(--text-secondary)]">
+            سیستم دلیوری ۴ فازی ساختاریافته برای تضمین کمترین زمان تا خلق ارزش و بالاترین قابلیت پیش‌بینی در اجرا.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Phase 1 -->
+          <div class="p-6 rounded-2xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] space-y-4 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="w-9 h-9 rounded-xl bg-indigo-500/10 text-indigo-400 font-mono font-bold flex items-center justify-center border border-indigo-500/20">P1</span>
+                <span class="text-[11px] font-bold text-indigo-400 px-2 py-0.5 rounded bg-indigo-500/10">هفته‌های ۱ تا ۲</span>
+              </div>
+              <h4 class="text-lg font-bold text-[var(--text-primary)] mb-2">فاز ۱: کشف و تعیین خط مبنا</h4>
+              <ul class="text-xs text-[var(--text-secondary)] space-y-2 list-disc list-inside">
+                <li>ممیزی ریتم‌های دلیوری موجود، وابستگی‌های فنی و شناسایی گلوگاه‌های شاخص‌ها.</li>
+                <li>هم‌راستاسازی با مدیران ارشد و حامیان تجاری روی OKRهای قابل سنجش.</li>
+              </ul>
+            </div>
+            <div class="pt-3 border-t border-[var(--border-subtle)] text-[11px] text-[var(--text-muted)]">
+              ممیزی و هم‌راستاسازی OKRها
+            </div>
+          </div>
+
+          <!-- Phase 2 -->
+          <div class="p-6 rounded-2xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] space-y-4 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="w-9 h-9 rounded-xl bg-cyan-500/10 text-cyan-400 font-mono font-bold flex items-center justify-center border border-cyan-500/20">P2</span>
+                <span class="text-[11px] font-bold text-cyan-400 px-2 py-0.5 rounded bg-cyan-500/10">هفته‌های ۳ تا ۴</span>
+              </div>
+              <h4 class="text-lg font-bold text-[var(--text-primary)] mb-2">فاز ۲: استراتژی و معماری</h4>
+              <ul class="text-xs text-[var(--text-secondary)] space-y-2 list-disc list-inside">
+                <li>ترسیم درخت متریک‌های آبشاری و اولویت‌بندی نقشه راه محصول با بیشترین بازدهی.</li>
+                <li>طراحی چارچوب سبک حاکمیت داده و استانداردسازی ارتباطات بین‌تیمی.</li>
+              </ul>
+            </div>
+            <div class="pt-3 border-t border-[var(--border-subtle)] text-[11px] text-[var(--text-muted)]">
+              درخت شاخص‌ها و نقشه راه
+            </div>
+          </div>
+
+          <!-- Phase 3 -->
+          <div class="p-6 rounded-2xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] space-y-4 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="w-9 h-9 rounded-xl bg-emerald-500/10 text-emerald-400 font-mono font-bold flex items-center justify-center border border-emerald-500/20">P3</span>
+                <span class="text-[11px] font-bold text-emerald-400 px-2 py-0.5 rounded bg-emerald-500/10">هفته‌های ۵ تا ۱۰</span>
+              </div>
+              <h4 class="text-lg font-bold text-[var(--text-primary)] mb-2">فاز ۳: اجرای چابک و مدرن‌سازی</h4>
+              <ul class="text-xs text-[var(--text-secondary)] space-y-2 list-disc list-inside">
+                <li>پیشبرد مدرن‌سازی داده و کلود (Databricks, Azure, Power BI).</li>
+                <li>پیاده‌سازی ریتم‌های چابک و کاربردی اسپرینت و رفع موانع اجرایی.</li>
+              </ul>
+            </div>
+            <div class="pt-3 border-t border-[var(--border-subtle)] text-[11px] text-[var(--text-muted)]">
+              اسپرینت‌های کلود و سرعت تحویل
+            </div>
+          </div>
+
+          <!-- Phase 4 -->
+          <div class="p-6 rounded-2xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] space-y-4 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="w-9 h-9 rounded-xl bg-amber-500/10 text-amber-400 font-mono font-bold flex items-center justify-center border border-amber-500/20">P4</span>
+                <span class="text-[11px] font-bold text-amber-400 px-2 py-0.5 rounded bg-amber-500/10">هفته‌های ۱۱ تا ۱۲</span>
+              </div>
+              <h4 class="text-lg font-bold text-[var(--text-primary)] mb-2">فاز ۴: توانمندسازی و تحویل کامل</h4>
+              <ul class="text-xs text-[var(--text-secondary)] space-y-2 list-disc list-inside">
+                <li>منتورینگ مدیران محصول داخلی و راهبران فنی در کشف پیوسته و مالکیت محصول.</li>
+                <li>ارائه مستندات کامل، داشبوردهای سلف‌سرویس و انتقال رهبری به تیم داخلی.</li>
+              </ul>
+            </div>
+            <div class="pt-3 border-t border-[var(--border-subtle)] text-[11px] text-[var(--text-muted)]">
+              خودمختاری تیم و تحویل نهایی
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 5: COMPANIES & RESUME (Persian)
+         ========================================================================== -->
+    <section id="companies-resume" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 scroll-mt-24">
+      
+      <!-- Trusted By & Track Record Bar (3 Companies with Logos) -->
+      <div class="glass-card p-8 mb-12 border border-[var(--border-subtle)] text-center">
+        <span class="text-xs uppercase tracking-widest text-indigo-400 font-bold block mb-6">
+          سابقه همکاری با سازمان‌های پیشرو
+        </span>
+        <div class="flex flex-wrap items-center justify-center gap-5 sm:gap-8">
+          
+          <!-- Logo 1: Atlas Copco -->
+          <div class="flex items-center gap-3 px-5 py-3 rounded-2xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] hover:border-indigo-500/50 hover:bg-[var(--bg-tertiary)] transition-all shadow-sm group">
+            <div class="w-8 h-8 rounded-lg bg-[#0079C1] flex items-center justify-center text-white shadow-sm group-hover:scale-105 transition-transform">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="9" stroke="white" stroke-width="2.2" stroke-dasharray="4 2"/>
+                <path d="M12 6V18M6 12H18" stroke="white" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="text-right">
+              <span class="font-extrabold text-sm sm:text-base text-[var(--text-primary)] tracking-tight block">Atlas Copco</span>
+              <span class="text-[10px] text-[var(--text-muted)] block">اطلس کوپکو (صنعتی بین‌المللی)</span>
+            </div>
+          </div>
+
+          <!-- Logo 2: Snapp! (Rocket Internet) -->
+          <div class="flex items-center gap-3 px-5 py-3 rounded-2xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] hover:border-emerald-500/50 hover:bg-[var(--bg-tertiary)] transition-all shadow-sm group">
+            <div class="w-8 h-8 rounded-lg bg-[#00D170] flex items-center justify-center text-white shadow-sm group-hover:scale-105 transition-transform">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 4C10.9 4 10 4.9 10 6L10.5 13C10.5 13.8 11.2 14.5 12 14.5C12.8 14.5 13.5 13.8 13.5 13L14 6C14 4.9 13.1 4 12 4Z"/>
+                <circle cx="12" cy="18" r="1.8"/>
+              </svg>
+            </div>
+            <div class="text-right">
+              <span class="font-extrabold text-sm sm:text-base text-[var(--text-primary)] tracking-tight block">Snapp!</span>
+              <span class="text-[10px] text-[var(--text-muted)] block">سوپراپ اسنپ (۵۰M+ کاربر)</span>
+            </div>
+          </div>
+
+          <!-- Logo 3: Parspooyesh Telecom -->
+          <div class="flex items-center gap-3 px-5 py-3 rounded-2xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] hover:border-cyan-500/50 hover:bg-[var(--bg-tertiary)] transition-all shadow-sm group">
+            <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-500 to-indigo-600 flex items-center justify-center text-white shadow-sm group-hover:scale-105 transition-transform">
+              <svg class="w-4.5 h-4.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="2" width="6" height="6" rx="1.5" fill="currentColor" fill-opacity="0.3"/>
+                <rect x="16" y="2" width="6" height="6" rx="1.5" fill="currentColor" fill-opacity="0.3"/>
+                <rect x="9" y="16" width="6" height="6" rx="1.5" fill="currentColor" fill-opacity="0.3"/>
+                <path d="M5 8V12C5 13.1 5.9 14 7 14H17C18.1 14 19 13.1 19 12V8"/>
+                <path d="M12 14V16"/>
+              </svg>
+            </div>
+            <div class="text-right">
+              <span class="font-extrabold text-sm sm:text-base text-[var(--text-primary)] tracking-tight block">پارس‌پویش فناور</span>
+              <span class="text-[10px] text-[var(--text-muted)] block">زیرساخت‌های مخابراتی</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+        
+        <!-- Left: Career Timeline & Impact Summary (7 cols) -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="space-y-1">
+            <span class="text-xs uppercase font-bold tracking-widest text-cyan-400">روایت حرفه‌ای تجربیات</span>
+            <h3 class="text-2xl font-bold text-[var(--text-primary)]">تایم‌لاین سوابق کاری و اثرگذاری</h3>
+          </div>
+
+          <div class="space-y-4 text-xs">
+            
+            <!-- Atlas Copco -->
+            <div class="glass-card p-5 rounded-xl space-y-2">
+              <div class="flex flex-wrap justify-between items-baseline gap-2">
+                <h4 class="text-sm font-bold text-[var(--text-primary)]">راهبر پروژه، محصولات داده و تحلیل کسب‌وکار</h4>
+                <span class="font-mono text-indigo-400 font-semibold px-2 py-0.5 rounded bg-indigo-500/10">اردیبهشت ۱۴۰۲ – اکنون</span>
+              </div>
+              <div class="text-indigo-300 font-semibold">اطلس کوپکو (Atlas Copco) • برنو، جمهوری چک (خرید و لجستیک جهانی • Global Purchasing & Logistics)</div>
+              <p class="text-[var(--text-secondary)] leading-relaxed">
+                مدیریت پروژه داشبورد زنجیره تامین SAP بر بستر Azure و Databricks. دستیابی به رشد فصلی حدود ۱۰٪ در ضریب نفوذ داشبوردها در عملیات زنجیره تأمین جهانی.
+              </p>
+            </div>
+
+            <!-- Snapp! -->
+            <div class="glass-card p-5 rounded-xl space-y-2">
+              <div class="flex flex-wrap justify-between items-baseline gap-2">
+                <h4 class="text-sm font-bold text-[var(--text-primary)]">مدیر محصول داده (Data Product Manager)</h4>
+                <span class="font-mono text-cyan-400 font-semibold px-2 py-0.5 rounded bg-cyan-500/10">اردیبهشت ۱۴۰۱ – اردیبهشت ۱۴۰۲</span>
+              </div>
+              <div class="text-cyan-300 font-semibold">سوپراپ اسنپ (راکِت اینترنت • ۵۰M+ کاربر و ۳M+ سفر روزانه)</div>
+              <p class="text-[var(--text-secondary)] leading-relaxed">
+                هدایت استراتژی و اجرای محصول داده برای مرکز سفارشات اسنپ (Order Center) پشتیبانی‌کننده بیش از ۵۰۰ هزار کاربر فعال روزانه؛ دستیابی به نرخ ۸۷٪ تحقق اهداف OKR.
+              </p>
+            </div>
+
+            <!-- Parspooyesh Fanavar -->
+            <div class="glass-card p-5 rounded-xl space-y-2">
+              <div class="flex flex-wrap justify-between items-baseline gap-2">
+                <h4 class="text-sm font-bold text-[var(--text-primary)]">مالک محصول IT و مدیر پروژه هوش تجاری</h4>
+                <span class="font-mono text-emerald-400 font-semibold px-2 py-0.5 rounded bg-emerald-500/10">دی ۱۳۹۹ – فروردین ۱۴۰۱</span>
+              </div>
+              <div class="text-emerald-300 font-semibold">شرکت پارس‌پویش فناور • زیرساخت‌های مخابراتی</div>
+              <p class="text-[var(--text-secondary)] leading-relaxed">
+                دلیوری پورتال مدیریت دسترسی میتا (رشد ۴۵٪ در فروش محصول طی ۶ ماه) و رهبری تیم ۷ نفره در طرح ملی پایگاه داده کشاورزی ایران (ICADB) با ۹۶٪ تحقق اهداف.
+              </p>
+            </div>
+
+            <!-- PDN Co. -->
+            <div class="glass-card p-5 rounded-xl space-y-2">
+              <div class="flex flex-wrap justify-between items-baseline gap-2">
+                <h4 class="text-sm font-bold text-[var(--text-primary)]">مدیر پروژه IT و تحلیل‌گر ارشد داده</h4>
+                <span class="font-mono text-amber-400 font-semibold px-2 py-0.5 rounded bg-amber-500/10">آبان ۱۳۹۷ – دی ۱۳۹۹</span>
+              </div>
+              <div class="text-amber-300 font-semibold">شرکت PDN Co • پروژه بورس کالای ایران</div>
+              <p class="text-[var(--text-secondary)] leading-relaxed">
+                دلیوری موتور ارزیابی و اعتبارسنجی مالی بورس کالای ایران، مکانیزه‌سازی فرآیندهای مدیریت ریسک برای بیش از ۱۲,۰۰۰ حساب شرکتی.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right: Credentials, Skills & Download (5 cols) -->
+        <div class="lg:col-span-5 space-y-6">
+          
+          <div class="space-y-1">
+            <span class="text-xs uppercase font-bold tracking-widest text-emerald-400">مدارک و مهارت‌های معتبر</span>
+            <h3 class="text-2xl font-bold text-[var(--text-primary)]">گواهی‌نامه‌ها و ابزارها</h3>
+          </div>
+
+          <!-- Certifications Card -->
+          <div class="glass-card p-6 rounded-2xl space-y-3">
+            <h4 class="text-xs uppercase tracking-wider font-bold text-indigo-400 flex items-center gap-2">
+              <i class="fas fa-certificate"></i> گواهی‌نامه‌های بین‌المللی
+            </h4>
+            <div class="space-y-2 text-xs">
+              <div class="p-2.5 rounded-xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] flex items-center justify-between font-bold text-[var(--text-primary)]">
+                <span>PMP® – حرفه‌ای مدیریت پروژه</span>
+                <span class="font-mono text-[10px] text-indigo-400 bg-indigo-500/10 px-2 py-0.5 rounded">PMI</span>
+              </div>
+              <div class="p-2.5 rounded-xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] flex items-center justify-between font-bold text-[var(--text-primary)]">
+                <span>PRINCE2 Agile Foundation</span>
+                <span class="font-mono text-[10px] text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded">Agile</span>
+              </div>
+              <div class="p-2.5 rounded-xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] flex items-center justify-between font-bold text-[var(--text-primary)]">
+                <span>Databricks Lakehouse Fundamentals</span>
+                <span class="font-mono text-[10px] text-red-400 bg-red-500/10 px-2 py-0.5 rounded">Lakehouse</span>
+              </div>
+              <div class="p-2.5 rounded-xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] flex items-center justify-between font-bold text-[var(--text-primary)]">
+                <span>Google Project Management Certificate</span>
+                <span class="font-mono text-[10px] text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded">Google</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education Card -->
+          <div class="glass-card p-6 rounded-2xl space-y-3">
+            <h4 class="text-xs uppercase tracking-wider font-bold text-cyan-400 flex items-center gap-2">
+              <i class="fas fa-graduation-cap"></i> تحصیلات دانشگاهی
+            </h4>
+            <div class="space-y-2 text-xs">
+              <div class="p-3 rounded-xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)]">
+                <div class="font-bold text-[var(--text-primary)]">کارشناسی ارشد مدیریت اجرایی (Executive MBA - گرایش بازاریابی)</div>
+                <div class="text-[11px] text-[var(--text-muted)]">دانشگاه آزاد اسلامی، واحد علوم و تحقیقات (۱۳۹۰–۱۳۹۲)</div>
+              </div>
+              <div class="p-3 rounded-xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)]">
+                <div class="font-bold text-[var(--text-primary)]">کارشناسی مهندسی نرم‌افزار کامپیوتر (B.Eng.)</div>
+                <div class="text-[11px] text-[var(--text-muted)]">دانشگاه آزاد اسلامی، واحد تهران شمال (۱۳۸۴–۱۳۸۹)</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Core Tooling Stack -->
+          <div class="glass-card p-6 rounded-2xl space-y-3">
+            <h4 class="text-xs uppercase tracking-wider font-bold text-emerald-400 flex items-center gap-2">
+              <i class="fas fa-microchip"></i> استک ابزارهای تخصصی
+            </h4>
+            <div class="flex flex-wrap gap-2 text-xs font-mono">
+              <span class="px-2.5 py-1 rounded-lg bg-[var(--bg-secondary)] border border-[var(--border-subtle)] text-[var(--text-primary)]">Databricks</span>
+              <span class="px-2.5 py-1 rounded-lg bg-[var(--bg-secondary)] border border-[var(--border-subtle)] text-[var(--text-primary)]">Microsoft Azure</span>
+              <span class="px-2.5 py-1 rounded-lg bg-[var(--bg-secondary)] border border-[var(--border-subtle)] text-[var(--text-primary)]">Power BI</span>
+              <span class="px-2.5 py-1 rounded-lg bg-[var(--bg-secondary)] border border-[var(--border-subtle)] text-[var(--text-primary)]">Atlassian (Jira & Confluence)</span>
+              <span class="px-2.5 py-1 rounded-lg bg-[var(--bg-secondary)] border border-[var(--border-subtle)] text-[var(--text-primary)]">Agile / Scrum</span>
+            </div>
+          </div>
+
+          <!-- Download Button -->
+          <div class="pt-2">
+            <button class="open-cv-modal btn-primary w-full py-3.5 rounded-xl font-bold text-xs flex items-center justify-center gap-2 shadow-lg shadow-indigo-500/25">
+              <i class="fas fa-file-pdf"></i>
+              <span>دانلود و مشاهده خلاصه رزومه (PDF)</span>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 6: CONTACT ME & COLLABORATION (Persian)
+         ========================================================================== -->
+    <section id="contact" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 scroll-mt-24">
+      <div class="glass-card p-8 sm:p-14 border border-indigo-500/40 bg-gradient-to-b from-indigo-950/40 via-[var(--bg-secondary)] to-[var(--bg-primary)]">
+        
+        <div class="max-w-3xl mx-auto text-center space-y-6 mb-10">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold">
+            <span class="pulse-dot"></span>
+            <span>در حال حاضر آماده پذیرش پروژه‌های فرکشنال و مشاوره سازمانی</span>
+          </div>
+
+          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-[var(--text-primary)]">
+            ارتباط مستقیم و آغاز همکاری
+          </h2>
+
+          <p class="text-sm sm:text-base text-[var(--text-secondary)] max-w-xl mx-auto leading-relaxed">
+            جهت بررسی نیازهای رهبری فرکشنال، ارزیابی ریتم‌های دلیوری، مربیگری چابک یا دریافت مشاوره استراتژیک مستقیماً در ارتباط باشید.
+          </p>
+        </div>
+
+        <!-- 4 Direct Contact & Channel Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          
+          <!-- Card 1: Direct Email -->
+          <div class="p-6 rounded-2xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] hover:border-indigo-500/50 transition-all flex flex-col justify-between space-y-4">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-base mb-3 border border-indigo-500/20">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <span class="text-xs font-bold text-indigo-400 uppercase tracking-wider block mb-1">ایمیل مستقیم کاری</span>
+              <div class="font-mono font-bold text-xs sm:text-sm text-[var(--text-primary)] break-all mb-1" dir="ltr">ali.maleki100@gmail.com</div>
+              <p class="text-xs text-[var(--text-secondary)]">پاسخ‌گویی سریع به سوالات و درخواست‌های همکاری پروژه‌ای.</p>
+            </div>
+            <div class="pt-3 border-t border-[var(--border-subtle)] flex items-center gap-2">
+              <a href="mailto:ali.maleki100@gmail.com" class="btn-primary flex-1 py-2 rounded-xl text-xs font-bold text-center flex items-center justify-center gap-1.5">
+                <i class="fas fa-paper-plane text-[10px]"></i> ارسال ایمیل
+              </a>
+              <button class="copy-email-btn px-3 py-2 rounded-xl bg-[var(--bg-tertiary)] border border-[var(--border-subtle)] hover:border-indigo-500/40 text-xs text-[var(--text-secondary)] hover:text-white" title="کپی آدرس ایمیل">
+                <i class="fas fa-copy"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 2: LinkedIn Profile -->
+          <div class="p-6 rounded-2xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] hover:border-cyan-500/50 transition-all flex flex-col justify-between space-y-4">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-base mb-3 border border-cyan-500/20">
+                <i class="fab fa-linkedin"></i>
+              </div>
+              <span class="text-xs font-bold text-cyan-400 uppercase tracking-wider block mb-2">شبکه حرفه‌ای لینکدین</span>
+              <p class="text-xs text-[var(--text-secondary)] leading-relaxed">شبکه‌سازی حرفه‌ای، دیدگاه‌های مدیریتی و تجربیات راهبری محصول و داده.</p>
+            </div>
+            <div class="pt-3 border-t border-[var(--border-subtle)]">
+              <a href="https://www.linkedin.com/in/alimaleki100/" target="_blank" rel="noopener noreferrer" class="btn-secondary w-full py-2 rounded-xl text-xs font-bold text-center flex items-center justify-center gap-1.5 hover:border-cyan-500/50">
+                <span>مشاهده پروفایل لینکدین</span>
+                <i class="fas fa-arrow-up-right-from-square text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 3: Medium Publications -->
+          <div class="p-6 rounded-2xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] hover:border-amber-500/50 transition-all flex flex-col justify-between space-y-4">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-base mb-3 border border-amber-500/20">
+                <i class="fab fa-medium"></i>
+              </div>
+              <span class="text-xs font-bold text-amber-400 uppercase tracking-wider block mb-2">انتشارات و مقالات مدیوم</span>
+              <p class="text-xs text-[var(--text-secondary)] leading-relaxed">نوشته‌ها و تجربیات تخصصی در تحول چابک، کشف محصول و حاکمیت داده.</p>
+            </div>
+            <div class="pt-3 border-t border-[var(--border-subtle)]">
+              <a href="https://medium.com/@ali.maleki100" target="_blank" rel="noopener noreferrer" class="btn-secondary w-full py-2 rounded-xl text-xs font-bold text-center flex items-center justify-center gap-1.5 hover:border-amber-500/50">
+                <span>مطالعه مقالات در مدیوم</span>
+                <i class="fas fa-arrow-up-right-from-square text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 4: Strategic Advisory Call -->
+          <div class="p-6 rounded-2xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] hover:border-emerald-500/50 transition-all flex flex-col justify-between space-y-4">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-base mb-3 border border-emerald-500/20">
+                <i class="fas fa-calendar-check"></i>
+              </div>
+              <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider block mb-1">جلسه آشنایی و ارزیابی</span>
+              <div class="font-bold text-xs sm:text-sm text-[var(--text-primary)] mb-1">مشاوره استراتژیک ۳۰ دقیقه‌ای</div>
+              <p class="text-xs text-[var(--text-secondary)]">بررسی گلوگاه‌های تحویل، اهداف تیم و تناسب همکاری.</p>
+            </div>
+            <div class="pt-3 border-t border-[var(--border-subtle)]">
+              <button class="open-call-modal btn-primary w-full py-2 rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 shadow-lg shadow-indigo-500/20">
+                <i class="fas fa-calendar-plus text-[10px]"></i>
+                <span>رزرو جلسه مشاوره</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER (Persian)
+       ========================================================================== -->
+  <footer class="border-t border-[var(--border-subtle)] bg-[var(--bg-secondary)] py-12 text-xs text-[var(--text-secondary)]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+      
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-cyan-500 flex items-center justify-center text-white font-bold text-xs">
+          AM
+        </div>
+        <div>
+          <span class="font-bold text-sm text-[var(--text-primary)]">علی ملکی</span>
+          <span class="block text-[11px] text-[var(--text-muted)]">مشاور تحول دیجیتال و داده | MBA | PMP®</span>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-6 text-xs">
+        <a href="mailto:ali.maleki100@gmail.com" class="hover:text-indigo-400 transition-colors flex items-center gap-1.5 font-mono">
+          <i class="fas fa-envelope"></i> ali.maleki100@gmail.com
+        </a>
+        <a href="https://www.linkedin.com/in/alimaleki100/" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-400 transition-colors flex items-center gap-1.5 font-mono">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://medium.com/@ali.maleki100" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-400 transition-colors flex items-center gap-1.5 font-mono">
+          <i class="fab fa-medium"></i> Medium
+        </a>
+        <span class="text-[var(--text-muted)]">برنو، جمهوری چک / همکاری ریموت بین‌المللی (CET)</span>
+      </div>
+
+      <div class="text-[11px] text-[var(--text-muted)] font-mono">
+        © 2026 Ali Maleki. All rights reserved.
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODAL 1: STRATEGY CONSULTATION (Persian)
+       ========================================================================== -->
+  <div id="strategy-call-modal" class="fixed inset-0 z-50 modal-overlay hidden items-center justify-center p-4">
+    <div class="glass-card modal-content w-full max-w-xl p-6 sm:p-8 bg-[var(--bg-secondary)] border border-[var(--border-focus)] max-h-[90vh] overflow-y-auto">
+      
+      <div class="flex items-start justify-between border-b border-[var(--border-subtle)] pb-4 mb-6">
+        <div>
+          <span class="text-xs uppercase font-bold text-indigo-400 tracking-wider block">آغاز همکاری و مشاوره</span>
+          <h3 class="text-2xl font-bold text-[var(--text-primary)]">درخواست جلسه مشاوره استراتژیک</h3>
+        </div>
+        <button id="close-call-modal" class="w-8 h-8 rounded-lg bg-[var(--bg-tertiary)] text-[var(--text-muted)] hover:text-white flex items-center justify-center" aria-label="بستن">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <form id="consulting-contact-form" class="space-y-4 text-xs">
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label for="form-name" class="block font-semibold text-[var(--text-secondary)] mb-1.5">نام و نام خانوادگی *</label>
+            <input type="text" id="form-name" required placeholder="مثال: علی احمدی" class="w-full px-3.5 py-2.5 rounded-xl bg-[var(--bg-tertiary)] border border-[var(--border-subtle)] text-[var(--text-primary)] focus:border-indigo-500 outline-none">
+          </div>
+          <div>
+            <label for="form-email" class="block font-semibold text-[var(--text-secondary)] mb-1.5">ایمیل سازمانی / کاری *</label>
+            <input type="email" id="form-email" required placeholder="ali@company.com" dir="ltr" class="w-full px-3.5 py-2.5 rounded-xl bg-[var(--bg-tertiary)] border border-[var(--border-subtle)] text-[var(--text-primary)] focus:border-indigo-500 outline-none font-mono">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label for="form-company" class="block font-semibold text-[var(--text-secondary)] mb-1.5">نام سازمان / شرکت</label>
+            <input type="text" id="form-company" placeholder="شرکت / استارتاپ" class="w-full px-3.5 py-2.5 rounded-xl bg-[var(--bg-tertiary)] border border-[var(--border-subtle)] text-[var(--text-primary)] focus:border-indigo-500 outline-none">
+          </div>
+          <div>
+            <label for="form-service" class="block font-semibold text-[var(--text-secondary)] mb-1.5">نوع خدمت مورد نظر</label>
+            <select id="form-service" class="w-full px-3.5 py-2.5 rounded-xl bg-[var(--bg-tertiary)] border border-[var(--border-subtle)] text-[var(--text-primary)] focus:border-indigo-500 outline-none">
+              <option value="رهبری فرکشنال محصول و دلیوری">رهبری فرکشنال محصول و دلیوری</option>
+              <option value="کوچینگ و توانمندسازی تیم‌ها">کوچینگ و توانمندسازی تیم‌ها</option>
+              <option value="پذیرش عمل‌گرایانه چابک و ریتم‌های دلیوری">پذیرش عمل‌گرایانه چابک و ریتم‌های دلیوری</option>
+              <option value="حاکمیت داده و معماری شاخص‌های کلیدی">حاکمیت داده و معماری شاخص‌های کلیدی</option>
+              <option value="مشاوره استراتژیک سازمانی">مشاوره استراتژیک سازمانی</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label for="form-message" class="block font-semibold text-[var(--text-secondary)] mb-1.5">شرح مختصر نیاز، گلوگاه یا هدف پروژه</label>
+          <textarea id="form-message" rows="4" placeholder="به صورت خلاصه ساختار فعلی تیم، گلوگاه‌های دلیوری یا نتایج تجاری مد نظرتان را شرح دهید..." class="w-full px-3.5 py-2.5 rounded-xl bg-[var(--bg-tertiary)] border border-[var(--border-subtle)] text-[var(--text-primary)] focus:border-indigo-500 outline-none"></textarea>
+        </div>
+
+        <div class="pt-2 flex flex-col sm:flex-row gap-3 items-center justify-between">
+          <button id="form-submit-btn" type="submit" class="btn-primary w-full sm:w-auto px-6 py-3 rounded-xl font-bold text-xs flex items-center justify-center gap-2">
+            <span>ارسال درخواست همکاری</span>
+            <i class="fas fa-paper-plane"></i>
+          </button>
+          
+          <button type="button" class="copy-email-btn text-[11px] text-[var(--text-muted)] hover:text-indigo-400 flex items-center gap-1.5 font-mono">
+            <i class="fas fa-envelope"></i> ali.maleki100@gmail.com
+          </button>
+        </div>
+
+      </form>
+
+      <!-- Success Confirmation View (In-Modal, Persian) -->
+      <div id="form-success-container" class="hidden text-center py-6 sm:py-8 space-y-4 animate-fadeIn">
+        <div class="w-16 h-16 rounded-2xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 flex items-center justify-center text-2xl mx-auto shadow-lg shadow-emerald-500/20">
+          <i class="fas fa-check-circle"></i>
+        </div>
+        <div class="space-y-2">
+          <h4 class="text-2xl font-bold text-[var(--text-primary)]">درخواست شما با موفقیت ثبت شد!</h4>
+          <p id="form-success-msg" class="text-xs sm:text-sm text-[var(--text-secondary)] max-w-md mx-auto leading-relaxed">
+            با تشکر از پیام شما. اطلاعات و نیازهای پروژه شما مستقیماً دریافت شد. پس از بررسی اولیه، ظرف حداکثر ۲۴ ساعت کاری با شما در تماس خواهم بود.
+          </p>
+        </div>
+        <div class="pt-4">
+          <button id="close-success-btn" type="button" class="btn-primary px-8 py-3 rounded-xl font-bold text-xs inline-flex items-center gap-2">
+            <span>تأیید و بستن</span>
+            <i class="fas fa-check"></i>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL 2: PERSIAN CV QUICK-VIEW & PRINT/PDF EXPORT
+       ========================================================================== -->
+  <div id="cv-modal" class="fixed inset-0 z-50 modal-overlay hidden items-center justify-center p-4">
+    <div class="cv-modal-inner glass-card modal-content w-full max-w-3xl p-6 sm:p-10 bg-[var(--bg-secondary)] border border-[var(--border-subtle)] max-h-[92vh] overflow-y-auto">
+      
+      <!-- Modal Header (no-print) -->
+      <div class="flex items-center justify-between border-b border-[var(--border-subtle)] pb-4 mb-6 no-print">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-bold text-indigo-400 px-2.5 py-0.5 rounded bg-indigo-500/10">خلاصه رزومه حرفه‌ای ۱ صفحه‌ای</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <button id="print-cv-btn" class="px-3 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold flex items-center gap-1.5 shadow-sm">
+            <i class="fas fa-print"></i> پرینت / ذخیره به صورت PDF
+          </button>
+          <button id="close-cv-modal" class="w-8 h-8 rounded-lg bg-[var(--bg-tertiary)] text-[var(--text-muted)] hover:text-white flex items-center justify-center" aria-label="بستن رزومه">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- CV Document Body -->
+      <div class="space-y-6 text-right leading-relaxed text-sm">
+        
+        <!-- CV Header -->
+        <div class="border-b border-[var(--border-subtle)] pb-4">
+          <h1 class="text-3xl font-extrabold text-[var(--text-primary)]">علی ملکی</h1>
+          <div class="text-sm font-semibold text-indigo-400 mt-1">مشاور تحول دیجیتال و داده | رهبر فرکشنال محصول و دلیوری</div>
+          <div class="text-xs font-mono text-[var(--text-muted)] mt-1" dir="ltr">MBA | PMP® • ali.maleki100@gmail.com • Brno, Czech Republic / Remote Global</div>
+        </div>
+
+        <!-- Career Summary -->
+        <div>
+          <h3 class="text-xs font-bold uppercase tracking-wider text-indigo-400 mb-2 border-b border-[var(--border-subtle)] pb-1">خلاصه سوابق حرفه‌ای</h3>
+          <p class="text-xs text-[var(--text-secondary)] leading-relaxed">
+            مشاور دارنده مدارک بین‌المللی PMP و MBA با بیش از ۷ سال سابقه در هدایت پروژه‌های تحول دیجیتال، محصولات داده و حاکمیت دلیوری در سازمان‌های چندملیتی و شرکت‌های مقیاس‌بزرگ فناوری (از جمله اطلس کوپکو و اسنپ). متخصص در هم‌راستاسازی سرمایه‌گذاری‌های فناورانه با اهداف استراتژیک کسب‌وکار، استقرار متدولوژی‌های چابک، ممیزی گلوگاه‌های جریان تحویل و کوچینگ تیم‌های تحلیل و مهندسی داده.
+          </p>
+        </div>
+
+        <!-- Experience -->
+        <div>
+          <h3 class="text-xs font-bold uppercase tracking-wider text-emerald-400 mb-3 border-b border-[var(--border-subtle)] pb-1">سوابق شغلی و تجربیات کلیدی</h3>
+          
+          <div class="space-y-4">
+            <div>
+              <div class="flex justify-between font-bold text-xs text-[var(--text-primary)]">
+                <span>اطلس کوپکو (Atlas Copco • برنو، جمهوری چک)</span>
+                <span class="font-mono text-indigo-400">اردیبهشت ۱۴۰۲ – اکنون</span>
+              </div>
+              <div class="text-xs text-indigo-300 italic mb-1">راهبر پروژه، محصولات داده و تحلیلی زنجیره تأمین و لجستیک جهانی (Global Purchasing & Logistics)</div>
+              <ul class="text-xs text-[var(--text-secondary)] list-disc list-inside space-y-1">
+                <li>مدیریت پروژه داشبورد زنجیره تامین SAP بر بستر پلتفرم‌های ابری Azure و Databricks.</li>
+                <li>هم‌راستاسازی الزامات ذی‌نفعان جهانی و تعریف شاخص‌های کلیدی پذیرش با رشد فصلی حدود ۱۰٪ در استفاده از داشبوردها در عملیات زنجیره تأمین جهانی.</li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="flex justify-between font-bold text-xs text-[var(--text-primary)]">
+                <span>اسنپ (Snapp! • ۵۰M+ کاربر و ۳M+ سفر روزانه)</span>
+                <span class="font-mono text-cyan-400">اردیبهشت ۱۴۰۱ – اردیبهشت ۱۴۰۲</span>
+              </div>
+              <div class="text-xs text-cyan-300 italic mb-1">مدیر محصول داده (Data Product Manager)</div>
+              <ul class="text-xs text-[var(--text-secondary)] list-disc list-inside space-y-1">
+                <li>هدایت استراتژی و تحویل محصول داده مرکز سفارشات متمرکز اسنپ (Order Center) برای بیش از ۵۰۰ هزار کاربر فعال روزانه.</li>
+                <li>استقرار فرآیندهای ساختاریافته OKR و مدیریت حاکمیت دلیوری با نرخ موفقیت ۸۷٪ در دستیابی به اهداف.</li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="flex justify-between font-bold text-xs text-[var(--text-primary)]">
+                <span>پارس‌پویش فناور (Parspooyesh Fanavar)</span>
+                <span class="font-mono text-emerald-400">دی ۱۳۹۹ – فروردین ۱۴۰۱</span>
+              </div>
+              <div class="text-xs text-emerald-300 italic mb-1">مالک محصول IT و مدیر پروژه هوش تجاری B2B</div>
+              <ul class="text-xs text-[var(--text-secondary)] list-disc list-inside space-y-1">
+                <li>دلیوری پورتال اپراتوری میتا با افزایش ۴۵ درصدی در فروش محصول طی ۶ ماه اول عرضه.</li>
+                <li>هدایت تیم ۷ نفره طرح ملی پایگاه داده کشاورزی ایران (ICADB) با تحقق ۹۶٪ اهداف پروژه.</li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="flex justify-between font-bold text-xs text-[var(--text-primary)]">
+                <span>شرکت PDN Co • پروژه بورس کالای ایران</span>
+                <span class="font-mono text-amber-400">آبان ۱۳۹۷ – دی ۱۳۹۹</span>
+              </div>
+              <div class="text-xs text-amber-300 italic mb-1">مدیر پروژه IT و تحلیل‌گر ارشد داده</div>
+              <ul class="text-xs text-[var(--text-secondary)] list-disc list-inside space-y-1">
+                <li>دلیوری موتور خودکار ارزیابی و رتبه‌بندی اعتباری بورس کالای ایران برای بیش از ۱۲,۰۰۰ حساب شرکتی.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certifications & Education -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 border-t border-[var(--border-subtle)] text-xs">
+          <div>
+            <h4 class="font-bold text-indigo-400 mb-1.5">گواهی‌نامه‌ها</h4>
+            <ul class="text-[var(--text-secondary)] space-y-1 list-disc list-inside font-mono">
+              <li>PMP® – Project Management Professional</li>
+              <li>PRINCE2 Agile Foundation</li>
+              <li>Databricks Lakehouse Fundamentals</li>
+              <li>Google Project Management Certificate</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-cyan-400 mb-1.5">تحصیلات دانشگاهی</h4>
+            <div class="space-y-1.5 text-[var(--text-secondary)]">
+              <div>
+                <strong>کارشناسی ارشد مدیریت اجرایی (MBA)</strong> (۱۳۹۰–۱۳۹۲)<br>
+                <span class="text-[11px] text-[var(--text-muted)]">دانشگاه آزاد اسلامی، واحد علوم و تحقیقات</span>
+              </div>
+              <div>
+                <strong>کارشناسی مهندسی نرم‌افزار کامپیوتر</strong> (۱۳۸۴–۱۳۸۹)<br>
+                <span class="text-[11px] text-[var(--text-muted)]">دانشگاه آزاد اسلامی، واحد تهران شمال</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Application Scripts -->
+  <script src="app-fa.js"></script>
+</body>
+</html>

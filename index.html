@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ali Maleki, PMP | Strategic Advisory for Tech & Data Delivery</title>
+  <meta name="description" content="Independent consulting and fractional leadership to help enterprise and high-growth organizations structure teams, remove delivery bottlenecks, and execute critical roadmaps.">
+  <meta name="keywords" content="Ali Maleki, Fractional Product Leader, Delivery Lead, Agile Coaching, Delivery Governance, Data Products, Engineering Leadership, PMP, Azure, Databricks, Atlas Copco, Snapp">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="alternate icon" href="favicon.svg">
+
+  <!-- Google Fonts Preconnect & Stylesheet (Plus Jakarta Sans, Vazirmatn & JetBrains Mono) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Vazirmatn:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['class', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              400: '#818cf8',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+            },
+            cyanAccent: '#06b6d4',
+            emeraldAccent: '#10b981',
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Custom Styles (v1 Design System) -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[var(--bg-primary)] text-[var(--text-primary)] antialiased transition-colors duration-300">
+
+  <!-- Ambient Glow Effects (v1 Design System) -->
+  <div class="ambient-bg" aria-hidden="true">
+    <div class="ambient-orb ambient-orb-1"></div>
+    <div class="ambient-orb ambient-orb-2"></div>
+    <div class="ambient-orb ambient-orb-3"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="fixed top-0 left-0 right-0 z-50 nav-blur">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo / Name -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-cyan-500 flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-indigo-500/20 group-hover:scale-105 transition-transform">
+          AM
+        </div>
+        <div>
+          <span class="font-bold text-lg text-[var(--text-primary)] tracking-tight block">Ali Maleki</span>
+          <span class="text-xs text-[var(--text-muted)] block">Data & Digital Transformation Consultant</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-[var(--text-secondary)]">
+        <a href="#services" class="nav-link hover:text-[var(--text-primary)] transition-colors">Services</a>
+        <a href="#case-studies" class="nav-link hover:text-[var(--text-primary)] transition-colors">Case Studies</a>
+        <a href="#playbook" class="nav-link hover:text-[var(--text-primary)] transition-colors">Playbook</a>
+        <a href="#companies-resume" class="nav-link hover:text-[var(--text-primary)] transition-colors">Companies & Resume</a>
+        <a href="#contact" class="nav-link hover:text-[var(--text-primary)] transition-colors text-indigo-400 font-semibold flex items-center gap-1.5">
+          <i class="fas fa-paper-plane text-xs"></i> Contact Me
+        </a>
+      </nav>
+
+      <!-- Action Buttons, Language & Theme Switcher -->
+      <div class="hidden sm:flex items-center gap-3">
+        
+        <!-- Language Switcher -->
+        <a href="fa.html" class="px-3 py-1.5 rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-secondary)] hover:bg-[var(--bg-tertiary)] hover:border-[var(--border-focus)] text-xs font-bold text-indigo-400 flex items-center gap-1.5 transition-all" title="تغییر زبان به فارسی">
+          <i class="fas fa-globe text-xs"></i>
+          <span>فارسی</span>
+        </a>
+
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" class="w-10 h-10 rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-secondary)] flex items-center justify-center hover:border-[var(--border-focus)] transition-colors theme-toggle-btn" aria-label="Toggle Dark/Light Mode">
+          <i id="theme-icon" class="fas fa-sun text-amber-400"></i>
+        </button>
+
+        <!-- Primary CTA -->
+        <button class="open-call-modal btn-primary px-4 py-2.5 rounded-xl text-xs font-bold tracking-wide flex items-center gap-2">
+          <span>Advisory Call</span>
+          <i class="fas fa-arrow-right text-[10px]"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button id="mobile-menu-btn" class="md:hidden w-10 h-10 rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-secondary)] flex items-center justify-center text-[var(--text-primary)]" aria-label="Toggle mobile menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-b border-[var(--border-subtle)] bg-[var(--bg-secondary)] px-6 py-5 flex flex-col gap-4 shadow-xl">
+      <div class="flex items-center justify-between pb-3 border-b border-[var(--border-subtle)]">
+        <span class="text-xs text-[var(--text-muted)] font-mono">Language / زبان</span>
+        <a href="fa.html" class="px-3 py-1 rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-xs font-bold text-indigo-400 flex items-center gap-1.5">
+          <i class="fas fa-globe"></i> مشاهده به فارسی
+        </a>
+      </div>
+      <a href="#services" class="nav-link text-sm py-2 text-[var(--text-secondary)] hover:text-white">Consulting Services</a>
+      <a href="#case-studies" class="nav-link text-sm py-2 text-[var(--text-secondary)] hover:text-white">Featured Case Studies</a>
+      <a href="#playbook" class="nav-link text-sm py-2 text-[var(--text-secondary)] hover:text-white">Delivery Playbook</a>
+      <a href="#companies-resume" class="nav-link text-sm py-2 text-[var(--text-secondary)] hover:text-white">Companies & Resume</a>
+      <a href="#contact" class="nav-link text-sm py-2 text-indigo-400 font-semibold hover:text-white flex items-center gap-2">
+        <i class="fas fa-paper-plane text-xs"></i> Contact Me
+      </a>
+      <div class="pt-4 border-t border-[var(--border-subtle)] flex flex-col gap-3">
+        <button class="open-call-modal btn-primary w-full py-2.5 rounded-xl text-xs font-bold flex items-center justify-center gap-2">
+          <span>Schedule Strategic Advisory Call</span>
+          <i class="fas fa-arrow-right text-[10px]"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="relative z-10 pt-28 pb-20 overflow-hidden">
+
+    <!-- ==========================================================================
+         SECTION 1: HERO HEADER
+         ========================================================================== -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-14 lg:pt-12 lg:pb-18">
+      <div class="max-w-4xl mx-auto text-center space-y-6">
+        
+        <!-- Badge / Pill Tag -->
+        <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-300 text-xs font-semibold tracking-wide">
+          <span class="pulse-dot"></span>
+          <span>Data & Digital Transformation Consultant | MBA | PMP®</span>
+        </div>
+
+        <!-- Main Headline -->
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15] text-[var(--text-primary)]">
+          Strategic Advisory for <span class="gradient-text-indigo">High-Impact Tech & Data Delivery</span>.
+        </h1>
+
+        <!-- Sub-headline -->
+        <p class="text-lg sm:text-xl lg:text-2xl text-[var(--text-secondary)] font-normal leading-relaxed max-w-3xl mx-auto">
+          Independent consulting and fractional leadership to help enterprise and high-growth organizations structure teams, remove delivery bottlenecks, and execute critical roadmaps.
+        </p>
+
+        <!-- Key Metric Highlights (3-Column Mini Bar) -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-3 max-w-3xl mx-auto text-left">
+          
+          <div class="metric-card">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-xs font-mono text-[var(--text-muted)] uppercase tracking-wider">Experience</span>
+              <div class="w-6 h-6 rounded-lg bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-xs">
+                <i class="fas fa-briefcase"></i>
+              </div>
+            </div>
+            <div class="text-2xl sm:text-3xl font-extrabold text-[var(--text-primary)] font-mono mb-1">7+ Years</div>
+            <p class="text-xs text-[var(--text-secondary)] leading-snug">Leading digital & data transformation initiatives</p>
+          </div>
+
+          <div class="metric-card">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-xs font-mono text-[var(--text-muted)] uppercase tracking-wider">Throughput</span>
+              <div class="w-6 h-6 rounded-lg bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-xs">
+                <i class="fas fa-users"></i>
+              </div>
+            </div>
+            <div class="text-2xl sm:text-3xl font-extrabold text-[var(--text-primary)] font-mono mb-1">500K+ DAU</div>
+            <p class="text-xs text-[var(--text-secondary)] leading-snug">50M+ platform scale & operational workflow experience</p>
+          </div>
+
+          <div class="metric-card">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-xs font-mono text-[var(--text-muted)] uppercase tracking-wider">Footprint</span>
+              <div class="w-6 h-6 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xs">
+                <i class="fas fa-globe"></i>
+              </div>
+            </div>
+            <div class="text-2xl sm:text-3xl font-extrabold text-[var(--text-primary)] font-mono mb-1">Global Impact</div>
+            <p class="text-xs text-[var(--text-secondary)] leading-snug">Multi-region transformations across the globe</p>
+          </div>
+
+        </div>
+
+        <!-- Trusted Ecosystems (1 Row Trust Bar) -->
+        <div class="pt-1">
+          <div class="inline-flex flex-nowrap items-center justify-center gap-4 sm:gap-6 px-4 py-2.5 rounded-2xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] text-xs text-[var(--text-secondary)] font-medium overflow-x-auto max-w-full">
+            <div class="flex items-center gap-2 shrink-0">
+              <i class="fas fa-industry text-indigo-400"></i>
+              <span>Atlas Copco</span>
+            </div>
+            <span class="text-[var(--text-muted)] opacity-40 shrink-0">•</span>
+            <div class="flex items-center gap-2 shrink-0">
+              <i class="fas fa-rocket text-cyan-400"></i>
+              <span>Snapp! (50M+ Users)</span>
+            </div>
+            <span class="text-[var(--text-muted)] opacity-40 shrink-0">•</span>
+            <div class="flex items-center gap-2 shrink-0">
+              <i class="fas fa-network-wired text-emerald-400"></i>
+              <span>Parspooyesh Telecom</span>
+            </div>
+            <span class="text-[var(--text-muted)] opacity-40 shrink-0">•</span>
+            <div class="flex items-center gap-2 shrink-0">
+              <i class="fas fa-chart-line text-amber-400"></i>
+              <span>Iran Mercantile Exchange</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Call to Actions -->
+        <div class="flex flex-wrap items-center justify-center gap-4 pt-3">
+          <button class="open-call-modal btn-primary px-8 py-4 rounded-xl font-bold text-sm tracking-wide flex items-center gap-2.5 shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/40">
+            <i class="fas fa-calendar-check"></i>
+            <span>Schedule Strategic Advisory Call</span>
+          </button>
+          
+          <a href="#case-studies" class="btn-secondary px-7 py-4 rounded-xl font-semibold text-sm flex items-center gap-2">
+            <span>Explore Case Studies</span>
+            <i class="fas fa-arrow-down text-xs"></i>
+          </a>
+
+          <button class="open-cv-modal btn-secondary px-5 py-4 rounded-xl font-semibold text-sm flex items-center gap-2">
+            <i class="fas fa-file-pdf text-red-400"></i>
+            <span>Download 1-Page PDF Resume</span>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 2: REFINED 4-PILLAR SERVICE STRUCTURE
+         ========================================================================== -->
+    <section id="services" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 scroll-mt-24">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+        <span class="text-xs uppercase font-mono font-bold tracking-widest text-indigo-400 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20">4-Pillar Service Structure</span>
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Consulting & Advisory Services</h2>
+        <p class="text-base text-[var(--text-secondary)]">
+          Targeted engagement models tailored to high-growth and enterprise product, engineering, and data organizations.
+        </p>
+      </div>
+
+      <!-- 4-Pillar Services Grid Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+        
+        <!-- Pillar 1: Fractional Product & Delivery Leadership -->
+        <div class="glass-card p-6 sm:p-8 flex flex-col justify-between group border-l-4 border-l-indigo-500">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-mono font-bold text-indigo-400 uppercase tracking-wider">Pillar 01</span>
+              <div class="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center border border-indigo-500/20 group-hover:scale-110 transition-transform">
+                <i class="fas fa-chess-queen"></i>
+              </div>
+            </div>
+            
+            <h3 class="text-xl font-bold text-[var(--text-primary)] mb-2">Fractional Product & Delivery Leadership</h3>
+            
+            <!-- Target Teams Badge -->
+            <div class="mb-4">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-[var(--bg-tertiary)] border border-[var(--border-subtle)] font-mono text-[11px] text-indigo-300 font-semibold">
+                <i class="fas fa-users-gear text-indigo-400 text-xs"></i>
+                <span>Target Teams: Engineering, Product & Data Teams</span>
+              </span>
+            </div>
+
+            <!-- Core Value Statement (Always Visible) -->
+            <div class="p-4 rounded-xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] space-y-1.5 text-xs">
+              <span class="font-mono text-emerald-400 font-bold uppercase tracking-wider block flex items-center gap-1.5">
+                <i class="fas fa-bullseye text-xs"></i> Core Value:
+              </span>
+              <p class="text-[var(--text-primary)] leading-relaxed font-medium">
+                Structures delivery governance, aligns cross-functional roadmaps with executive OKRs, and manages technical/business risk.
+              </p>
+            </div>
+
+            <!-- Interactive Accordion Toggle Button -->
+            <button class="pillar-toggle-btn w-full mt-3 py-2.5 px-4 rounded-xl bg-[var(--bg-tertiary)] border border-[var(--border-subtle)] hover:border-indigo-500/40 text-xs font-semibold text-[var(--text-secondary)] hover:text-white flex items-center justify-between transition-all" aria-expanded="false">
+              <span class="flex items-center gap-2">
+                <i class="fas fa-list-check text-indigo-400"></i>
+                <span>View Concrete Deliverables & Scope</span>
+              </span>
+              <i class="fas fa-chevron-down text-[10px] transition-transform duration-300"></i>
+            </button>
+
+            <!-- Expandable Deliverables Content (Initially Hidden) -->
+            <div class="pillar-details-content hidden pt-3 space-y-2 text-xs border-t border-[var(--border-subtle)] mt-3">
+              <div class="space-y-1.5 text-[var(--text-secondary)]">
+                <div class="flex items-start gap-2">
+                  <i class="fas fa-check text-indigo-400 mt-1 shrink-0 text-[10px]"></i>
+                  <span>Executive OKR, roadmap synchronization, and strategic backlog governance.</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <i class="fas fa-check text-indigo-400 mt-1 shrink-0 text-[10px]"></i>
+                  <span>Cross-functional delivery rituals auditing and blocker remediation.</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <i class="fas fa-check text-indigo-400 mt-1 shrink-0 text-[10px]"></i>
+                  <span>Technical debt vs. product value prioritization frameworks.</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <i class="fas fa-check text-indigo-400 mt-1 shrink-0 text-[10px]"></i>
+                  <span>Interim leadership & key engineering/PM hiring advisement.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-[var(--border-subtle)] flex items-center justify-between">
+            <span class="text-xs font-mono text-[var(--text-muted)]">1–2 Days / Week Embedded</span>
+            <button class="open-call-modal text-xs font-bold text-indigo-400 hover:text-indigo-300 flex items-center gap-1.5">
+              Discuss Scope <i class="fas fa-arrow-right text-[10px]"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Pillar 2: Team Coaching & Capability Building -->
+        <div class="glass-card p-6 sm:p-8 flex flex-col justify-between group border-l-4 border-l-amber-500">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-mono font-bold text-amber-400 uppercase tracking-wider">Pillar 02</span>
+              <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center border border-amber-500/20 group-hover:scale-110 transition-transform">
+                <i class="fas fa-user-graduate"></i>
+              </div>
+            </div>
+            
+            <h3 class="text-xl font-bold text-[var(--text-primary)] mb-2">Team Coaching & Capability Building</h3>
+            
+            <!-- Target Teams Badge -->
+            <div class="mb-4">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-[var(--bg-tertiary)] border border-[var(--border-subtle)] font-mono text-[11px] text-amber-300 font-semibold">
+                <i class="fas fa-users text-amber-400 text-xs"></i>
+                <span>Target Teams: Developers, Data PMs, Analysts & Engineers</span>
+              </span>
+            </div>
+
+            <!-- Core Value Statement (Always Visible) -->
+            <div class="p-4 rounded-xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] space-y-1.5 text-xs">
+              <span class="font-mono text-emerald-400 font-bold uppercase tracking-wider block flex items-center gap-1.5">
+                <i class="fas fa-bullseye text-xs"></i> Core Value:
+              </span>
+              <p class="text-[var(--text-primary)] leading-relaxed font-medium">
+                Upskills technical teams in product discovery, business-value ownership, and structured stakeholder communication.
+              </p>
+            </div>
+
+            <!-- Interactive Accordion Toggle Button -->
+            <button class="pillar-toggle-btn w-full mt-3 py-2.5 px-4 rounded-xl bg-[var(--bg-tertiary)] border border-[var(--border-subtle)] hover:border-amber-500/40 text-xs font-semibold text-[var(--text-secondary)] hover:text-white flex items-center justify-between transition-all" aria-expanded="false">
+              <span class="flex items-center gap-2">
+                <i class="fas fa-list-check text-amber-400"></i>
+                <span>View Concrete Deliverables & Scope</span>
+              </span>
+              <i class="fas fa-chevron-down text-[10px] transition-transform duration-300"></i>
+            </button>
+
+            <!-- Expandable Deliverables Content (Initially Hidden) -->
+            <div class="pillar-details-content hidden pt-3 space-y-2 text-xs border-t border-[var(--border-subtle)] mt-3">
+              <div class="space-y-1.5 text-[var(--text-secondary)]">
+                <div class="flex items-start gap-2">
+                  <i class="fas fa-check text-amber-400 mt-1 shrink-0 text-[10px]"></i>
+                  <span>Modern product discovery & user story mapping workshops.</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <i class="fas fa-check text-amber-400 mt-1 shrink-0 text-[10px]"></i>
+                  <span>Mentorship for data product managers, engineers, and analysts.</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <i class="fas fa-check text-amber-400 mt-1 shrink-0 text-[10px]"></i>
+                  <span>Translating complex data/tech outputs into executive business ROI.</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <i class="fas fa-check text-amber-400 mt-1 shrink-0 text-[10px]"></i>
+                  <span>Async communication standards and structured stakeholder management.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-[var(--border-subtle)] flex items-center justify-between">
+            <span class="text-xs font-mono text-[var(--text-muted)]">1-on-1 Mentorship & Workshops</span>
+            <button class="open-call-modal text-xs font-bold text-amber-400 hover:text-amber-300 flex items-center gap-1.5">
+              Discuss Scope <i class="fas fa-arrow-right text-[10px]"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Pillar 3: Pragmatic Agile Adoption & Delivery Rituals -->
+        <div class="glass-card p-6 sm:p-8 flex flex-col justify-between group border-l-4 border-l-emerald-500">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-mono font-bold text-emerald-400 uppercase tracking-wider">Pillar 03</span>
+              <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center border border-emerald-500/20 group-hover:scale-110 transition-transform">
+                <i class="fas fa-repeat"></i>
+              </div>
+            </div>
+            
+            <h3 class="text-xl font-bold text-[var(--text-primary)] mb-2">Pragmatic Agile Adoption & Delivery Rituals</h3>
+            
+            <!-- Target Teams Badge -->
+            <div class="mb-4">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-[var(--bg-tertiary)] border border-[var(--border-subtle)] font-mono text-[11px] text-emerald-300 font-semibold">
+                <i class="fas fa-laptop-code text-emerald-400 text-xs"></i>
+                <span>Target Teams: Software Dev, QA, Data & DevOps Teams</span>
+              </span>
+            </div>
+
+            <!-- Core Value Statement (Always Visible) -->
+            <div class="p-4 rounded-xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] space-y-1.5 text-xs">
+              <span class="font-mono text-emerald-400 font-bold uppercase tracking-wider block flex items-center gap-1.5">
+                <i class="fas fa-bullseye text-xs"></i> Core Value:
+              </span>
+              <p class="text-[var(--text-primary)] leading-relaxed font-medium">
+                Implements lean Scrum/Kanban frameworks, eliminates sprint bottlenecks, establishes predictable velocity, and optimizes release cadences.
+              </p>
+            </div>
+
+            <!-- Interactive Accordion Toggle Button -->
+            <button class="pillar-toggle-btn w-full mt-3 py-2.5 px-4 rounded-xl bg-[var(--bg-tertiary)] border border-[var(--border-subtle)] hover:border-emerald-500/40 text-xs font-semibold text-[var(--text-secondary)] hover:text-white flex items-center justify-between transition-all" aria-expanded="false">
+              <span class="flex items-center gap-2">
+                <i class="fas fa-list-check text-emerald-400"></i>
+                <span>View Concrete Deliverables & Scope</span>
+              </span>
+              <i class="fas fa-chevron-down text-[10px] transition-transform duration-300"></i>
+            </button>
+
+            <!-- Expandable Deliverables Content (Initially Hidden) -->
+            <div class="pillar-details-content hidden pt-3 space-y-2 text-xs border-t border-[var(--border-subtle)] mt-3">
+              <div class="space-y-1.5 text-[var(--text-secondary)]">
+                <div class="flex items-start gap-2">
+                  <i class="fas fa-check text-emerald-400 mt-1 shrink-0 text-[10px]"></i>
+                  <span>Tailored Scrum & Kanban ceremonies removing unnecessary meeting bloat.</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <i class="fas fa-check text-emerald-400 mt-1 shrink-0 text-[10px]"></i>
+                  <span>Velocity baseline calculation and estimation stabilization.</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <i class="fas fa-check text-emerald-400 mt-1 shrink-0 text-[10px]"></i>
+                  <span>Automated release gating & CI/CD workflow synchronization.</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <i class="fas fa-check text-emerald-400 mt-1 shrink-0 text-[10px]"></i>
+                  <span>Retrospective action item tracking and continuous capability reviews.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-[var(--border-subtle)] flex items-center justify-between">
+            <span class="text-xs font-mono text-[var(--text-muted)]">4–6 Week Diagnostics & Cadences</span>
+            <button class="open-call-modal text-xs font-bold text-emerald-400 hover:text-emerald-300 flex items-center gap-1.5">
+              Discuss Scope <i class="fas fa-arrow-right text-[10px]"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Pillar 4: Data Governance & KPI Architecture -->
+        <div class="glass-card p-6 sm:p-8 flex flex-col justify-between group border-l-4 border-l-cyan-500">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-mono font-bold text-cyan-400 uppercase tracking-wider">Pillar 04</span>
+              <div class="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center border border-cyan-500/20 group-hover:scale-110 transition-transform">
+                <i class="fas fa-sitemap"></i>
+              </div>
+            </div>
+            
+            <h3 class="text-xl font-bold text-[var(--text-primary)] mb-2">Data Governance & KPI Architecture</h3>
+            
+            <!-- Target Teams Badge -->
+            <div class="mb-4">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-[var(--bg-tertiary)] border border-[var(--border-subtle)] font-mono text-[11px] text-cyan-300 font-semibold">
+                <i class="fas fa-chart-pie text-cyan-400 text-xs"></i>
+                <span>Target Teams: Leadership, BI & Analytics Teams</span>
+              </span>
+            </div>
+
+            <!-- Core Value Statement (Always Visible) -->
+            <div class="p-4 rounded-xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] space-y-1.5 text-xs">
+              <span class="font-mono text-emerald-400 font-bold uppercase tracking-wider block flex items-center gap-1.5">
+                <i class="fas fa-bullseye text-xs"></i> Core Value:
+              </span>
+              <p class="text-[var(--text-primary)] leading-relaxed font-medium">
+                Designs cascading metric trees, self-serve reporting architectures, and lightweight governance linking tech output to commercial revenue.
+              </p>
+            </div>
+
+            <!-- Interactive Accordion Toggle Button -->
+            <button class="pillar-toggle-btn w-full mt-3 py-2.5 px-4 rounded-xl bg-[var(--bg-tertiary)] border border-[var(--border-subtle)] hover:border-cyan-500/40 text-xs font-semibold text-[var(--text-secondary)] hover:text-white flex items-center justify-between transition-all" aria-expanded="false">
+              <span class="flex items-center gap-2">
+                <i class="fas fa-list-check text-cyan-400"></i>
+                <span>View Concrete Deliverables & Scope</span>
+              </span>
+              <i class="fas fa-chevron-down text-[10px] transition-transform duration-300"></i>
+            </button>
+
+            <!-- Expandable Deliverables Content (Initially Hidden) -->
+            <div class="pillar-details-content hidden pt-3 space-y-2 text-xs border-t border-[var(--border-subtle)] mt-3">
+              <div class="space-y-1.5 text-[var(--text-secondary)]">
+                <div class="flex items-start gap-2">
+                  <i class="fas fa-check text-cyan-400 mt-1 shrink-0 text-[10px]"></i>
+                  <span>North Star and cascading operational metric tree architecture.</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <i class="fas fa-check text-cyan-400 mt-1 shrink-0 text-[10px]"></i>
+                  <span>Self-serve BI modeling (Power BI / Looker) with single source of truth.</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <i class="fas fa-check text-cyan-400 mt-1 shrink-0 text-[10px]"></i>
+                  <span>Cloud data lakehouse migration roadmaps (Azure / Databricks).</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <i class="fas fa-check text-cyan-400 mt-1 shrink-0 text-[10px]"></i>
+                  <span>Lightweight data quality and access control governance.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-[var(--border-subtle)] flex items-center justify-between">
+            <span class="text-xs font-mono text-[var(--text-muted)]">Data Modernization & Metric Governance</span>
+            <button class="open-call-modal text-xs font-bold text-cyan-400 hover:text-cyan-300 flex items-center gap-1.5">
+              Discuss Scope <i class="fas fa-arrow-right text-[10px]"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 3: FEATURED CASE STUDIES
+         ========================================================================== -->
+    <section id="case-studies" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 scroll-mt-24">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+        <span class="text-xs uppercase font-mono font-bold tracking-widest text-emerald-400 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20">Proof of Execution</span>
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Featured Case Studies</h2>
+        <p class="text-base text-[var(--text-secondary)]">
+          Deep dives into real-world transformations executed across multinational industrial and hyper-growth platforms.
+        </p>
+      </div>
+
+      <div class="space-y-10">
+        
+        <!-- Case Study 1: Enterprise Cloud & Analytics Transformation -->
+        <div class="glass-card p-8 sm:p-10 border border-indigo-500/30">
+          <div class="flex flex-col lg:flex-row lg:items-center justify-between pb-6 border-b border-[var(--border-subtle)] gap-4 mb-6">
+            <div>
+              <span class="text-xs font-mono text-indigo-400 font-bold uppercase tracking-wider block mb-1">Case Study 01</span>
+              <h3 class="text-2xl sm:text-3xl font-bold text-[var(--text-primary)]">Enterprise Cloud & Analytics Transformation</h3>
+              <p class="text-xs text-[var(--text-muted)] font-medium mt-1">Multinational Industrial (Atlas Copco • Global Purchasing and Logistics SAP Data Products)</p>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-lg bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 text-xs font-mono font-bold">Azure & Databricks</span>
+              <span class="px-3 py-1 rounded-lg bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 text-xs font-mono font-bold">SAP Modernization</span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Context -->
+            <div class="p-5 rounded-2xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] space-y-2.5">
+              <div class="flex items-center gap-2 text-xs font-mono font-bold text-red-400 uppercase tracking-wider">
+                <i class="fas fa-circle-exclamation"></i> Context
+              </div>
+              <p class="text-xs text-[var(--text-secondary)] leading-relaxed">
+                Fragmented legacy reporting and disparate operational data across Europe and India purchasing and logistics units.
+              </p>
+            </div>
+
+            <!-- Action -->
+            <div class="p-5 rounded-2xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] space-y-2.5">
+              <div class="flex items-center gap-2 text-xs font-mono font-bold text-indigo-400 uppercase tracking-wider">
+                <i class="fas fa-gears"></i> Action
+              </div>
+              <p class="text-xs text-[var(--text-secondary)] leading-relaxed">
+                Led SAP-to-cloud transformation utilizing Azure and Databricks architectures while aligning regional stakeholder requirements.
+              </p>
+            </div>
+
+            <!-- Impact -->
+            <div class="p-5 rounded-2xl bg-gradient-to-b from-indigo-950/40 to-[var(--bg-secondary)] border border-indigo-500/30 space-y-2.5">
+              <div class="flex items-center gap-2 text-xs font-mono font-bold text-emerald-400 uppercase tracking-wider">
+                <i class="fas fa-chart-line"></i> Impact
+              </div>
+              <p class="text-xs text-[var(--text-primary)] leading-relaxed font-medium">
+                Delivered ~10% quarter-over-quarter growth in dashboard adoption and unified cross-regional operational visibility.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Case Study 2: Scaled Platform Workflow Hub -->
+        <div class="glass-card p-8 sm:p-10 border border-cyan-500/30">
+          <div class="flex flex-col lg:flex-row lg:items-center justify-between pb-6 border-b border-[var(--border-subtle)] gap-4 mb-6">
+            <div>
+              <span class="text-xs font-mono text-cyan-400 font-bold uppercase tracking-wider block mb-1">Case Study 02</span>
+              <h3 class="text-2xl sm:text-3xl font-bold text-[var(--text-primary)]">Scaled Platform Workflow Hub</h3>
+              <p class="text-xs text-[var(--text-muted)] font-medium mt-1">High-Growth Super-App (Snapp! • 50M+ Users & 3M+ Daily Rides)</p>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-lg bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 text-xs font-mono font-bold">500K+ DAU</span>
+              <span class="px-3 py-1 rounded-lg bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-mono font-bold">87% OKR Attainment</span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Context -->
+            <div class="p-5 rounded-2xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] space-y-2.5">
+              <div class="flex items-center gap-2 text-xs font-mono font-bold text-red-400 uppercase tracking-wider">
+                <i class="fas fa-circle-exclamation"></i> Context
+              </div>
+              <p class="text-xs text-[var(--text-secondary)] leading-relaxed">
+                Managing delivery and alignment for operational workflows across a high-volume multi-service platform.
+              </p>
+            </div>
+
+            <!-- Action -->
+            <div class="p-5 rounded-2xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] space-y-2.5">
+              <div class="flex items-center gap-2 text-xs font-mono font-bold text-cyan-400 uppercase tracking-wider">
+                <i class="fas fa-gears"></i> Action
+              </div>
+              <p class="text-xs text-[var(--text-secondary)] leading-relaxed">
+                Directed data product strategy and execution for the unified Order Center; implemented structured OKR delivery cadences.
+              </p>
+            </div>
+
+            <!-- Impact -->
+            <div class="p-5 rounded-2xl bg-gradient-to-b from-cyan-950/40 to-[var(--bg-secondary)] border border-cyan-500/30 space-y-2.5">
+              <div class="flex items-center gap-2 text-xs font-mono font-bold text-emerald-400 uppercase tracking-wider">
+                <i class="fas fa-chart-line"></i> Impact
+              </div>
+              <p class="text-xs text-[var(--text-primary)] leading-relaxed font-medium">
+                Supported 500K+ daily active users and achieved 87% OKR attainment across cross-functional product squads.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Case Study 3: Large-Scale Public Sector BI & Scoring Infrastructure -->
+        <div class="glass-card p-8 sm:p-10 border border-emerald-500/30">
+          <div class="flex flex-col lg:flex-row lg:items-center justify-between pb-6 border-b border-[var(--border-subtle)] gap-4 mb-6">
+            <div>
+              <span class="text-xs font-mono text-emerald-400 font-bold uppercase tracking-wider block mb-1">Case Study 03</span>
+              <h3 class="text-2xl sm:text-3xl font-bold text-[var(--text-primary)]">Large-Scale Public Sector BI & Scoring Infrastructure</h3>
+              <p class="text-xs text-[var(--text-muted)] font-medium mt-1">Enterprise & Government Initiatives (Iran Mercantile Exchange & Parspooyesh / ICADB)</p>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-lg bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-mono font-bold">12,000+ Accounts</span>
+              <span class="px-3 py-1 rounded-lg bg-amber-500/10 text-amber-400 border border-amber-500/20 text-xs font-mono font-bold">96% Delivery Rate</span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Context -->
+            <div class="p-5 rounded-2xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] space-y-2.5">
+              <div class="flex items-center gap-2 text-xs font-mono font-bold text-red-400 uppercase tracking-wider">
+                <i class="fas fa-circle-exclamation"></i> Context
+              </div>
+              <p class="text-xs text-[var(--text-secondary)] leading-relaxed">
+                Manual workflows and complex data tracking across enterprise and government-scale initiatives.
+              </p>
+            </div>
+
+            <!-- Action -->
+            <div class="p-5 rounded-2xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] space-y-2.5">
+              <div class="flex items-center gap-2 text-xs font-mono font-bold text-emerald-400 uppercase tracking-wider">
+                <i class="fas fa-gears"></i> Action
+              </div>
+              <p class="text-xs text-[var(--text-secondary)] leading-relaxed">
+                Managed delivery of the automated credit-scoring engine (Iran Mercantile Exchange) and the nationwide ICADB BI initiative.
+              </p>
+            </div>
+
+            <!-- Impact -->
+            <div class="p-5 rounded-2xl bg-gradient-to-b from-emerald-950/40 to-[var(--bg-secondary)] border border-emerald-500/30 space-y-2.5">
+              <div class="flex items-center gap-2 text-xs font-mono font-bold text-emerald-400 uppercase tracking-wider">
+                <i class="fas fa-chart-line"></i> Impact
+              </div>
+              <p class="text-xs text-[var(--text-primary)] leading-relaxed font-medium">
+                Streamlined evaluation for 12,000+ enterprise accounts and achieved 96% of planned program objectives.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 4: DELIVERY PLAYBOOK ("HOW I WORK")
+         ========================================================================== -->
+    <section id="playbook" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 scroll-mt-24">
+      
+      <div class="glass-card p-8 sm:p-12 border border-[var(--border-focus)]">
+        
+        <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+          <span class="text-xs uppercase font-mono font-bold tracking-widest text-cyan-400 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20">Operational Methodology</span>
+          <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Delivery Playbook ("How I Work")</h2>
+          <p class="text-base text-[var(--text-secondary)]">
+            A structured 4-phase delivery system ensuring rapid time-to-value and predictable execution.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Phase 1 -->
+          <div class="p-6 rounded-2xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] space-y-4 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="w-9 h-9 rounded-xl bg-indigo-500/10 text-indigo-400 font-mono font-bold flex items-center justify-center border border-indigo-500/20">P1</span>
+                <span class="text-[11px] font-mono text-indigo-400 font-bold px-2 py-0.5 rounded bg-indigo-500/10">Weeks 1–2</span>
+              </div>
+              <h4 class="text-lg font-bold text-[var(--text-primary)] mb-2">Phase 1: Discover & Baseline</h4>
+              <ul class="text-xs text-[var(--text-secondary)] space-y-2 list-disc list-inside">
+                <li>Audit existing delivery cadences, tech stack dependencies, and metric bottlenecks.</li>
+                <li>Align with executive sponsors on measurable commercial OKRs.</li>
+              </ul>
+            </div>
+            <div class="pt-3 border-t border-[var(--border-subtle)] text-[11px] text-[var(--text-muted)] font-mono">
+              Audit & OKR Alignment
+            </div>
+          </div>
+
+          <!-- Phase 2 -->
+          <div class="p-6 rounded-2xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] space-y-4 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="w-9 h-9 rounded-xl bg-cyan-500/10 text-cyan-400 font-mono font-bold flex items-center justify-center border border-cyan-500/20">P2</span>
+                <span class="text-[11px] font-mono text-cyan-400 font-bold px-2 py-0.5 rounded bg-cyan-500/10">Weeks 3–4</span>
+              </div>
+              <h4 class="text-lg font-bold text-[var(--text-primary)] mb-2">Phase 2: Strategy & Architecture</h4>
+              <ul class="text-xs text-[var(--text-secondary)] space-y-2 list-disc list-inside">
+                <li>Establish cascading KPI trees and prioritize high-value product roadmaps.</li>
+                <li>Design lightweight governance and cross-functional team interfaces.</li>
+              </ul>
+            </div>
+            <div class="pt-3 border-t border-[var(--border-subtle)] text-[11px] text-[var(--text-muted)] font-mono">
+              KPI Trees & Roadmap
+            </div>
+          </div>
+
+          <!-- Phase 3 -->
+          <div class="p-6 rounded-2xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] space-y-4 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="w-9 h-9 rounded-xl bg-emerald-500/10 text-emerald-400 font-mono font-bold flex items-center justify-center border border-emerald-500/20">P3</span>
+                <span class="text-[11px] font-mono text-emerald-400 font-bold px-2 py-0.5 rounded bg-emerald-500/10">Weeks 5–10</span>
+              </div>
+              <h4 class="text-lg font-bold text-[var(--text-primary)] mb-2">Phase 3: Agile Execution & Modernization</h4>
+              <ul class="text-xs text-[var(--text-secondary)] space-y-2 list-disc list-inside">
+                <li>Drive cloud/BI modernizations (Databricks, Azure, Power BI).</li>
+                <li>Implement pragmatic agile delivery cadences and eliminate sprint blockers.</li>
+              </ul>
+            </div>
+            <div class="pt-3 border-t border-[var(--border-subtle)] text-[11px] text-[var(--text-muted)] font-mono">
+              Cloud Sprints & Velocity
+            </div>
+          </div>
+
+          <!-- Phase 4 -->
+          <div class="p-6 rounded-2xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] space-y-4 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="w-9 h-9 rounded-xl bg-amber-500/10 text-amber-400 font-mono font-bold flex items-center justify-center border border-amber-500/20">P4</span>
+                <span class="text-[11px] font-mono text-amber-400 font-bold px-2 py-0.5 rounded bg-amber-500/10">Weeks 11–12</span>
+              </div>
+              <h4 class="text-lg font-bold text-[var(--text-primary)] mb-2">Phase 4: Enablement & Handover</h4>
+              <ul class="text-xs text-[var(--text-secondary)] space-y-2 list-disc list-inside">
+                <li>Mentor internal PMs and technical leads on continuous discovery and product ownership.</li>
+                <li>Deliver documentation, self-serve dashboards, and transition leadership back to the internal team.</li>
+              </ul>
+            </div>
+            <div class="pt-3 border-t border-[var(--border-subtle)] text-[11px] text-[var(--text-muted)] font-mono">
+              Autonomous Handover
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 5: COMPANIES & RESUME
+         ========================================================================== -->
+    <section id="companies-resume" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 scroll-mt-24">
+      
+      <!-- Trusted By & Track Record Bar (3 Companies with Logos) -->
+      <div class="glass-card p-8 mb-12 border border-[var(--border-subtle)] text-center">
+        <span class="text-xs font-mono uppercase tracking-widest text-indigo-400 font-bold block mb-6">
+          Trusted By & Track Record
+        </span>
+        <div class="flex flex-wrap items-center justify-center gap-5 sm:gap-8">
+          
+          <!-- Logo 1: Atlas Copco -->
+          <div class="flex items-center gap-3 px-5 py-3 rounded-2xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] hover:border-indigo-500/50 hover:bg-[var(--bg-tertiary)] transition-all shadow-sm group">
+            <div class="w-8 h-8 rounded-lg bg-[#0079C1] flex items-center justify-center text-white shadow-sm group-hover:scale-105 transition-transform">
+              <!-- Atlas Copco Iconic Ring/A Mark -->
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="9" stroke="white" stroke-width="2.2" stroke-dasharray="4 2"/>
+                <path d="M12 6V18M6 12H18" stroke="white" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="text-left">
+              <span class="font-extrabold text-sm sm:text-base text-[var(--text-primary)] tracking-tight block">Atlas Copco</span>
+              <span class="text-[10px] font-mono text-[var(--text-muted)] block">Industrial Enterprise</span>
+            </div>
+          </div>
+
+          <!-- Logo 2: Snapp! (Rocket Internet) -->
+          <div class="flex items-center gap-3 px-5 py-3 rounded-2xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] hover:border-emerald-500/50 hover:bg-[var(--bg-tertiary)] transition-all shadow-sm group">
+            <div class="w-8 h-8 rounded-lg bg-[#00D170] flex items-center justify-center text-white shadow-sm group-hover:scale-105 transition-transform">
+              <!-- Snapp! Iconic Exclamation Mark -->
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 4C10.9 4 10 4.9 10 6L10.5 13C10.5 13.8 11.2 14.5 12 14.5C12.8 14.5 13.5 13.8 13.5 13L14 6C14 4.9 13.1 4 12 4Z"/>
+                <circle cx="12" cy="18" r="1.8"/>
+              </svg>
+            </div>
+            <div class="text-left">
+              <span class="font-extrabold text-sm sm:text-base text-[var(--text-primary)] tracking-tight block">Snapp!</span>
+              <span class="text-[10px] font-mono text-[var(--text-muted)] block">50M+ User Super-App</span>
+            </div>
+          </div>
+
+          <!-- Logo 3: Parspooyesh Telecom -->
+          <div class="flex items-center gap-3 px-5 py-3 rounded-2xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] hover:border-cyan-500/50 hover:bg-[var(--bg-tertiary)] transition-all shadow-sm group">
+            <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-500 to-indigo-600 flex items-center justify-center text-white shadow-sm group-hover:scale-105 transition-transform">
+              <!-- Parspooyesh Connected Network Nodes -->
+              <svg class="w-4.5 h-4.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="2" width="6" height="6" rx="1.5" fill="currentColor" fill-opacity="0.3"/>
+                <rect x="16" y="2" width="6" height="6" rx="1.5" fill="currentColor" fill-opacity="0.3"/>
+                <rect x="9" y="16" width="6" height="6" rx="1.5" fill="currentColor" fill-opacity="0.3"/>
+                <path d="M5 8V12C5 13.1 5.9 14 7 14H17C18.1 14 19 13.1 19 12V8"/>
+                <path d="M12 14V16"/>
+              </svg>
+            </div>
+            <div class="text-left">
+              <span class="font-extrabold text-sm sm:text-base text-[var(--text-primary)] tracking-tight block">Parspooyesh</span>
+              <span class="text-[10px] font-mono text-[var(--text-muted)] block">Telecom Infrastructure</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+        
+        <!-- Left: Career Timeline & Impact Summary (7 cols) -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="space-y-1">
+            <span class="text-xs uppercase font-mono font-bold tracking-widest text-cyan-400">Chronological Track Record</span>
+            <h3 class="text-2xl font-bold text-[var(--text-primary)]">Career Timeline & Impact Summary</h3>
+          </div>
+
+          <div class="space-y-4 text-xs">
+            
+            <!-- Atlas Copco -->
+            <div class="glass-card p-5 rounded-xl space-y-2">
+              <div class="flex flex-wrap justify-between items-baseline gap-2">
+                <h4 class="text-sm font-bold text-[var(--text-primary)]">Project Lead, Data Products & Analytics</h4>
+                <span class="font-mono text-indigo-400 font-semibold px-2 py-0.5 rounded bg-indigo-500/10">April 2023 – Present</span>
+              </div>
+              <div class="text-indigo-300 font-semibold">Atlas Copco • Global Purchasing & Logistics</div>
+              <p class="text-[var(--text-secondary)] leading-relaxed">
+                Led SAP-to-cloud transformation utilizing Azure and Databricks. Delivered ~10% QoQ dashboard adoption growth across European supply chain operations.
+              </p>
+            </div>
+
+            <!-- Snapp! -->
+            <div class="glass-card p-5 rounded-xl space-y-2">
+              <div class="flex flex-wrap justify-between items-baseline gap-2">
+                <h4 class="text-sm font-bold text-[var(--text-primary)]">Data Product Manager</h4>
+                <span class="font-mono text-cyan-400 font-semibold px-2 py-0.5 rounded bg-cyan-500/10">April 2022 – April 2023</span>
+              </div>
+              <div class="text-cyan-300 font-semibold">Snapp! (Rocket Internet Super-App • 50M+ Users)</div>
+              <p class="text-[var(--text-secondary)] leading-relaxed">
+                Directed data product strategy and execution for Snapp Order Center supporting 500K+ daily operators; achieved 87% OKR attainment.
+              </p>
+            </div>
+
+            <!-- Parspooyesh Fanavar -->
+            <div class="glass-card p-5 rounded-xl space-y-2">
+              <div class="flex flex-wrap justify-between items-baseline gap-2">
+                <h4 class="text-sm font-bold text-[var(--text-primary)]">IT Product Owner / BI Project Manager</h4>
+                <span class="font-mono text-emerald-400 font-semibold px-2 py-0.5 rounded bg-emerald-500/10">Dec 2020 – March 2022</span>
+              </div>
+              <div class="text-emerald-300 font-semibold">Parspooyesh Fanavar • Telecom Infrastructure</div>
+              <p class="text-[var(--text-secondary)] leading-relaxed">
+                Delivered operator-scale Mita captive portal (+45% sales surge in 6 months) and managed nationwide ICADB BI initiative (96% goal attainment).
+              </p>
+            </div>
+
+            <!-- PDN Co. -->
+            <div class="glass-card p-5 rounded-xl space-y-2">
+              <div class="flex flex-wrap justify-between items-baseline gap-2">
+                <h4 class="text-sm font-bold text-[var(--text-primary)]">IT Project Manager / Senior Data Analyst</h4>
+                <span class="font-mono text-amber-400 font-semibold px-2 py-0.5 rounded bg-amber-500/10">Nov 2018 – Dec 2020</span>
+              </div>
+              <div class="text-amber-300 font-semibold">PDN Co. • Iran Mercantile Exchange Credit Engine</div>
+              <p class="text-[var(--text-secondary)] leading-relaxed">
+                Delivered automated credit-scoring engine streamlining real-time risk workflows for 12,000+ enterprise accounts.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right: Credentials, Skills & Download (5 cols) -->
+        <div class="lg:col-span-5 space-y-6">
+          
+          <div class="space-y-1">
+            <span class="text-xs uppercase font-mono font-bold tracking-widest text-emerald-400">Verified Credentials</span>
+            <h3 class="text-2xl font-bold text-[var(--text-primary)]">Credentials & Tooling</h3>
+          </div>
+
+          <!-- Certifications Card -->
+          <div class="glass-card p-6 rounded-2xl space-y-3">
+            <h4 class="text-xs font-mono uppercase tracking-wider font-bold text-indigo-400 flex items-center gap-2">
+              <i class="fas fa-certificate"></i> Certifications
+            </h4>
+            <div class="space-y-2 text-xs">
+              <div class="p-2.5 rounded-xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] flex items-center justify-between font-bold text-[var(--text-primary)]">
+                <span>PMP® – Project Management Professional</span>
+                <span class="font-mono text-[10px] text-indigo-400 bg-indigo-500/10 px-2 py-0.5 rounded">PMI</span>
+              </div>
+              <div class="p-2.5 rounded-xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] flex items-center justify-between font-bold text-[var(--text-primary)]">
+                <span>PRINCE2 Agile Foundation</span>
+                <span class="font-mono text-[10px] text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded">Agile</span>
+              </div>
+              <div class="p-2.5 rounded-xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] flex items-center justify-between font-bold text-[var(--text-primary)]">
+                <span>Databricks Fundamentals</span>
+                <span class="font-mono text-[10px] text-red-400 bg-red-500/10 px-2 py-0.5 rounded">Lakehouse</span>
+              </div>
+              <div class="p-2.5 rounded-xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] flex items-center justify-between font-bold text-[var(--text-primary)]">
+                <span>Google Project Management Certificate</span>
+                <span class="font-mono text-[10px] text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded">Google</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education Card -->
+          <div class="glass-card p-6 rounded-2xl space-y-3">
+            <h4 class="text-xs font-mono uppercase tracking-wider font-bold text-cyan-400 flex items-center gap-2">
+              <i class="fas fa-graduation-cap"></i> Education
+            </h4>
+            <div class="space-y-2 text-xs">
+              <div class="p-3 rounded-xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)]">
+                <div class="font-bold text-[var(--text-primary)]">Executive MBA (Marketing)</div>
+                <div class="text-[11px] text-[var(--text-muted)]">IAU, Science and Research Branch (2011–2013)</div>
+              </div>
+              <div class="p-3 rounded-xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)]">
+                <div class="font-bold text-[var(--text-primary)]">B.Eng. in Software Engineering</div>
+                <div class="text-[11px] text-[var(--text-muted)]">IAU, North Tehran Branch (2005–2010)</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Core Tooling Stack -->
+          <div class="glass-card p-6 rounded-2xl space-y-3">
+            <h4 class="text-xs font-mono uppercase tracking-wider font-bold text-emerald-400 flex items-center gap-2">
+              <i class="fas fa-microchip"></i> Core Tooling Stack
+            </h4>
+            <div class="flex flex-wrap gap-2 text-xs">
+              <span class="px-2.5 py-1 rounded-lg bg-[var(--bg-secondary)] border border-[var(--border-subtle)] font-mono text-[var(--text-primary)]">Databricks</span>
+              <span class="px-2.5 py-1 rounded-lg bg-[var(--bg-secondary)] border border-[var(--border-subtle)] font-mono text-[var(--text-primary)]">Microsoft Azure</span>
+              <span class="px-2.5 py-1 rounded-lg bg-[var(--bg-secondary)] border border-[var(--border-subtle)] font-mono text-[var(--text-primary)]">Power BI</span>
+              <span class="px-2.5 py-1 rounded-lg bg-[var(--bg-secondary)] border border-[var(--border-subtle)] font-mono text-[var(--text-primary)]">Atlassian (Jira & Confluence)</span>
+              <span class="px-2.5 py-1 rounded-lg bg-[var(--bg-secondary)] border border-[var(--border-subtle)] font-mono text-[var(--text-primary)]">Agile / Scrum</span>
+            </div>
+          </div>
+
+          <!-- Download Button -->
+          <div class="pt-2">
+            <button class="open-cv-modal btn-primary w-full py-3.5 rounded-xl font-bold text-xs flex items-center justify-center gap-2 shadow-lg shadow-indigo-500/25">
+              <i class="fas fa-file-pdf"></i>
+              <span>Download 1-Page PDF Resume</span>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 6: CONTACT ME & COLLABORATION
+         ========================================================================== -->
+    <section id="contact" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 scroll-mt-24">
+      <div class="glass-card p-8 sm:p-14 border border-indigo-500/40 bg-gradient-to-b from-indigo-950/40 via-[var(--bg-secondary)] to-[var(--bg-primary)]">
+        
+        <div class="max-w-3xl mx-auto text-center space-y-6 mb-10">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold">
+            <span class="pulse-dot"></span>
+            <span>Currently Scheduling Fractional & Advisory Engagements</span>
+          </div>
+
+          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-[var(--text-primary)]">
+            Let's Connect & Build Together.
+          </h2>
+
+          <p class="text-sm sm:text-base text-[var(--text-secondary)] max-w-xl mx-auto leading-relaxed">
+            Reach out directly for fractional leadership inquiries, delivery diagnostics, agile coaching, or advisory discussions.
+          </p>
+        </div>
+
+        <!-- 4 Direct Contact & Channel Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          
+          <!-- Card 1: Direct Email -->
+          <div class="p-6 rounded-2xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] hover:border-indigo-500/50 transition-all flex flex-col justify-between space-y-4">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-base mb-3 border border-indigo-500/20">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <span class="text-xs font-mono font-bold text-indigo-400 uppercase tracking-wider block mb-1">Direct Email</span>
+              <div class="font-mono font-bold text-xs sm:text-sm text-[var(--text-primary)] break-all mb-1">ali.maleki100@gmail.com</div>
+              <p class="text-xs text-[var(--text-secondary)]">Direct inbox for project inquiries and advisory requests.</p>
+            </div>
+            <div class="pt-3 border-t border-[var(--border-subtle)] flex items-center gap-2">
+              <a href="mailto:ali.maleki100@gmail.com" class="btn-primary flex-1 py-2 rounded-xl text-xs font-bold text-center flex items-center justify-center gap-1.5">
+                <i class="fas fa-paper-plane text-[10px]"></i> Send Email
+              </a>
+              <button class="copy-email-btn px-3 py-2 rounded-xl bg-[var(--bg-tertiary)] border border-[var(--border-subtle)] hover:border-indigo-500/40 text-xs text-[var(--text-secondary)] hover:text-white" title="Copy email address">
+                <i class="fas fa-copy"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 2: LinkedIn Profile -->
+          <div class="p-6 rounded-2xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] hover:border-cyan-500/50 transition-all flex flex-col justify-between space-y-4">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-base mb-3 border border-cyan-500/20">
+                <i class="fab fa-linkedin"></i>
+              </div>
+              <span class="text-xs font-mono font-bold text-cyan-400 uppercase tracking-wider block mb-2">LinkedIn Network</span>
+              <p class="text-xs text-[var(--text-secondary)] leading-relaxed">Connect for leadership insights, strategic frameworks, and professional networking.</p>
+            </div>
+            <div class="pt-3 border-t border-[var(--border-subtle)]">
+              <a href="https://www.linkedin.com/in/alimaleki100/" target="_blank" rel="noopener noreferrer" class="btn-secondary w-full py-2 rounded-xl text-xs font-bold text-center flex items-center justify-center gap-1.5 hover:border-cyan-500/50">
+                <span>View LinkedIn</span>
+                <i class="fas fa-arrow-up-right-from-square text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 3: Medium Publications -->
+          <div class="p-6 rounded-2xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] hover:border-amber-500/50 transition-all flex flex-col justify-between space-y-4">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-base mb-3 border border-amber-500/20">
+                <i class="fab fa-medium"></i>
+              </div>
+              <span class="text-xs font-mono font-bold text-amber-400 uppercase tracking-wider block mb-2">Thought Leadership</span>
+              <p class="text-xs text-[var(--text-secondary)] leading-relaxed">Articles on Agile transformation, modern product discovery, and scalable data governance.</p>
+            </div>
+            <div class="pt-3 border-t border-[var(--border-subtle)]">
+              <a href="https://medium.com/@ali.maleki100" target="_blank" rel="noopener noreferrer" class="btn-secondary w-full py-2 rounded-xl text-xs font-bold text-center flex items-center justify-center gap-1.5 hover:border-amber-500/50">
+                <span>Read on Medium</span>
+                <i class="fas fa-arrow-up-right-from-square text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 4: Strategic Advisory Call -->
+          <div class="p-6 rounded-2xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] hover:border-emerald-500/50 transition-all flex flex-col justify-between space-y-4">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-base mb-3 border border-emerald-500/20">
+                <i class="fas fa-calendar-check"></i>
+              </div>
+              <span class="text-xs font-mono font-bold text-emerald-400 uppercase tracking-wider block mb-1">Discovery Session</span>
+              <div class="font-bold text-xs sm:text-sm text-[var(--text-primary)] mb-1">30-Min Strategic Call</div>
+              <p class="text-xs text-[var(--text-secondary)]">Discuss high-priority roadmaps and engagement fit.</p>
+            </div>
+            <div class="pt-3 border-t border-[var(--border-subtle)]">
+              <button class="open-call-modal btn-primary w-full py-2 rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 shadow-lg shadow-indigo-500/20">
+                <i class="fas fa-calendar-plus text-[10px]"></i>
+                <span>Schedule Call</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="border-t border-[var(--border-subtle)] bg-[var(--bg-secondary)] py-12 text-xs text-[var(--text-secondary)]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+      
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-cyan-500 flex items-center justify-center text-white font-bold text-xs">
+          AM
+        </div>
+        <div>
+          <span class="font-bold text-sm text-[var(--text-primary)]">Ali Maleki</span>
+          <span class="block text-[11px] text-[var(--text-muted)]">Data & Digital Transformation Consultant | MBA | PMP®</span>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-6 text-xs">
+        <a href="mailto:ali.maleki100@gmail.com" class="hover:text-indigo-400 transition-colors flex items-center gap-1.5 font-mono">
+          <i class="fas fa-envelope"></i> ali.maleki100@gmail.com
+        </a>
+        <a href="https://www.linkedin.com/in/alimaleki100/" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-400 transition-colors flex items-center gap-1.5 font-mono">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://medium.com/@ali.maleki100" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-400 transition-colors flex items-center gap-1.5 font-mono">
+          <i class="fab fa-medium"></i> Medium
+        </a>
+        <span class="text-[var(--text-muted)]">Brno, Czech Republic / Remote Global (CET)</span>
+      </div>
+
+      <div class="text-[11px] text-[var(--text-muted)] font-mono">
+        © 2026 Ali Maleki. All rights reserved.
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODAL 1: STRATEGY CONSULTATION & DIRECT INQUIRY
+       ========================================================================== -->
+  <div id="strategy-call-modal" class="fixed inset-0 z-50 modal-overlay hidden items-center justify-center p-4">
+    <div class="glass-card modal-content w-full max-w-xl p-6 sm:p-8 bg-[var(--bg-secondary)] border border-[var(--border-focus)] max-h-[90vh] overflow-y-auto">
+      
+      <div class="flex items-start justify-between border-b border-[var(--border-subtle)] pb-4 mb-6">
+        <div>
+          <span class="text-xs uppercase font-mono font-bold text-indigo-400 tracking-wider block">Initiate Fractional Engagement</span>
+          <h3 class="text-2xl font-bold text-[var(--text-primary)]">Schedule Strategic Advisory Call</h3>
+        </div>
+        <button id="close-call-modal" class="w-8 h-8 rounded-lg bg-[var(--bg-tertiary)] text-[var(--text-muted)] hover:text-white flex items-center justify-center" aria-label="Close modal">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <form id="consulting-contact-form" class="space-y-4 text-xs">
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label for="form-name" class="block font-semibold text-[var(--text-secondary)] mb-1.5 font-mono uppercase tracking-wider">Your Name *</label>
+            <input type="text" id="form-name" required placeholder="Alex Morgan" class="w-full px-3.5 py-2.5 rounded-xl bg-[var(--bg-tertiary)] border border-[var(--border-subtle)] text-[var(--text-primary)] focus:border-indigo-500 outline-none">
+          </div>
+          <div>
+            <label for="form-email" class="block font-semibold text-[var(--text-secondary)] mb-1.5 font-mono uppercase tracking-wider">Work Email *</label>
+            <input type="email" id="form-email" required placeholder="alex@company.com" class="w-full px-3.5 py-2.5 rounded-xl bg-[var(--bg-tertiary)] border border-[var(--border-subtle)] text-[var(--text-primary)] focus:border-indigo-500 outline-none">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label for="form-company" class="block font-semibold text-[var(--text-secondary)] mb-1.5 font-mono uppercase tracking-wider">Company / Org</label>
+            <input type="text" id="form-company" placeholder="Enterprise / Scale-up" class="w-full px-3.5 py-2.5 rounded-xl bg-[var(--bg-tertiary)] border border-[var(--border-subtle)] text-[var(--text-primary)] focus:border-indigo-500 outline-none">
+          </div>
+          <div>
+            <label for="form-service" class="block font-semibold text-[var(--text-secondary)] mb-1.5 font-mono uppercase tracking-wider">Service Focus</label>
+            <select id="form-service" class="w-full px-3.5 py-2.5 rounded-xl bg-[var(--bg-tertiary)] border border-[var(--border-subtle)] text-[var(--text-primary)] focus:border-indigo-500 outline-none">
+              <option value="Fractional Product & Delivery Leadership">Fractional Product & Delivery Leadership</option>
+              <option value="Team Coaching & Capability Building">Team Coaching & Capability Building</option>
+              <option value="Pragmatic Agile Adoption & Delivery Rituals">Pragmatic Agile Adoption & Delivery Rituals</option>
+              <option value="Data Governance & KPI Architecture">Data Governance & KPI Architecture</option>
+              <option value="Strategic Executive Advisory">Strategic Executive Advisory</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label for="form-message" class="block font-semibold text-[var(--text-secondary)] mb-1.5 font-mono uppercase tracking-wider">Current Challenge / Focus Area</label>
+          <textarea id="form-message" rows="4" placeholder="Briefly describe your team structure, delivery bottlenecks, or target outcomes..." class="w-full px-3.5 py-2.5 rounded-xl bg-[var(--bg-tertiary)] border border-[var(--border-subtle)] text-[var(--text-primary)] focus:border-indigo-500 outline-none"></textarea>
+        </div>
+
+        <div class="pt-2 flex flex-col sm:flex-row gap-3 items-center justify-between">
+          <button id="form-submit-btn" type="submit" class="btn-primary w-full sm:w-auto px-6 py-3 rounded-xl font-bold text-xs flex items-center justify-center gap-2">
+            <span>Send Direct Inquiry</span>
+            <i class="fas fa-paper-plane"></i>
+          </button>
+          
+          <button type="button" class="copy-email-btn text-[11px] text-[var(--text-muted)] hover:text-indigo-400 flex items-center gap-1.5 font-mono">
+            <i class="fas fa-envelope"></i> ali.maleki100@gmail.com
+          </button>
+        </div>
+
+      </form>
+
+      <!-- Success Confirmation View (In-Modal) -->
+      <div id="form-success-container" class="hidden text-center py-6 sm:py-8 space-y-4 animate-fadeIn">
+        <div class="w-16 h-16 rounded-2xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 flex items-center justify-center text-2xl mx-auto shadow-lg shadow-emerald-500/20">
+          <i class="fas fa-check-circle"></i>
+        </div>
+        <div class="space-y-2">
+          <h4 class="text-2xl font-bold text-[var(--text-primary)]">Inquiry Sent Successfully!</h4>
+          <p id="form-success-msg" class="text-xs sm:text-sm text-[var(--text-secondary)] max-w-md mx-auto leading-relaxed">
+            Thank you for reaching out. Your project inquiry has been securely sent directly to Ali's inbox. I will review your requirements and get back to you within 24 hours.
+          </p>
+        </div>
+        <div class="pt-4">
+          <button id="close-success-btn" type="button" class="btn-primary px-8 py-3 rounded-xl font-bold text-xs inline-flex items-center gap-2">
+            <span>Done</span>
+            <i class="fas fa-check"></i>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL 2: FULL CLEAN CV QUICK-VIEW & PRINT/PDF EXPORT
+       ========================================================================== -->
+  <div id="cv-modal" class="fixed inset-0 z-50 modal-overlay hidden items-center justify-center p-4">
+    <div class="cv-modal-inner glass-card modal-content w-full max-w-3xl p-6 sm:p-10 bg-[var(--bg-secondary)] border border-[var(--border-subtle)] max-h-[92vh] overflow-y-auto">
+      
+      <!-- Modal Header (no-print) -->
+      <div class="flex items-center justify-between border-b border-[var(--border-subtle)] pb-4 mb-6 no-print">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-mono uppercase text-indigo-400 font-bold px-2.5 py-0.5 rounded bg-indigo-500/10">1-Page PDF Resume Summary</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <button id="print-cv-btn" class="px-3 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold flex items-center gap-1.5 shadow-sm">
+            <i class="fas fa-print"></i> Print / Save as PDF
+          </button>
+          <button id="close-cv-modal" class="w-8 h-8 rounded-lg bg-[var(--bg-tertiary)] text-[var(--text-muted)] hover:text-white flex items-center justify-center" aria-label="Close CV Modal">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- CV Document Body -->
+      <div class="space-y-6 text-left leading-relaxed text-sm">
+        
+        <!-- CV Header -->
+        <div class="border-b border-[var(--border-subtle)] pb-4">
+          <h1 class="text-3xl font-extrabold text-[var(--text-primary)]">Ali Maleki</h1>
+          <div class="text-sm font-semibold text-indigo-400 mt-1">Data & Digital Transformation Consultant | Fractional Product & Delivery Lead</div>
+          <div class="text-xs font-mono text-[var(--text-muted)] mt-1">MBA | PMP® • ali.maleki100@gmail.com • Brno, Czech Republic / Remote Global</div>
+        </div>
+
+        <!-- Career Summary -->
+        <div>
+          <h3 class="text-xs font-mono font-bold uppercase tracking-wider text-indigo-400 mb-2 border-b border-[var(--border-subtle)] pb-1">Career Summary</h3>
+          <p class="text-xs text-[var(--text-secondary)] leading-relaxed">
+            MBA and PMP-certified consultant with 7+ years of experience leading digital transformation, data products and enterprise delivery initiatives. Experience spans multinational and high-growth organizations including Atlas Copco and Snapp, helping teams improve delivery execution, product governance, stakeholder alignment and data-driven decision making. Specialized in delivery leadership, data team coaching, product strategy, Agile transformation and business-focused analytics initiatives. Available for fractional leadership, strategic advisory, delivery governance audits, and data team mentoring.
+          </p>
+        </div>
+
+        <!-- Experience -->
+        <div>
+          <h3 class="text-xs font-mono font-bold uppercase tracking-wider text-emerald-400 mb-3 border-b border-[var(--border-subtle)] pb-1">Experience</h3>
+          
+          <div class="space-y-4">
+            <div>
+              <div class="flex justify-between font-bold text-xs text-[var(--text-primary)]">
+                <span>Atlas Copco (Brno, Czech Republic)</span>
+                <span class="font-mono text-indigo-400">April 2023 – Present</span>
+              </div>
+              <div class="text-xs text-indigo-300 italic mb-1">Project Lead, Data Products & Analytics (Global Purchasing & Logistics)</div>
+              <ul class="text-xs text-[var(--text-secondary)] list-disc list-inside space-y-1">
+                <li>Led enterprise data transformation initiatives for Global Purchasing & Logistics functions.</li>
+                <li>Coordinated cross-functional teams and stakeholders to improve delivery effectiveness, prioritization and business alignment.</li>
+                <li>Led SAP-to-cloud transformation initiatives, modernizing enterprise data capabilities through Azure and Databricks platforms.</li>
+                <li>Defined adoption KPIs and drove continuous improvement initiatives resulting in ~10% QoQ growth in dashboard usage.</li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="flex justify-between font-bold text-xs text-[var(--text-primary)]">
+                <span>Snapp! (Rocket Internet Super-App, 50M+ users, 3M+ daily rides)</span>
+                <span class="font-mono text-cyan-400">April 2022 – April 2023</span>
+              </div>
+              <div class="text-xs text-cyan-300 italic mb-1">Data Product Manager</div>
+              <ul class="text-xs text-[var(--text-secondary)] list-disc list-inside space-y-1">
+                <li>Led data product strategy and delivery execution for large-scale data initiatives, aligning tech investments with business objectives.</li>
+                <li>Led design and delivery of Snapp Order Center, supporting operational workflows for more than 500K daily users.</li>
+                <li>Led OKR planning and delivery governance initiatives, contributing to 87% OKR attainment and improved org alignment.</li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="flex justify-between font-bold text-xs text-[var(--text-primary)]">
+                <span>Parspooyesh Fanavar (Telecom Infrastructure Lead)</span>
+                <span class="font-mono text-emerald-400">Dec 2020 – March 2022</span>
+              </div>
+              <div class="text-xs text-emerald-300 italic mb-1">IT Product Owner – B2B & BI Project Manager</div>
+              <ul class="text-xs text-[var(--text-secondary)] list-disc list-inside space-y-1">
+                <li>Led delivery of Mita, an operator-scale captive portal solution, contributing to a 45% increase in product sales within six months.</li>
+                <li>Led a 7-member team delivering nationwide ICADB BI initiative, achieving 96% of project objectives.</li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="flex justify-between font-bold text-xs text-[var(--text-primary)]">
+                <span>PDN Co. (Information Systems Solutions)</span>
+                <span class="font-mono text-amber-400">Nov 2018 – Dec 2020</span>
+              </div>
+              <div class="text-xs text-amber-300 italic mb-1">IT Project Manager & Senior Data Analyst</div>
+              <ul class="text-xs text-[var(--text-secondary)] list-disc list-inside space-y-1">
+                <li>Delivered automated credit-scoring engine for Iran Mercantile Exchange, streamlining workflows for 12,000+ accounts.</li>
+                <li>Built data-driven solutions and KPI frameworks that improved reporting and operational decision-making.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certifications & Education -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 border-t border-[var(--border-subtle)] text-xs">
+          <div>
+            <h4 class="font-bold text-indigo-400 mb-1.5 uppercase font-mono text-[11px]">Certifications</h4>
+            <ul class="text-[var(--text-secondary)] space-y-1 list-disc list-inside">
+              <li>PMP® – Project Management Professional</li>
+              <li>PRINCE2 Agile Foundation</li>
+              <li>Databricks Fundamentals</li>
+              <li>Google Project Management Certificate</li>
+              <li>Product Management Essentials</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-cyan-400 mb-1.5 uppercase font-mono text-[11px]">Education</h4>
+            <div class="space-y-1.5 text-[var(--text-secondary)]">
+              <div>
+                <strong>Executive MBA, Marketing</strong> (2011–2013)<br>
+                <span class="text-[11px] text-[var(--text-muted)]">IAU, Science and Research Branch</span>
+              </div>
+              <div>
+                <strong>B.Eng. in Software Engineering</strong> (2005–2010)<br>
+                <span class="text-[11px] text-[var(--text-muted)]">IAU, North Tehran Branch</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Application Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>
