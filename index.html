@@ -140,106 +140,189 @@
   <main class="relative z-10 pt-28 pb-20 overflow-hidden">
 
     <!-- ==========================================================================
-         SECTION 1: HERO HEADER
+         SECTION 1: 2-COLUMN EXECUTIVE HERO
          ========================================================================== -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-14 lg:pt-12 lg:pb-18">
-      <div class="max-w-4xl mx-auto text-center space-y-6">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-14 lg:pt-10 lg:pb-18">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
         
-        <!-- Badge / Pill Tag -->
-        <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-300 text-xs font-semibold tracking-wide">
-          <span class="pulse-dot"></span>
-          <span>Data & Digital Transformation Consultant | MBA | PMP®</span>
-        </div>
-
-        <!-- Main Headline -->
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15] text-[var(--text-primary)]">
-          Strategic Advisory for <span class="gradient-text-indigo">High-Impact Tech & Data Delivery</span>.
-        </h1>
-
-        <!-- Sub-headline -->
-        <p class="text-lg sm:text-xl lg:text-2xl text-[var(--text-secondary)] font-normal leading-relaxed max-w-3xl mx-auto">
-          Independent consulting and fractional leadership to help enterprise and high-growth organizations structure teams, remove delivery bottlenecks, and execute critical roadmaps.
-        </p>
-
-        <!-- Key Metric Highlights (3-Column Mini Bar) -->
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-3 max-w-3xl mx-auto text-left">
+        <!-- Left Column: Executive Messaging & Action (8 cols) -->
+        <div class="lg:col-span-8 text-left space-y-6">
           
-          <div class="metric-card">
-            <div class="flex items-center justify-between mb-1">
-              <span class="text-xs font-mono text-[var(--text-muted)] uppercase tracking-wider">Experience</span>
-              <div class="w-6 h-6 rounded-lg bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-xs">
-                <i class="fas fa-briefcase"></i>
-              </div>
-            </div>
-            <div class="text-2xl sm:text-3xl font-extrabold text-[var(--text-primary)] font-mono mb-1">7+ Years</div>
-            <p class="text-xs text-[var(--text-secondary)] leading-snug">Leading digital & data transformation initiatives</p>
+          <!-- Badge / Pill Tag -->
+          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-300 text-xs font-semibold tracking-wide">
+            <span class="pulse-dot"></span>
+            <span>Data & Digital Transformation Consultant | MBA | PMP®</span>
           </div>
 
-          <div class="metric-card">
-            <div class="flex items-center justify-between mb-1">
-              <span class="text-xs font-mono text-[var(--text-muted)] uppercase tracking-wider">Throughput</span>
-              <div class="w-6 h-6 rounded-lg bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-xs">
-                <i class="fas fa-users"></i>
+          <!-- Main Headline -->
+          <h1 class="text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight leading-[1.15] text-[var(--text-primary)]">
+            Strategic Advisory for <span class="gradient-text-indigo">High-Impact Tech & Data Delivery</span>.
+          </h1>
+
+          <!-- Sub-headline in First-Person Voice -->
+          <p class="text-lg sm:text-xl text-[var(--text-secondary)] font-normal leading-relaxed">
+            I partner with leadership teams to structure data products, coach engineering talent, and build predictable delivery systems.
+          </p>
+
+          <!-- Key Metric Highlights (3-Column Mini Bar) -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5 pt-1">
+            <div class="metric-card">
+              <div class="flex items-center justify-between mb-1">
+                <span class="text-xs font-mono text-[var(--text-muted)] uppercase tracking-wider">Experience</span>
+                <div class="w-6 h-6 rounded-lg bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-xs">
+                  <i class="fas fa-briefcase"></i>
+                </div>
               </div>
+              <div class="text-2xl font-extrabold text-[var(--text-primary)] font-mono mb-0.5">7+ Years</div>
+              <p class="text-xs text-[var(--text-secondary)] leading-snug">Leading digital & data transformation</p>
             </div>
-            <div class="text-2xl sm:text-3xl font-extrabold text-[var(--text-primary)] font-mono mb-1">500K+ DAU</div>
-            <p class="text-xs text-[var(--text-secondary)] leading-snug">50M+ platform scale & operational workflow experience</p>
+
+            <div class="metric-card">
+              <div class="flex items-center justify-between mb-1">
+                <span class="text-xs font-mono text-[var(--text-muted)] uppercase tracking-wider">Throughput</span>
+                <div class="w-6 h-6 rounded-lg bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-xs">
+                  <i class="fas fa-users"></i>
+                </div>
+              </div>
+              <div class="text-2xl font-extrabold text-[var(--text-primary)] font-mono mb-0.5">500K+ DAU</div>
+              <p class="text-xs text-[var(--text-secondary)] leading-snug">50M+ platform scale experience</p>
+            </div>
+
+            <div class="metric-card">
+              <div class="flex items-center justify-between mb-1">
+                <span class="text-xs font-mono text-[var(--text-muted)] uppercase tracking-wider">Footprint</span>
+                <div class="w-6 h-6 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xs">
+                  <i class="fas fa-globe"></i>
+                </div>
+              </div>
+              <div class="text-2xl font-extrabold text-[var(--text-primary)] font-mono mb-0.5">Global Impact</div>
+              <p class="text-xs text-[var(--text-secondary)] leading-snug">Multi-region enterprise delivery</p>
+            </div>
           </div>
 
-          <div class="metric-card">
-            <div class="flex items-center justify-between mb-1">
-              <span class="text-xs font-mono text-[var(--text-muted)] uppercase tracking-wider">Footprint</span>
-              <div class="w-6 h-6 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xs">
-                <i class="fas fa-globe"></i>
+          <!-- Call to Actions -->
+          <div class="flex flex-wrap items-center gap-3 pt-2">
+            <button class="open-call-modal btn-primary px-7 py-3.5 rounded-xl font-bold text-sm tracking-wide flex items-center gap-2.5 shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/40">
+              <i class="fas fa-calendar-check"></i>
+              <span>Schedule Strategic Advisory Call</span>
+            </button>
+            
+            <a href="#case-studies" class="btn-secondary px-5 py-3.5 rounded-xl font-semibold text-sm flex items-center gap-2">
+              <span>View Selected Work</span>
+              <i class="fas fa-arrow-down text-xs"></i>
+            </a>
+
+            <button class="open-cv-modal btn-secondary px-4 py-3.5 rounded-xl font-semibold text-sm flex items-center gap-2">
+              <i class="fas fa-file-pdf text-red-400"></i>
+              <span>Resume</span>
+            </button>
+          </div>
+
+          <!-- Trusted Ecosystems (Compact Row) -->
+          <div class="pt-2">
+            <div class="inline-flex flex-nowrap items-center gap-3 sm:gap-4 px-4 py-2.5 rounded-2xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] text-xs text-[var(--text-secondary)] font-medium overflow-x-auto max-w-full">
+              <span class="text-xs font-mono text-[var(--text-muted)] uppercase tracking-wider shrink-0">Track Record:</span>
+              <div class="flex items-center gap-1.5 shrink-0">
+                <i class="fas fa-industry text-indigo-400 text-xs"></i>
+                <span>Atlas Copco</span>
+              </div>
+              <span class="text-[var(--text-muted)] opacity-40 shrink-0">•</span>
+              <div class="flex items-center gap-1.5 shrink-0">
+                <i class="fas fa-rocket text-cyan-400 text-xs"></i>
+                <span>Snapp! (50M+)</span>
+              </div>
+              <span class="text-[var(--text-muted)] opacity-40 shrink-0">•</span>
+              <div class="flex items-center gap-1.5 shrink-0">
+                <i class="fas fa-network-wired text-emerald-400 text-xs"></i>
+                <span>Parspooyesh</span>
+              </div>
+              <span class="text-[var(--text-muted)] opacity-40 shrink-0">•</span>
+              <div class="flex items-center gap-1.5 shrink-0">
+                <i class="fas fa-chart-line text-amber-400 text-xs"></i>
+                <span>IME</span>
               </div>
             </div>
-            <div class="text-2xl sm:text-3xl font-extrabold text-[var(--text-primary)] font-mono mb-1">Global Impact</div>
-            <p class="text-xs text-[var(--text-secondary)] leading-snug">Multi-region transformations across the globe</p>
           </div>
 
         </div>
 
-        <!-- Trusted Ecosystems (1 Row Trust Bar) -->
-        <div class="pt-1">
-          <div class="inline-flex flex-nowrap items-center justify-center gap-4 sm:gap-6 px-4 py-2.5 rounded-2xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] text-xs text-[var(--text-secondary)] font-medium overflow-x-auto max-w-full">
-            <div class="flex items-center gap-2 shrink-0">
-              <i class="fas fa-industry text-indigo-400"></i>
-              <span>Atlas Copco</span>
+        <!-- Right Column: Executive Credentials & Profile Card (4 cols) -->
+        <div class="lg:col-span-4 flex justify-center lg:justify-end">
+          <div class="relative w-full max-w-sm">
+            
+            <!-- Ambient Glow Backdrop -->
+            <div class="absolute -inset-3 bg-gradient-to-tr from-indigo-600/25 via-cyan-500/20 to-purple-600/15 rounded-3xl blur-xl opacity-75 -z-10"></div>
+            
+            <!-- Executive Info Glass Card -->
+            <div class="glass-card p-6 rounded-3xl border border-indigo-500/30 relative overflow-hidden shadow-2xl bg-[var(--bg-secondary)]/95 backdrop-blur-xl space-y-5">
+              
+              <!-- Card Header: Monogram Avatar & Name & Status -->
+              <div class="flex items-start justify-between pb-4 border-b border-[var(--border-subtle)]">
+                <div class="flex items-center gap-3.5">
+                  <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-indigo-600 to-cyan-500 flex items-center justify-center font-bold text-white text-base tracking-wider shadow-lg shadow-indigo-500/25 shrink-0">
+                    AM
+                  </div>
+                  <div>
+                    <h3 class="text-base font-extrabold text-[var(--text-primary)] leading-tight">Ali Maleki</h3>
+                    <p class="text-xs text-indigo-400 font-semibold">Data & Digital Transformation</p>
+                  </div>
+                </div>
+                <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-[10px] font-bold">
+                  <span class="pulse-dot !w-1.5 !h-1.5"></span>
+                  <span>Active</span>
+                </div>
+              </div>
+
+              <!-- Credentials & Certifications Badges -->
+              <div class="space-y-2">
+                <span class="text-[10px] font-mono uppercase tracking-wider text-[var(--text-muted)] font-bold block">Credentials & Leadership</span>
+                <div class="flex flex-wrap gap-1.5">
+                  <span class="px-2.5 py-1 rounded-lg bg-indigo-500/10 text-indigo-300 border border-indigo-500/20 text-xs font-mono font-bold flex items-center gap-1.5">
+                    <i class="fas fa-graduation-cap text-[10px]"></i> MBA
+                  </span>
+                  <span class="px-2.5 py-1 rounded-lg bg-cyan-500/10 text-cyan-300 border border-cyan-500/20 text-xs font-mono font-bold flex items-center gap-1.5">
+                    <i class="fas fa-certificate text-[10px]"></i> PMP®
+                  </span>
+                  <span class="px-2.5 py-1 rounded-lg bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 text-xs font-mono font-bold flex items-center gap-1.5">
+                    <i class="fas fa-tasks text-[10px]"></i> PSM™ I
+                  </span>
+                </div>
+              </div>
+
+              <!-- Core Engagement Capabilities -->
+              <div class="space-y-2">
+                <span class="text-[10px] font-mono uppercase tracking-wider text-[var(--text-muted)] font-bold block">Core Focus</span>
+                <div class="space-y-1.5 text-xs text-[var(--text-secondary)] font-medium">
+                  <div class="flex items-center gap-2">
+                    <i class="fas fa-check text-indigo-400 text-[10px]"></i>
+                    <span>Fractional Product & Delivery Leadership</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i class="fas fa-check text-cyan-400 text-[10px]"></i>
+                    <span>SAP to Cloud & Databricks Lakehouse</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i class="fas fa-check text-emerald-400 text-[10px]"></i>
+                    <span>Agile Governance & Engineering Coaching</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Location & Direct Link Footer -->
+              <div class="pt-4 border-t border-[var(--border-subtle)] flex items-center justify-between text-xs">
+                <div class="flex items-center gap-1.5 text-[var(--text-muted)]">
+                  <i class="fas fa-location-dot text-indigo-400 text-xs"></i>
+                  <span>Brno, CZ (CET) • Remote</span>
+                </div>
+                <a href="https://www.linkedin.com/in/alimaleki100/" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-lg bg-indigo-500/10 hover:bg-indigo-500/20 text-indigo-400 font-semibold flex items-center gap-1.5 transition-colors text-xs">
+                  <i class="fab fa-linkedin-in text-[10px]"></i>
+                  <span>Profile</span>
+                </a>
+              </div>
+
             </div>
-            <span class="text-[var(--text-muted)] opacity-40 shrink-0">•</span>
-            <div class="flex items-center gap-2 shrink-0">
-              <i class="fas fa-rocket text-cyan-400"></i>
-              <span>Snapp! (50M+ Users)</span>
-            </div>
-            <span class="text-[var(--text-muted)] opacity-40 shrink-0">•</span>
-            <div class="flex items-center gap-2 shrink-0">
-              <i class="fas fa-network-wired text-emerald-400"></i>
-              <span>Parspooyesh Telecom</span>
-            </div>
-            <span class="text-[var(--text-muted)] opacity-40 shrink-0">•</span>
-            <div class="flex items-center gap-2 shrink-0">
-              <i class="fas fa-chart-line text-amber-400"></i>
-              <span>Iran Mercantile Exchange</span>
-            </div>
+
           </div>
-        </div>
-
-        <!-- Call to Actions -->
-        <div class="flex flex-wrap items-center justify-center gap-4 pt-3">
-          <button class="open-call-modal btn-primary px-8 py-4 rounded-xl font-bold text-sm tracking-wide flex items-center gap-2.5 shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/40">
-            <i class="fas fa-calendar-check"></i>
-            <span>Schedule Strategic Advisory Call</span>
-          </button>
-          
-          <a href="#case-studies" class="btn-secondary px-7 py-4 rounded-xl font-semibold text-sm flex items-center gap-2">
-            <span>Explore Case Studies</span>
-            <i class="fas fa-arrow-down text-xs"></i>
-          </a>
-
-          <button class="open-cv-modal btn-secondary px-5 py-4 rounded-xl font-semibold text-sm flex items-center gap-2">
-            <i class="fas fa-file-pdf text-red-400"></i>
-            <span>Download 1-Page PDF Resume</span>
-          </button>
         </div>
 
       </div>
@@ -545,31 +628,63 @@
     </section>
 
     <!-- ==========================================================================
-         SECTION 3: FEATURED CASE STUDIES
+         ABOUT ME & GUIDING PHILOSOPHY
+         ========================================================================== -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <div class="glass-card p-8 sm:p-10 rounded-3xl border border-indigo-500/30 bg-gradient-to-r from-indigo-950/40 via-[var(--bg-secondary)] to-[var(--bg-secondary)] relative overflow-hidden shadow-xl">
+        <!-- Ambient subtle glow -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20"></div>
+        
+        <div class="flex flex-col md:flex-row items-start md:items-center gap-6 relative z-10">
+          <div class="w-16 h-16 rounded-2xl bg-indigo-500/15 border border-indigo-500/30 text-indigo-400 flex items-center justify-center text-2xl shrink-0 shadow-inner">
+            <i class="fas fa-quote-left"></i>
+          </div>
+          <div class="space-y-3">
+            <div class="flex items-center gap-2">
+              <span class="text-xs uppercase font-mono font-bold tracking-widest text-indigo-400">About Me & Guiding Philosophy</span>
+              <span class="text-[var(--text-muted)]">•</span>
+              <span class="text-xs text-[var(--text-muted)] font-mono">Executive Perspective</span>
+            </div>
+            <p class="text-base sm:text-lg text-[var(--text-primary)] leading-relaxed font-medium">
+              “With an engineering foundation and an executive MBA, I operate at the intersection of business strategy and technical execution. Over the past 7+ years across global enterprises and fast-scaling tech companies, I've learned that technology failures are rarely code problems—they are alignment and governance problems.”
+            </p>
+            <div class="text-xs text-[var(--text-muted)] font-mono flex flex-wrap items-center gap-2 pt-0.5">
+              <span class="font-bold text-[var(--text-primary)]">Ali Maleki</span>
+              <span>•</span>
+              <span class="text-[var(--text-secondary)]">Data & Digital Transformation Consultant | MBA | PMP®</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 3: SELECTED ENGAGEMENTS & STORIES
          ========================================================================== -->
     <section id="case-studies" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 scroll-mt-24">
       
       <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
-        <span class="text-xs uppercase font-mono font-bold tracking-widest text-emerald-400 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20">Proof of Execution</span>
-        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Featured Case Studies</h2>
+        <span class="text-xs uppercase font-mono font-bold tracking-widest text-emerald-400 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20">Featured Work & Stories</span>
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Selected Engagements & Initiatives I've Led</h2>
         <p class="text-base text-[var(--text-secondary)]">
-          Deep dives into real-world transformations executed across multinational industrial and hyper-growth platforms.
+          Real-world transformations and modernization initiatives I've directed across global industrial enterprises and hyper-growth platforms.
         </p>
       </div>
 
       <div class="space-y-10">
         
-        <!-- Case Study 1: Enterprise Cloud & Analytics Transformation -->
+        <!-- Case Study 1: Global Supply Chain Data Product Modernization -->
         <div class="glass-card p-8 sm:p-10 border border-indigo-500/30">
           <div class="flex flex-col lg:flex-row lg:items-center justify-between pb-6 border-b border-[var(--border-subtle)] gap-4 mb-6">
             <div>
-              <span class="text-xs font-mono text-indigo-400 font-bold uppercase tracking-wider block mb-1">Case Study 01</span>
-              <h3 class="text-2xl sm:text-3xl font-bold text-[var(--text-primary)]">Enterprise Cloud & Analytics Transformation</h3>
-              <p class="text-xs text-[var(--text-muted)] font-medium mt-1">Multinational Industrial (Atlas Copco • Global Purchasing and Logistics SAP Data Products)</p>
+              <span class="text-xs font-mono text-indigo-400 font-bold uppercase tracking-wider block mb-1">Initiative 01</span>
+              <h3 class="text-2xl sm:text-3xl font-bold text-[var(--text-primary)]">Global Supply Chain Data Product Modernization</h3>
+              <p class="text-xs text-[var(--text-muted)] font-medium mt-1">Industrial Manufacturing Enterprise (Atlas Copco • Global Purchasing & Logistics Data Ecosystem)</p>
             </div>
             <div class="flex flex-wrap gap-2">
-              <span class="px-3 py-1 rounded-lg bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 text-xs font-mono font-bold">Azure & Databricks</span>
-              <span class="px-3 py-1 rounded-lg bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 text-xs font-mono font-bold">SAP Modernization</span>
+              <span class="px-3 py-1 rounded-lg bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 text-xs font-mono font-bold">SAP</span>
+              <span class="px-3 py-1 rounded-lg bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 text-xs font-mono font-bold">Databricks</span>
+              <span class="px-3 py-1 rounded-lg bg-amber-500/10 text-amber-400 border border-amber-500/20 text-xs font-mono font-bold">Power BI</span>
             </div>
           </div>
 
@@ -580,7 +695,7 @@
                 <i class="fas fa-circle-exclamation"></i> Context
               </div>
               <p class="text-xs text-[var(--text-secondary)] leading-relaxed">
-                Fragmented legacy reporting and disparate operational data across Europe and India purchasing and logistics units.
+                Global purchasing and logistics operations relied on legacy on-premise data silos, creating fragmented reporting, delayed cross-functional decision cycles, and poor visibility into supply chain operations.
               </p>
             </div>
 
@@ -590,7 +705,7 @@
                 <i class="fas fa-gears"></i> Action
               </div>
               <p class="text-xs text-[var(--text-secondary)] leading-relaxed">
-                Led SAP-to-cloud transformation utilizing Azure and Databricks architectures while aligning regional stakeholder requirements.
+                Led the end-to-end strategy, modernization, and delivery of Sourcing data product migrating legacy analytics workloads to a SAP - Databricks Lakehouse architecture and establishing governed Power BI semantic models, Agile delivery practices, and a scalable self-service reporting ecosystem.
               </p>
             </div>
 
@@ -600,23 +715,24 @@
                 <i class="fas fa-chart-line"></i> Impact
               </div>
               <p class="text-xs text-[var(--text-primary)] leading-relaxed font-medium">
-                Delivered ~10% quarter-over-quarter growth in dashboard adoption and unified cross-regional operational visibility.
+                Drove global procurement digitalization through Databricks data products, consolidating SAP purchasing data into a centralized analytics platform used for strategic sourcing and operational performance management.
               </p>
             </div>
           </div>
         </div>
 
-        <!-- Case Study 2: Scaled Platform Workflow Hub -->
+        <!-- Case Study 2: Platform Operations & Data Quality Modernization -->
         <div class="glass-card p-8 sm:p-10 border border-cyan-500/30">
           <div class="flex flex-col lg:flex-row lg:items-center justify-between pb-6 border-b border-[var(--border-subtle)] gap-4 mb-6">
             <div>
-              <span class="text-xs font-mono text-cyan-400 font-bold uppercase tracking-wider block mb-1">Case Study 02</span>
-              <h3 class="text-2xl sm:text-3xl font-bold text-[var(--text-primary)]">Scaled Platform Workflow Hub</h3>
-              <p class="text-xs text-[var(--text-muted)] font-medium mt-1">High-Growth Super-App (Snapp! • 50M+ Users & 3M+ Daily Rides)</p>
+              <span class="text-xs font-mono text-cyan-400 font-bold uppercase tracking-wider block mb-1">Initiative 02</span>
+              <h3 class="text-2xl sm:text-3xl font-bold text-[var(--text-primary)]">Platform Operations & Data Quality Modernization</h3>
+              <p class="text-xs text-[var(--text-muted)] font-medium mt-1">High-Growth On-Demand Super-App (Snapp! • 50M+ Users & 3M+ Daily Rides)</p>
             </div>
             <div class="flex flex-wrap gap-2">
-              <span class="px-3 py-1 rounded-lg bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 text-xs font-mono font-bold">500K+ DAU</span>
-              <span class="px-3 py-1 rounded-lg bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-mono font-bold">87% OKR Attainment</span>
+              <span class="px-3 py-1 rounded-lg bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 text-xs font-mono font-bold">Snapp Order Center</span>
+              <span class="px-3 py-1 rounded-lg bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 text-xs font-mono font-bold">Data Quality Platform</span>
+              <span class="px-3 py-1 rounded-lg bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-mono font-bold">OKR Governance</span>
             </div>
           </div>
 
@@ -627,7 +743,7 @@
                 <i class="fas fa-circle-exclamation"></i> Context
               </div>
               <p class="text-xs text-[var(--text-secondary)] leading-relaxed">
-                Managing delivery and alignment for operational workflows across a high-volume multi-service platform.
+                High-throughput operations across 50M+ users faced operational friction in order fulfillment and fragmented data trust across cross-functional engineering, product, and business units.
               </p>
             </div>
 
@@ -636,9 +752,14 @@
               <div class="flex items-center gap-2 text-xs font-mono font-bold text-cyan-400 uppercase tracking-wider">
                 <i class="fas fa-gears"></i> Action
               </div>
-              <p class="text-xs text-[var(--text-secondary)] leading-relaxed">
-                Directed data product strategy and execution for the unified Order Center; implemented structured OKR delivery cadences.
+              <p class="text-xs text-[var(--text-secondary)] leading-relaxed mb-2">
+                Directed data product strategy and execution for two critical platform initiatives:
               </p>
+              <ul class="text-xs text-[var(--text-secondary)] leading-relaxed space-y-1.5 list-disc list-inside">
+                <li><span class="font-semibold text-[var(--text-primary)]">Snapp Order Center:</span> Centralized operational hub supporting fulfillment workflows for 500K+ daily users.</li>
+                <li><span class="font-semibold text-[var(--text-primary)]">Data Quality Platform:</span> Implemented enterprise data quality monitoring, validation frameworks, and data trust standards.</li>
+                <li><span class="font-semibold text-[var(--text-primary)]">Governance:</span> Instituted cross-functional OKR cadences and Agile delivery rituals.</li>
+              </ul>
             </div>
 
             <!-- Impact -->
@@ -646,9 +767,11 @@
               <div class="flex items-center gap-2 text-xs font-mono font-bold text-emerald-400 uppercase tracking-wider">
                 <i class="fas fa-chart-line"></i> Impact
               </div>
-              <p class="text-xs text-[var(--text-primary)] leading-relaxed font-medium">
-                Supported 500K+ daily active users and achieved 87% OKR attainment across cross-functional product squads.
-              </p>
+              <ul class="text-xs text-[var(--text-primary)] leading-relaxed space-y-2 font-medium list-disc list-inside">
+                <li><span class="font-bold text-emerald-400">500K+ DAU supported</span> seamlessly with high uptime and streamlined operational workflows.</li>
+                <li><span class="font-bold text-cyan-400">Enterprise data reliability</span> established through automated quality checks and validation pipelines.</li>
+                <li><span class="font-bold text-indigo-400">87% strategic OKR attainment</span> delivered via structured cross-functional alignment.</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -657,7 +780,7 @@
         <div class="glass-card p-8 sm:p-10 border border-emerald-500/30">
           <div class="flex flex-col lg:flex-row lg:items-center justify-between pb-6 border-b border-[var(--border-subtle)] gap-4 mb-6">
             <div>
-              <span class="text-xs font-mono text-emerald-400 font-bold uppercase tracking-wider block mb-1">Case Study 03</span>
+              <span class="text-xs font-mono text-emerald-400 font-bold uppercase tracking-wider block mb-1">Initiative 03</span>
               <h3 class="text-2xl sm:text-3xl font-bold text-[var(--text-primary)]">Large-Scale Public Sector BI & Scoring Infrastructure</h3>
               <p class="text-xs text-[var(--text-muted)] font-medium mt-1">Enterprise & Government Initiatives (Iran Mercantile Exchange & Parspooyesh / ICADB)</p>
             </div>
