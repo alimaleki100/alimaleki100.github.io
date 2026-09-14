@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" class="scroll-smooth" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مشاوره استراتژیک و رهبری فرکشنال محصول | علی ملکی</title>
+  <meta name="description" content="مشاوره مستقل و رهبری فرکشنال برای سازمان‌های پیشرو و شرکت‌های با رشد سریع جهت ساختاردهی تیم‌ها، رفع گلوگاه‌های دلیوری و اجرای برنامه‌های کلیدی.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="alternate icon" href="favicon.svg">
+
+  <!-- Fonts & Tailwind CSS CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Vazirmatn:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['class', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          colors: {
+            obsidian: '#0B0F19',
+            cobalt: '#2563EB',
+            indigoAccent: '#6366F1',
+            cyanAccent: '#06B6D4',
+            emeraldAccent: '#10B981',
+          },
+          fontFamily: {
+            sans: ['"Vazirmatn"', '"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#0B0F19] text-slate-100 min-h-screen relative selection:bg-blue-600 selection:text-white font-['Vazirmatn']">
+
+  <!-- Ambient Glow Background -->
+  <div class="ambient-bg">
+    <div class="ambient-orb ambient-orb-1"></div>
+    <div class="ambient-orb ambient-orb-2"></div>
+    <div class="ambient-orb ambient-orb-3"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <!-- ==========================================================================
+       STICKY EXECUTIVE HEADER (Persian)
+       ========================================================================== -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-[#0B0F19]/80 backdrop-blur-xl border-b border-slate-800/80 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="fa.html" class="flex items-center gap-3.5 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-500 flex items-center justify-center font-extrabold text-white text-sm shadow-lg shadow-blue-500/25 group-hover:scale-105 transition-transform">
+          AM
+        </div>
+        <div class="flex flex-col text-right">
+          <span class="font-extrabold text-base tracking-tight text-white group-hover:text-blue-400 transition-colors">علی ملکی</span>
+          <span class="text-xs text-slate-400 font-medium">مشاوره استراتژیک و رهبری فرکشنال</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
+        <a href="fa.html" class="hover:text-white transition-colors flex items-center gap-1.5">
+          <i class="fas fa-arrow-right text-xs text-slate-400"></i> بازگشت به پورتفولیو
+        </a>
+        <a href="#services" class="hover:text-white transition-colors">ستون‌های خدمات</a>
+        <a href="#models" class="hover:text-white transition-colors">مدل‌های همکاری</a>
+        <a href="#booking" class="hover:text-white transition-colors">جلسه دیسکاوری</a>
+        
+        <div class="h-4 w-px bg-slate-800"></div>
+
+        <a href="consulting.html" class="px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-800/50 hover:bg-slate-700/50 text-xs font-semibold text-slate-300 transition-all flex items-center gap-1.5 font-sans">
+          <span>EN</span>
+          <i class="fas fa-globe text-blue-400 text-xs"></i>
+        </a>
+
+        <a href="#booking" class="btn-primary px-5 py-2.5 rounded-xl text-xs font-bold tracking-wide flex items-center gap-2">
+          <i class="fas fa-calendar-check text-xs"></i>
+          <span>درخواست جلسه</span>
+        </a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <div class="flex items-center gap-3 md:hidden">
+        <a href="consulting.html" class="px-2.5 py-1 rounded-lg border border-slate-800 text-xs font-semibold text-slate-300 font-sans">EN</a>
+        <button id="mobile-menu-btn" class="p-2 rounded-xl border border-slate-800 bg-slate-900/80 text-slate-300 hover:text-white focus:outline-none">
+          <i class="fas fa-bars text-lg"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#0B0F19]/95 backdrop-blur-2xl border-b border-slate-800 px-4 pt-3 pb-6 space-y-3 text-right">
+      <a href="fa.html" class="block py-2 text-sm text-slate-300 hover:text-white flex items-center gap-2">
+        <i class="fas fa-arrow-right text-xs text-blue-400"></i> بازگشت به صفحه اصلی
+      </a>
+      <a href="#services" class="block py-2 text-sm text-slate-300 hover:text-white">ستون‌های خدمات</a>
+      <a href="#models" class="block py-2 text-sm text-slate-300 hover:text-white">مدل‌های همکاری</a>
+      <a href="#booking" class="block py-2 text-sm text-slate-300 hover:text-white">جلسه دیسکاوری</a>
+      <div class="pt-2">
+        <a href="#booking" class="btn-primary w-full py-3 rounded-xl text-xs font-bold flex items-center justify-center gap-2">
+          <span>درخواست جلسه دیسکاوری</span>
+          <i class="fas fa-arrow-left text-xs"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="relative z-10 pt-28 pb-20 overflow-hidden">
+
+    <!-- ==========================================================================
+         CONSULTING HERO (Persian)
+         ========================================================================== -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-16 lg:pt-14 lg:pb-20 text-center">
+      <div class="max-w-4xl mx-auto space-y-6">
+        
+        <!-- Live Availability Pill -->
+        <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-300 text-xs font-semibold tracking-wide">
+          <span class="pulse-dot"></span>
+          <span>آماده پذیرش پروژه‌های مشاوره‌ای و فرکشنال Q4</span>
+        </div>
+
+        <!-- Main Headline -->
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.25] text-white">
+          مشاوره استراتژیک و <span class="gradient-text-cobalt">رهبری فرکشنال تحویل فناوری</span>.
+        </h1>
+
+        <!-- Sub-headline -->
+        <p class="text-lg sm:text-xl text-slate-300 font-normal leading-relaxed max-w-3xl mx-auto">
+          همراهی با تیم‌های رهبری سازمان‌ها و استارتاپ‌های پررشد جهت ساختاردهی محصولات داده، رفع گلوگاه‌های فرآیندی دلیوری و برقراری حاکمیت چابک پیش‌بینی‌پذیر.
+        </p>
+
+        <!-- CTAs -->
+        <div class="flex flex-wrap items-center justify-center gap-4 pt-4">
+          <a href="#booking" class="btn-primary px-8 py-4 rounded-xl font-bold text-sm tracking-wide flex items-center gap-2.5 shadow-lg shadow-blue-500/25">
+            <i class="fas fa-calendar-check"></i>
+            <span>درخواست جلسه دیسکاوری ۳۰ دقیقه‌ای</span>
+          </a>
+          
+          <a href="#services" class="btn-secondary px-7 py-4 rounded-xl font-semibold text-sm flex items-center gap-2">
+            <span>بررسی ستون‌های خدمات</span>
+            <i class="fas fa-arrow-down text-xs"></i>
+          </a>
+        </div>
+
+        <!-- Track Record Strip -->
+        <div class="pt-6">
+          <div class="inline-flex flex-nowrap items-center justify-center gap-4 sm:gap-6 px-5 py-3 rounded-2xl bg-slate-900/60 border border-slate-800 text-xs text-slate-400 font-medium overflow-x-auto max-w-full">
+            <span class="text-slate-500 font-bold shrink-0">تجربه اثبات‌شده در:</span>
+            <span class="text-slate-300 font-semibold shrink-0">اطلس کوپکو</span>
+            <span class="text-slate-600">•</span>
+            <span class="text-slate-300 font-semibold shrink-0">اسنپ (۵۰M+ کاربر)</span>
+            <span class="text-slate-600">•</span>
+            <span class="text-slate-300 font-semibold shrink-0">پارس‌پویش</span>
+            <span class="text-slate-600">•</span>
+            <span class="text-slate-300 font-semibold shrink-0">بورس کالا</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         4-PILLAR SERVICE STRUCTURE (Persian)
+         ========================================================================== -->
+    <section id="services" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 scroll-mt-24">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+        <span class="text-xs uppercase font-mono font-bold tracking-widest text-blue-400 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20">شایستگی‌های محوری</span>
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-white">چارچوب ۴ گانه مشاوره و تحول</h2>
+        <p class="text-base text-slate-300">
+          راهکارهای ساختاریافته و عملیاتی برای رفع اصطکاک‌ها در زنجیره تحویل فناوری و داده.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-right">
+        
+        <!-- Pillar 1 -->
+        <div class="glass-card p-8 border-r-4 border-r-blue-500 space-y-5">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono font-bold text-blue-400 uppercase tracking-wider">ستون ۰۱</span>
+            <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center border border-blue-500/20 text-lg">
+              <i class="fas fa-chess-queen"></i>
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-white">رهبری فرکشنال محصول و دلیوری</h3>
+          <p class="text-xs text-slate-400 font-medium">
+            <strong class="text-slate-300">مخاطب:</strong> سازمان‌های در حال توسعه که به هدایت ارشد محصول و هم‌راستاسازی نقشه راه بدون هزینه‌های سربار مدیر تمام‌وقت نیاز دارند.
+          </p>
+          <div class="space-y-2 pt-2 border-t border-slate-800">
+            <span class="text-[11px] text-slate-400 uppercase tracking-wider font-bold block">خروجی‌های ملموس:</span>
+            <ul class="text-xs text-slate-300 space-y-1.5 list-disc list-inside">
+              <li>تدوین نقشه راه ۹۰ روزه دلیوری و ماتریس اولویت‌بندی قابلیت‌ها</li>
+              <li>معماری OKR سازمانی و مدیریت وابستگی‌های میان‌تیمی</li>
+              <li>استقرار ریتم دلیوری دو مسیره (کشف محصول + توسعه فنی)</li>
+              <li>جلسات راهبری استراتژیک و هم‌راستاسازی ذی‌نفعان کلیدی</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="glass-card p-8 border-r-4 border-r-indigo-500 space-y-5">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono font-bold text-indigo-400 uppercase tracking-wider">ستون ۰۲</span>
+            <div class="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center border border-indigo-500/20 text-lg">
+              <i class="fas fa-users-gear"></i>
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-white">مربیگری و ارتقای توانمندی تیم‌ها</h3>
+          <p class="text-xs text-slate-400 font-medium">
+            <strong class="text-slate-300">مخاطب:</strong> تیم‌های مهندسی و مدیران محصول داده که نیازمند گذر از نقش مجری صرف به مالکان استراتژیک ارزش هستند.
+          </p>
+          <div class="space-y-2 pt-2 border-t border-slate-800">
+            <span class="text-[11px] text-slate-400 uppercase tracking-wider font-bold block">خروجی‌های ملموس:</span>
+            <ul class="text-xs text-slate-300 space-y-1.5 list-disc list-inside">
+              <li>منتورینگ فردبه‌فرد مدیران محصول داده و لیدهای فنی</li>
+              <li>کارگاه‌های نقشه‌برداری داستان کاربر (User Story Mapping) و فرضیه‌آزمایی</li>
+              <li>آموزش مهارت‌های ارتباط فنی موثر و ارائه به سطوح C-Level</li>
+              <li>استقرار چارچوب‌های تصمیم‌گیری خودمختار برای تیم‌های مهندسی</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="glass-card p-8 border-r-4 border-r-cyan-500 space-y-5">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono font-bold text-cyan-400 uppercase tracking-wider">ستون ۰۳</span>
+            <div class="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center border border-cyan-500/20 text-lg">
+              <i class="fas fa-sliders"></i>
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-white">استقرار چابک عملگرایانه و آیین‌های دلیوری</h3>
+          <p class="text-xs text-slate-400 font-medium">
+            <strong class="text-slate-300">مخاطب:</strong> سازمان‌های درگیر تشریفات بوروکراتیک، تعهدات محقق‌نشده اسپرینت یا اصطکاک میان تیم‌های بیزینس و فنی.
+          </p>
+          <div class="space-y-2 pt-2 border-t border-slate-800">
+            <span class="text-[11px] text-slate-400 uppercase tracking-wider font-bold block">خروجی‌های ملموس:</span>
+            <ul class="text-xs text-slate-300 space-y-1.5 list-disc list-inside">
+              <li>ممیزی مراسم چابک (حذف جلسات فرسایشی و بوروکراسی زائد)</li>
+              <li>جلسات رترواسپکتیو نتیجه‌گرا با پیگیری دقیق اقدامات اصلاحی</li>
+              <li>مدل‌های پیش‌بینی انتشار محصول و کاهش زمان چرخه توسعه (Cycle Time)</li>
+              <li>مدرن‌سازی گردش کار Jira / Linear و ارتقای نظم بُردهای کاری</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Pillar 4 -->
+        <div class="glass-card p-8 border-r-4 border-r-emerald-500 space-y-5">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono font-bold text-emerald-400 uppercase tracking-wider">ستون ۰۴</span>
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center border border-emerald-500/20 text-lg">
+              <i class="fas fa-database"></i>
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-white">حاکمیت داده و معماری شاخص‌ها (KPIs)</h3>
+          <p class="text-xs text-slate-400 font-medium">
+            <strong class="text-slate-300">مخاطب:</strong> سازمان‌های در حال گذار از سیلوهای سنتی (SAP و ERP) به معماری‌های مدرن لیک‌هاوس (Databricks و Power BI).
+          </p>
+          <div class="space-y-2 pt-2 border-t border-slate-800">
+            <span class="text-[11px] text-slate-400 uppercase tracking-wider font-bold block">خروجی‌های ملموس:</span>
+            <ul class="text-xs text-slate-300 space-y-1.5 list-disc list-inside">
+              <li>طراحی درخت KPI واحد و ماتریس تعریف شاخص‌های کلیدی</li>
+              <li>مدل‌های معنایی حاکمیت‌یافته در Power BI و کاتالوگ تحلیل خودخدمت</li>
+              <li>گیت‌های اعتبارسنجی خودکار کیفیت داده و استانداردهای پایش سلامت پایپ‌لاین‌ها</li>
+              <li>قراردادهای داده (Data Contracts) میان تیم‌های تولیدکننده و مصرف‌کننده</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ENGAGEMENT MODELS (Persian)
+         ========================================================================== -->
+    <section id="models" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 scroll-mt-24">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+        <span class="text-xs uppercase font-mono font-bold tracking-widest text-indigo-400 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20">همکاری انعطاف‌پذیر</span>
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-white">مدل‌های تعامل و همکاری</h2>
+        <p class="text-base text-slate-300">
+          مدل‌های ساختاریافته متناسب با سطح بلوغ و زمان‌بندی سازمان شما.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-right">
+        
+        <!-- Model 1 -->
+        <div class="glass-card p-8 flex flex-col justify-between border border-blue-500/30 hover:border-blue-500/60 relative">
+          <div class="space-y-4">
+            <div class="inline-flex px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 text-xs font-bold">
+              رهبری مستمر
+            </div>
+            <h3 class="text-2xl font-bold text-white">ریتینر فرکشنال</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              حضور ارشد در تیم (۱ تا ۲ روز در هفته) در نقش سرپرست موقت محصول یا راهبر دلیوری.
+            </p>
+            <ul class="text-xs text-slate-400 space-y-2 pt-3 border-t border-slate-800">
+              <li class="flex items-center gap-2"><i class="fas fa-check text-blue-400 text-xs"></i> هدایت مستقیم نقشه‌های راه و OKRها</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-blue-400 text-xs"></i> منتورینگ مستقیم لیدهای تیم</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-blue-400 text-xs"></i> جلسات هفتگی هم‌راستاسازی با مدیران ارشد</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-blue-400 text-xs"></i> تعهد منعطف ۳ تا ۶ ماهه</li>
+            </ul>
+          </div>
+          <div class="pt-6 mt-6 border-t border-slate-800">
+            <a href="#booking" class="btn-primary w-full py-3 rounded-xl text-xs font-bold text-center block">
+              استعلام ظرفیت فرکشنال
+            </a>
+          </div>
+        </div>
+
+        <!-- Model 2 -->
+        <div class="glass-card p-8 flex flex-col justify-between border border-indigo-500/40 relative bg-gradient-to-b from-indigo-950/20 to-slate-900/80 shadow-xl shadow-indigo-500/10">
+          <div class="absolute -top-3 left-6 bg-indigo-600 text-white text-[10px] font-bold px-3 py-0.5 rounded-full uppercase tracking-wider">
+            محبوب‌ترین
+          </div>
+          <div class="space-y-4">
+            <div class="inline-flex px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-300 text-xs font-bold">
+              عیب‌یابی سریع
+            </div>
+            <h3 class="text-2xl font-bold text-white">ممیزی ۲ هفته‌ای دلیوری</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              ارزیابی متمرکز و فشرده از ساختار تیم، گلوگاه‌های دلیوری و معماری داده لیک‌هاوس.
+            </p>
+            <ul class="text-xs text-slate-300 space-y-2 pt-3 border-t border-slate-800">
+              <li class="flex items-center gap-2"><i class="fas fa-check text-indigo-400 text-xs"></i> بیش از ۱۰ مصاحبه با ذی‌نفعان و مهندسان</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-indigo-400 text-xs"></i> نقشه حرارتی اصطکاک‌های فرآیندی و فنی</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-indigo-400 text-xs"></i> تدوین برنامه اقدام اولویت‌بندی‌شده ۹۰ روزه</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-indigo-400 text-xs"></i> ارائه گزارش اجرایی به هیئت مدیره</li>
+            </ul>
+          </div>
+          <div class="pt-6 mt-6 border-t border-slate-800">
+            <a href="#booking" class="btn-primary w-full py-3 rounded-xl text-xs font-bold text-center block">
+              رزرو ممیزی ۲ هفته‌ای
+            </a>
+          </div>
+        </div>
+
+        <!-- Model 3 -->
+        <div class="glass-card p-8 flex flex-col justify-between border border-slate-800 hover:border-slate-700 relative">
+          <div class="space-y-4">
+            <div class="inline-flex px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-bold">
+              توانمندسازی تیم
+            </div>
+            <h3 class="text-2xl font-bold text-white">برنامه مربیگری تیم</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              اسپرینت‌های توانمندسازی هدفمند (۴ تا ۸ هفته) جهت تبدیل مدیران و لیدهای فنی به مجریان پرسرعت.
+            </p>
+            <ul class="text-xs text-slate-400 space-y-2 pt-3 border-t border-slate-800">
+              <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-400 text-xs"></i> کارگاه‌های عملی کشف محصول و نگاشت داستان‌ها</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-400 text-xs"></i> آموزش تخصصی مالکان محصول داده لیک‌هاوس</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-400 text-xs"></i> جلسات فردبه‌فرد دوهفته‌یک‌بار</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-400 text-xs"></i> تحویل دستورالعمل جامع آیین‌های دلیوری</li>
+            </ul>
+          </div>
+          <div class="pt-6 mt-6 border-t border-slate-800">
+            <a href="#booking" class="btn-secondary w-full py-3 rounded-xl text-xs font-bold text-center block">
+              برنامه‌ریزی کارگاه تیمی
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         BOOKING & INQUIRY SECTION (Persian)
+         ========================================================================== -->
+    <section id="booking" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 scroll-mt-24">
+      
+      <div class="glass-card p-8 sm:p-12 border border-blue-500/30 rounded-3xl bg-gradient-to-l from-slate-900/90 via-slate-900/60 to-slate-900/90 shadow-2xl relative overflow-hidden text-right">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+          
+          <!-- Left Info Column -->
+          <div class="lg:col-span-5 space-y-6">
+            <div class="space-y-2">
+              <span class="text-xs uppercase font-bold tracking-widest text-blue-400">مشاوره مستقیم</span>
+              <h2 class="text-3xl font-bold text-white">درخواست جلسه دیسکاوری و مشاوره</h2>
+              <p class="text-sm text-slate-300 leading-relaxed">
+                بیایید در یک جلسه آشنایی ۳۰ دقیقه‌ای پیرامون چالش‌های فعلی دلیوری، معماری محصولات داده یا نیازمندی‌های رهبری فرکشنال شما گفتگو کنیم.
+              </p>
+            </div>
+
+            <div class="space-y-3 pt-2">
+              <div class="flex items-center gap-3 text-xs text-slate-300">
+                <div class="w-8 h-8 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center shrink-0">
+                  <i class="fas fa-clock"></i>
+                </div>
+                <span><strong>مدت جلسه:</strong> ۳۰ دقیقه • تماس ویدیویی Google Meet / Zoom</span>
+              </div>
+              <div class="flex items-center gap-3 text-xs text-slate-300">
+                <div class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0">
+                  <i class="fas fa-shield-halved"></i>
+                </div>
+                <span><strong>محرمانگی:</strong> پایبندی کامل به اصول رازداری سازمانی (NDA)</span>
+              </div>
+              <div class="flex items-center gap-3 text-xs text-slate-300">
+                <div class="w-8 h-8 rounded-lg bg-indigo-500/10 text-indigo-400 flex items-center justify-center shrink-0">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <span><strong>ایمیل مستقیم:</strong> <button class="copy-email-btn underline hover:text-white font-mono">ali.maleki100@gmail.com</button></span>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-800/40 border border-slate-800 text-xs text-slate-400">
+              <span class="font-bold text-slate-200">ترجیح می‌دهید پیام متنی بفرستید؟</span> فرم روبرو را تکمیل کنید تا حداکثر ظرف ۲۴ ساعت کاری با جزئیات پاسخ داده شود.
+            </div>
+          </div>
+
+          <!-- Right: Direct Submission Form Gateway -->
+          <div class="lg:col-span-7">
+            <div class="p-6 sm:p-8 rounded-2xl bg-slate-900/90 border border-slate-800 shadow-xl">
+              
+              <!-- In-Card Success View -->
+              <div id="form-success-container" class="hidden text-center py-8 space-y-4">
+                <div class="w-16 h-16 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-2xl mx-auto">
+                  <i class="fas fa-check"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white">درخواست شما با موفقیت ثبت شد!</h3>
+                <p id="form-success-msg" class="text-xs text-slate-300 max-w-md mx-auto leading-relaxed">
+                  با تشکر! پیام شما مستقیماً به ایمیل علی ملکی ارسال گردید و به زودی با شما تماس گرفته خواهد شد.
+                </p>
+              </div>
+
+              <!-- Form -->
+              <form id="consulting-contact-form" class="space-y-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="form-name" class="block text-xs font-semibold text-slate-300 mb-1">نام و نام خانوادگی *</label>
+                    <input type="text" id="form-name" required placeholder="مثال: علی رضایی" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-800/60 border border-slate-700 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors">
+                  </div>
+                  <div>
+                    <label for="form-email" class="block text-xs font-semibold text-slate-300 mb-1">ایمیل سازمانی / کاری *</label>
+                    <input type="email" id="form-email" required placeholder="مثال: ali@company.com" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-800/60 border border-slate-700 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors">
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="form-company" class="block text-xs font-semibold text-slate-300 mb-1">نام سازمان / استارتاپ</label>
+                    <input type="text" id="form-company" placeholder="مثال: شرکت فناوری نوین" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-800/60 border border-slate-700 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors">
+                  </div>
+                  <div>
+                    <label for="form-service" class="block text-xs font-semibold text-slate-300 mb-1">حوزه اصلی همکاری</label>
+                    <select id="form-service" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-800/60 border border-slate-700 text-xs text-white focus:outline-none focus:border-blue-500 transition-colors">
+                      <option value="رهبری فرکشنال محصول و دلیوری">رهبری فرکشنال محصول و دلیوری</option>
+                      <option value="ممیزی ۲ هفته‌ای دلیوری و معماری">ممیزی ۲ هفته‌ای دلیوری و معماری</option>
+                      <option value="حاکمیت داده و مدرن‌سازی لیک‌هاوس">حاکمیت داده و مدرن‌سازی لیک‌هاوس</option>
+                      <option value="مربیگری تیم و استقرار چابک">مربیگری تیم و استقرار چابک</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <label for="form-message" class="block text-xs font-semibold text-slate-300 mb-1">شرح چالش فعلی و محدوده مورد نظر *</label>
+                  <textarea id="form-message" rows="4" required placeholder="توضیح مختصری پیرامون ساختار فعلی تیم، چالش اصلی یا زمان‌بندی مد نظر بنویسید..." class="w-full px-3.5 py-2.5 rounded-xl bg-slate-800/60 border border-slate-700 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors"></textarea>
+                </div>
+
+                <button type="submit" id="form-submit-btn" class="btn-primary w-full py-3.5 rounded-xl text-xs font-bold tracking-wide flex items-center justify-center gap-2">
+                  <span>ارسال درخواست همکاری</span>
+                  <i class="fas fa-paper-plane text-xs"></i>
+                </button>
+              </form>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER (Persian)
+       ========================================================================== -->
+  <footer class="border-t border-slate-800 bg-[#0B0F19] py-12 relative z-10 text-xs text-slate-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <div class="w-7 h-7 rounded-lg bg-blue-600 flex items-center justify-center font-bold text-white text-xs font-sans">AM</div>
+        <span>© ۲۰۲۶ علی ملکی. کلیه حقوق محفوظ است.</span>
+      </div>
+
+      <div class="flex items-center gap-6">
+        <a href="https://www.linkedin.com/in/alimaleki100/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors flex items-center gap-1.5 font-sans">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://github.com/alimaleki100" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors flex items-center gap-1.5 font-sans">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+        <a href="https://medium.com/@ali.maleki100" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors flex items-center gap-1.5 font-sans">
+          <i class="fab fa-medium"></i> Medium
+        </a>
+        <button class="copy-email-btn hover:text-white transition-colors flex items-center gap-1.5 font-mono">
+          <i class="fas fa-envelope"></i> ایمیل
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app-fa.js"></script>
+</body>
+</html>

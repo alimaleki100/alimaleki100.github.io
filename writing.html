@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Writing & Insights | Ali Maleki</title>
+  <meta name="description" content="Practitioner essays by Ali Maleki.">
+  <meta name="author" content="Ali Maleki">
+  <link rel="canonical" href="https://alimaleki100.github.io/writing">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="Writing & Insights | Ali Maleki">
+  <meta property="og:description" content="Practitioner essays by Ali Maleki.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://alimaleki100.github.io/writing">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Tailwind CSS CDN with Modern Mineral Config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            mineralBg: '#F2F1ED',
+            mineralSurface: '#FAFAF7',
+            mineralText: '#202522',
+            mineralSecondary: '#66706C',
+            mineralAccent: '#176B68',
+            mineralDarkAccent: '#105552',
+            mineralBorder: '#D8DAD4',
+            mineralCopper: '#B56F46',
+            mineralDarkSurface: '#172825',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            heading: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Custom Modern Mineral Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#F2F1ED] text-[#202522] min-h-screen flex flex-col font-sans selection:bg-[#176B68]/15 selection:text-[#176B68]">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-[#F2F1ED]/95 backdrop-blur-md border-b border-[#D8DAD4] transition-all">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      
+      <!-- Brand Monogram & Name -->
+      <a href="index.html" class="flex items-center gap-3 group text-decoration-none" aria-label="Ali Maleki Homepage">
+        <div class="w-8 h-8 rounded-md bg-[#176B68] flex items-center justify-center font-bold text-[#FAFAF7] text-xs font-mono tracking-wider shadow-sm group-hover:bg-[#105552] transition-colors">
+          AM
+        </div>
+        <div class="flex flex-col">
+          <span class="font-bold text-sm text-[#202522] tracking-tight group-hover:text-[#176B68] transition-colors font-heading">Ali Maleki</span>
+          <span class="text-[11px] text-[#66706C] font-normal leading-none hidden sm:inline">Data Product &amp; Transformation Leader</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-1 text-sm font-medium text-[#66706C]" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-item ">Home</a>
+        <a href="work/index.html" class="nav-item ">Work</a>
+        <a href="about/index.html" class="nav-item ">About</a>
+        <a href="writing/index.html" class="nav-item active">Writing</a>
+        <a href="consulting/index.html" class="nav-item ">Consulting</a>
+        <a href="index.html#contact" class="nav-item">Contact</a>
+        <div class="h-4 w-px bg-[#D8DAD4] mx-2"></div>
+        <a href="ali-maleki-resume.pdf" target="_blank" download class="btn-mineral-secondary text-xs py-2 px-3.5 flex items-center gap-1.5">
+          <span>R&eacute;sum&eacute;</span>
+          <i class="fas fa-arrow-down text-[10px] text-[#B56F46]"></i>
+        </a>
+      </nav>
+
+      <!-- Mobile Nav Controls -->
+      <div class="flex items-center gap-2 md:hidden">
+        <a href="ali-maleki-resume.pdf" target="_blank" download class="btn-mineral-secondary text-xs py-1.5 px-2.5">
+          <span>R&eacute;sum&eacute;</span>
+        </a>
+        <button id="mobile-nav-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation menu" class="p-2 rounded-md border border-[#D8DAD4] bg-[#FAFAF7] text-[#202522] hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#176B68]">
+          <i class="fas fa-bars text-sm"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Drawer Overlay -->
+    <div id="mobile-nav-backdrop" class="fixed inset-0 bg-[#202522]/40 backdrop-blur-sm z-40 hidden md:hidden"></div>
+    <div id="mobile-nav-menu" class="fixed top-0 right-0 bottom-0 w-72 max-w-[80vw] bg-[#FAFAF7] border-l border-[#D8DAD4] z-50 p-6 flex flex-col justify-between hidden md:hidden shadow-xl" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+      <div class="space-y-6">
+        <div class="flex items-center justify-between pb-4 border-b border-[#D8DAD4]">
+          <span class="font-bold text-base text-[#202522] font-heading">Navigation</span>
+          <button id="mobile-nav-close" type="button" aria-label="Close menu" class="p-2 text-[#66706C] hover:text-[#202522]">
+            <i class="fas fa-times text-base"></i>
+          </button>
+        </div>
+        <div class="flex flex-col space-y-3">
+          <a href="index.html" class="mobile-nav-link text-sm font-medium py-2 px-3 rounded-md transition-colors text-[#202522] hover:bg-black/5">Home</a>
+          <a href="work/index.html" class="mobile-nav-link text-sm font-medium py-2 px-3 rounded-md transition-colors text-[#202522] hover:bg-black/5">Selected Work</a>
+          <a href="about/index.html" class="mobile-nav-link text-sm font-medium py-2 px-3 rounded-md transition-colors text-[#202522] hover:bg-black/5">About</a>
+          <a href="writing/index.html" class="mobile-nav-link text-sm font-medium py-2 px-3 rounded-md transition-colors bg-[#176B68]/10 text-[#176B68] font-semibold">Writing</a>
+          <a href="consulting/index.html" class="mobile-nav-link text-sm font-medium py-2 px-3 rounded-md transition-colors text-[#202522] hover:bg-black/5">Consulting</a>
+          <a href="index.html#contact" class="mobile-nav-link text-sm font-medium py-2 px-3 rounded-md text-[#202522] hover:bg-black/5">Contact</a>
+        </div>
+      </div>
+      <div class="pt-6 border-t border-[#D8DAD4]">
+        <a href="ali-maleki-resume.pdf" target="_blank" download class="btn-mineral-primary w-full text-xs py-2.5 flex items-center justify-center gap-2">
+          <span>Download R&eacute;sum&eacute; (PDF)</span>
+          <i class="fas fa-arrow-down text-[11px]"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    
+    <!-- Page Header -->
+    <section class="py-12 md:py-16 border-b border-[#D8DAD4] bg-[#FAFAF7]">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#176B68]/10 border border-[#176B68]/20 text-[#176B68] text-xs font-mono font-medium mb-4">
+            Published Articles
+          </div>
+          <h1 class="text-3xl sm:text-4xl font-bold font-heading text-[#202522] tracking-tight mb-4">
+            Writing &amp; Insights
+          </h1>
+          <p class="text-base sm:text-lg text-[#66706C] leading-relaxed mb-6">
+            Practitioner essays by Ali Maleki on internal products, product management, and data documentation.
+          </p>
+          <a href="https://medium.com/@ali.maleki100" target="_blank" rel="noopener" class="btn-mineral-secondary text-xs py-2 px-4 inline-flex items-center gap-2">
+            <i class="fab fa-medium text-[#176B68]"></i>
+            <span>Follow @ali.maleki100 on Medium</span>
+            <i class="fas fa-arrow-up-right-from-square text-[10px]"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Articles List (ONLY Ali Maleki's 3 Real Articles) -->
+    <section class="py-16 md:py-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          
+          <!-- Article 1 -->
+          <article class="surface-card p-6 md:p-8 flex flex-col justify-between">
+            <div>
+              <div class="text-xs font-mono text-[#66706C] mb-4">
+                Aug 21, 2025 &middot; 3 min read
+              </div>
+              <h2 class="text-lg font-bold font-heading text-[#202522] mb-3 hover:text-[#176B68] transition-colors leading-snug">
+                <a href="https://medium.com/@ali.maleki100/internal-products-part-3-how-to-measure-the-success-of-internal-tools-0d8d2d788726" target="_blank" rel="noopener">
+                  Internal Products: Part 3 &mdash; How to Measure the Success of Internal Tools
+                </a>
+              </h2>
+            </div>
+            <div class="pt-6 mt-6 border-t border-[#D8DAD4]">
+              <a href="https://medium.com/@ali.maleki100/internal-products-part-3-how-to-measure-the-success-of-internal-tools-0d8d2d788726" target="_blank" rel="noopener" class="text-xs font-semibold text-[#176B68] flex items-center gap-1.5">
+                <span>Read Full Article on Medium</span>
+                <i class="fas fa-arrow-up-right-from-square text-[10px]"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Article 2 -->
+          <article class="surface-card p-6 md:p-8 flex flex-col justify-between">
+            <div>
+              <div class="text-xs font-mono text-[#66706C] mb-4">
+                Aug 4, 2025 &middot; 3 min read
+              </div>
+              <h2 class="text-lg font-bold font-heading text-[#202522] mb-3 hover:text-[#176B68] transition-colors leading-snug">
+                <a href="https://medium.com/@ali.maleki100/internal-products-part-2-why-internal-products-deserve-product-management-a63d5a19401f" target="_blank" rel="noopener">
+                  Internal Products: Part 2 &mdash; Why Internal Products Deserve Product Management
+                </a>
+              </h2>
+            </div>
+            <div class="pt-6 mt-6 border-t border-[#D8DAD4]">
+              <a href="https://medium.com/@ali.maleki100/internal-products-part-2-why-internal-products-deserve-product-management-a63d5a19401f" target="_blank" rel="noopener" class="text-xs font-semibold text-[#176B68] flex items-center gap-1.5">
+                <span>Read Full Article on Medium</span>
+                <i class="fas fa-arrow-up-right-from-square text-[10px]"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Article 3 -->
+          <article class="surface-card p-6 md:p-8 flex flex-col justify-between">
+            <div>
+              <div class="text-xs font-mono text-[#66706C] mb-4">
+                Jul 17, 2025
+              </div>
+              <h2 class="text-lg font-bold font-heading text-[#202522] mb-3 hover:text-[#176B68] transition-colors leading-snug">
+                <a href="https://medium.com/@ali.maleki100/the-hidden-cost-of-poor-data-documentation-fae4a8e84e63" target="_blank" rel="noopener">
+                  The Hidden Cost of Poor Data Documentation
+                </a>
+              </h2>
+            </div>
+            <div class="pt-6 mt-6 border-t border-[#D8DAD4]">
+              <a href="https://medium.com/@ali.maleki100/the-hidden-cost-of-poor-data-documentation-fae4a8e84e63" target="_blank" rel="noopener" class="text-xs font-semibold text-[#176B68] flex items-center gap-1.5">
+                <span>Read Full Article on Medium</span>
+                <i class="fas fa-arrow-up-right-from-square text-[10px]"></i>
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="mt-auto border-t border-[#D8DAD4] bg-[#FAFAF7] py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        
+        <!-- Brand / Bio -->
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-2 mb-3">
+            <div class="w-6 h-6 rounded bg-[#176B68] flex items-center justify-center font-bold text-[#FAFAF7] text-[10px] font-mono">AM</div>
+            <span class="font-bold text-sm text-[#202522] font-heading">Ali Maleki</span>
+          </div>
+          <p class="text-xs text-[#66706C] max-w-sm leading-relaxed mb-4">
+            Data Product &amp; Transformation Leader specializing in Databricks Lakehouse modernization, semantic layer governance, and agile delivery engineering.
+          </p>
+          <div class="text-xs text-[#66706C]">
+            <i class="fas fa-location-dot text-[#176B68] mr-1.5"></i> Czech Republic &middot; Global Hybrid
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-[#202522] mb-3 font-mono">Navigation</h4>
+          <ul class="space-y-2 text-xs text-[#66706C]">
+            <li><a href="index.html" class="hover:text-[#176B68] transition-colors">Home</a></li>
+            <li><a href="work/index.html" class="hover:text-[#176B68] transition-colors">Selected Work</a></li>
+            <li><a href="about/index.html" class="hover:text-[#176B68] transition-colors">About &amp; Credentials</a></li>
+            <li><a href="writing/index.html" class="hover:text-[#176B68] transition-colors">Writing &amp; Insights</a></li>
+            <li><a href="consulting/index.html" class="hover:text-[#176B68] transition-colors">Advisory Services</a></li>
+          </ul>
+        </div>
+
+        <!-- Connect -->
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-[#202522] mb-3 font-mono">Connect</h4>
+          <ul class="space-y-2 text-xs text-[#66706C]">
+            <li><a href="mailto:ali.maleki100@gmail.com" class="hover:text-[#176B68] transition-colors flex items-center gap-1.5"><i class="fas fa-envelope text-[11px] text-[#176B68]"></i> ali.maleki100@gmail.com</a></li>
+            <li><a href="https://www.linkedin.com/in/alimaleki100/" target="_blank" rel="noopener" class="hover:text-[#176B68] transition-colors flex items-center gap-1.5"><i class="fab fa-linkedin text-[11px] text-[#176B68]"></i> LinkedIn</a></li>
+            <li><a href="https://medium.com/@ali.maleki100" target="_blank" rel="noopener" class="hover:text-[#176B68] transition-colors flex items-center gap-1.5"><i class="fab fa-medium text-[11px] text-[#176B68]"></i> Medium (@ali.maleki100)</a></li>
+            <li><a href="ali-maleki-resume.pdf" target="_blank" download class="hover:text-[#B56F46] transition-colors flex items-center gap-1.5 font-medium"><i class="fas fa-file-pdf text-[11px] text-[#B56F46]"></i> Download R&eacute;sum&eacute; (PDF)</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-6 border-t border-[#D8DAD4] flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#66706C]">
+        <p>&copy; 2026 Ali Maleki. All rights reserved.</p>
+        <p class="mt-2 sm:mt-0">Built with semantic standards, clean typography, and fast static delivery.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
