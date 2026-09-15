@@ -92,22 +92,73 @@ function highlightActiveNav() {
 }
 
 /* ==========================================================================
-   3. Contact Form Submission (with Fallback)
+   3. Contact Modal & Inbox Delivery
    ========================================================================== */
 function initContactForm() {
+  const modal = document.getElementById('contact-modal');
   const form = document.getElementById('contact-form');
-  if (!form) return;
+  const openButtons = document.querySelectorAll('[data-contact-open]');
+  const closeButtons = document.querySelectorAll('[data-contact-close]');
+  const status = document.getElementById('contact-form-status');
+  if (!modal || !form || !openButtons.length) return;
 
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const name = form.querySelector('[name="name"]')?.value || '';
-    const email = form.querySelector('[name="email"]')?.value || '';
-    const message = form.querySelector('[name="message"]')?.value || '';
+  let previouslyFocused = null;
 
-    const subject = encodeURIComponent(`Portfolio Inquiry from ${name}`);
-    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
-    
-    // Open native mailto directly as robust fallback
-    window.location.href = `mailto:ali.maleki100@gmail.com?subject=${subject}&body=${body}`;
+  function openModal() {
+    previouslyFocused = document.activeElement;
+    modal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+    window.setTimeout(() => document.getElementById('contact-name')?.focus(), 0);
+  }
+
+  function closeModal() {
+    modal.classList.add('hidden');
+    document.body.style.overflow = '';
+    if (previouslyFocused instanceof HTMLElement) previouslyFocused.focus();
+  }
+
+  openButtons.forEach((button) => button.addEventListener('click', openModal));
+  closeButtons.forEach((button) => button.addEventListener('click', closeModal));
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
+  });
+
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const submitButton = form.querySelector('button[type="submit"]');
+    const originalLabel = submitButton?.innerHTML;
+
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.innerHTML = '<i class="fas fa-circle-notch fa-spin text-xs"></i><span>Sending...</span>';
+    }
+    if (status) status.classList.add('hidden');
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
+      });
+
+      if (!response.ok) throw new Error('Message delivery failed');
+
+      form.reset();
+      if (status) {
+        status.textContent = 'Message sent successfully. Thank you — I will respond by email.';
+        status.className = 'rounded-lg px-3 py-2.5 text-xs border border-[#20B8A6]/30 bg-[#20B8A6]/10 text-[#20B8A6]';
+      }
+    } catch (error) {
+      if (status) {
+        status.textContent = 'The message could not be sent. Please try WhatsApp or LinkedIn instead.';
+        status.className = 'rounded-lg px-3 py-2.5 text-xs border border-red-400/30 bg-red-400/10 text-red-300';
+      }
+    } finally {
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.innerHTML = originalLabel;
+      }
+    }
   });
 }
