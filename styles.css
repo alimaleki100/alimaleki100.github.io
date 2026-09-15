@@ -1,30 +1,33 @@
 /* ==========================================================================
-   Ali Maleki - Modern Mineral Portfolio Design System
+   Ali Maleki - Executive Navy Blue Portfolio Design System
    Palette:
-     Main background: #F2F1ED
-     Primary surface: #FAFAF7
-     Primary text: #202522
-     Primary accent: #176B68
-     Darker accent: #105552
-     Secondary text: #66706C
-     Borders: #D8DAD4
-     Restrained copper accent: #B56F46
-     Dark emphasis surface: #172825
+     Main background: #08111F
+     Elevated surface / section: #0D1728
+     Card surface: #111D30
+     Primary text: #F4F7FB
+     Secondary text: #9AA8BA
+     Primary blue: #3478F6
+     Blue hover: #2563EB
+     Teal accent: #20B8A6
+     Border: rgba(255, 255, 255, 0.10)
+     Muted surface: rgba(255, 255, 255, 0.04)
    ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 :root {
-  --bg-main: #F2F1ED;
-  --surface-primary: #FAFAF7;
-  --text-primary: #202522;
-  --accent-primary: #176B68;
-  --accent-dark: #105552;
-  --text-secondary: #66706C;
-  --border-color: #D8DAD4;
-  --accent-copper: #B56F46;
-  --surface-dark: #172825;
-  --surface-muted: #EBEAE5;
+  --bg-main: #08111F;
+  --bg-elevated: #0D1728;
+  --bg-card: #111D30;
+  --text-primary: #F4F7FB;
+  --text-secondary: #9AA8BA;
+  --accent-blue: #3478F6;
+  --accent-blue-hover: #2563EB;
+  --accent-teal: #20B8A6;
+  --border-color: rgba(255, 255, 255, 0.10);
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --surface-muted: rgba(255, 255, 255, 0.04);
+  --surface-card: #111D30;
 
   --font-heading: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   --font-body: 'Inter', system-ui, -apple-system, sans-serif;
@@ -59,46 +62,18 @@ body {
   display: none !important;
 }
 
-@media (max-width: 639px) {
-  .sm\:inline, .sm\:flex, .sm\:grid, .sm\:block {
-    display: none !important;
-  }
-}
-
-@media (max-width: 767px) {
-  .md\:flex, .md\:grid, .md\:block, .md\:inline {
-    display: none !important;
-  }
-}
-
 @media (min-width: 640px) {
-  .sm\:inline {
-    display: inline !important;
-  }
-  .sm\:flex {
-    display: flex !important;
-  }
-  .sm\:grid {
-    display: grid !important;
-  }
-  .sm\:block {
-    display: block !important;
-  }
+  .sm\:inline { display: inline !important; }
+  .sm\:flex { display: flex !important; }
+  .sm\:grid { display: grid !important; }
+  .sm\:block { display: block !important; }
 }
 
 @media (min-width: 768px) {
-  .md\:hidden {
-    display: none !important;
-  }
-  .md\:flex {
-    display: flex !important;
-  }
-  .md\:grid {
-    display: grid !important;
-  }
-  .md\:block {
-    display: block !important;
-  }
+  .md\:hidden { display: none !important; }
+  .md\:flex { display: flex !important; }
+  .md\:grid { display: grid !important; }
+  .md\:block { display: block !important; }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -107,7 +82,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.02em;
 }
 
-/* Data-path subtle abstract hero visual */
+/* Data-path subtle abstract hero visual on desktop */
 .hero-datapath {
   position: absolute;
   top: 0;
@@ -116,66 +91,66 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
   overflow: hidden;
   pointer-events: none;
-  opacity: 0.45;
+  opacity: 0.25;
   z-index: 0;
 }
 
 .datapath-line {
-  stroke: #D8DAD4;
+  stroke: rgba(255, 255, 255, 0.15);
   stroke-width: 1;
   stroke-dasharray: 4 4;
   fill: none;
 }
 
 .datapath-node {
-  fill: #FAFAF7;
-  stroke: #176B68;
+  fill: #0D1728;
+  stroke: #3478F6;
   stroke-width: 1.5;
 }
 
 .datapath-node-accent {
-  fill: #FAFAF7;
-  stroke: #B56F46;
+  fill: #0D1728;
+  stroke: #20B8A6;
   stroke-width: 1.5;
 }
 
-/* Editorial Buttons */
-.btn-mineral-primary {
+/* Executive Buttons */
+.btn-primary, .btn-mineral-primary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background-color: var(--accent-primary);
-  color: #FAFAF7;
+  background-color: var(--accent-blue);
+  color: #FFFFFF;
   font-family: var(--font-heading);
   font-weight: 600;
   font-size: 0.875rem;
-  padding: 0.75rem 1.35rem;
+  padding: 0.65rem 1.35rem;
   border-radius: 0.5rem;
-  border: 1px solid var(--accent-dark);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   transition: all 0.2s ease;
   text-decoration: none;
   cursor: pointer;
 }
 
-.btn-mineral-primary:hover {
-  background-color: var(--accent-dark);
+.btn-primary:hover, .btn-mineral-primary:hover {
+  background-color: var(--accent-blue-hover);
   color: #FFFFFF;
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(23, 107, 104, 0.18);
+  box-shadow: 0 4px 12px rgba(52, 120, 246, 0.25);
 }
 
-.btn-mineral-secondary {
+.btn-secondary, .btn-mineral-secondary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background-color: var(--surface-primary);
+  background-color: var(--surface-muted);
   color: var(--text-primary);
   font-family: var(--font-heading);
-  font-weight: 600;
+  font-weight: 500;
   font-size: 0.875rem;
-  padding: 0.75rem 1.35rem;
+  padding: 0.65rem 1.25rem;
   border-radius: 0.5rem;
   border: 1px solid var(--border-color);
   transition: all 0.2s ease;
@@ -183,105 +158,109 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
 }
 
-.btn-mineral-secondary:hover {
-  background-color: #FFFFFF;
-  border-color: #B56F46;
-  color: var(--accent-copper);
+.btn-secondary:hover, .btn-mineral-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.25);
+  color: #FFFFFF;
   transform: translateY(-1px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-.btn-mineral-outline {
+.btn-outline, .btn-mineral-outline {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
   background-color: transparent;
-  color: var(--accent-primary);
+  color: var(--accent-blue);
   font-family: var(--font-heading);
   font-weight: 600;
   font-size: 0.875rem;
-  padding: 0.65rem 1.15rem;
+  padding: 0.6rem 1.15rem;
   border-radius: 0.5rem;
   border: 1px solid var(--border-color);
   transition: all 0.2s ease;
   text-decoration: none;
 }
 
-.btn-mineral-outline:hover {
-  border-color: var(--accent-primary);
-  background-color: rgba(23, 107, 104, 0.05);
-  color: var(--accent-dark);
+.btn-outline:hover, .btn-mineral-outline:hover {
+  border-color: var(--accent-blue);
+  background-color: rgba(52, 120, 246, 0.1);
+  color: #FFFFFF;
 }
 
-/* Mineral Surfaces & Cards */
+/* Surfaces & Cards */
 .surface-card {
-  background-color: var(--surface-primary);
+  background-color: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: 0.75rem;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: border-color 0.2s ease, transform 0.2s ease;
 }
 
 .surface-card:hover {
-  border-color: #B9BCB4;
-  box-shadow: 0 4px 20px rgba(32, 37, 34, 0.04);
+  border-color: rgba(52, 120, 246, 0.4);
+}
+
+.surface-elevated {
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
 }
 
 .surface-dark-card {
-  background-color: var(--surface-dark);
-  color: #FAFAF7;
-  border: 1px solid #2A3C38;
+  background-color: #060D17;
+  color: #F4F7FB;
+  border: 1px solid var(--border-color);
   border-radius: 0.75rem;
 }
 
 /* Badges */
-.badge-mineral {
+.badge-blue, .badge-mineral {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  padding: 0.25rem 0.65rem;
+  padding: 0.2rem 0.6rem;
   border-radius: 9999px;
   font-family: var(--font-mono);
   font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  background-color: rgba(23, 107, 104, 0.08);
-  color: var(--accent-primary);
-  border: 1px solid rgba(23, 107, 104, 0.18);
+  background-color: rgba(52, 120, 246, 0.12);
+  color: var(--accent-blue);
+  border: 1px solid rgba(52, 120, 246, 0.25);
 }
 
-.badge-copper {
+.badge-teal, .badge-copper {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  padding: 0.25rem 0.65rem;
+  padding: 0.2rem 0.6rem;
   border-radius: 9999px;
   font-family: var(--font-mono);
   font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  background-color: rgba(181, 111, 70, 0.1);
-  color: var(--accent-copper);
-  border: 1px solid rgba(181, 111, 70, 0.25);
+  background-color: rgba(32, 184, 166, 0.12);
+  color: var(--accent-teal);
+  border: 1px solid rgba(32, 184, 166, 0.25);
 }
 
 .badge-neutral {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  padding: 0.25rem 0.6rem;
+  padding: 0.2rem 0.55rem;
   border-radius: 0.375rem;
   font-family: var(--font-mono);
   font-size: 0.7rem;
   font-weight: 500;
-  background-color: #EBEAE5;
+  background-color: rgba(255, 255, 255, 0.04);
   color: var(--text-secondary);
   border: 1px solid var(--border-color);
 }
 
-/* Nav Link */
+/* Navigation Link */
 .nav-item {
   color: var(--text-secondary);
   font-size: 0.875rem;
@@ -294,87 +273,68 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-item:hover {
   color: var(--text-primary);
-  background-color: rgba(0, 0, 0, 0.03);
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .nav-item.active {
-  color: var(--accent-primary);
+  color: var(--accent-blue);
   font-weight: 600;
 }
 
-/* Selected Organizations Logos */
+/* Selected Organizations Logos: Quiet Monochrome on Navy */
 .brand-logo-item {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: opacity 0.25s ease, transform 0.25s ease;
+  filter: brightness(0) invert(0.85);
+  opacity: 0.70;
+  transition: opacity 0.2s ease, filter 0.2s ease, transform 0.2s ease;
+}
+
+.brand-logo-item:hover {
+  filter: brightness(0) invert(1);
+  opacity: 1;
+  transform: translateY(-1px);
 }
 
 .brand-logo-atlas {
-  height: 28px;
-  max-height: 28px;
-  width: auto;
-  object-fit: contain;
-  opacity: 0.72;
-  border-radius: 3px;
-  transition: opacity 0.25s ease, transform 0.25s ease;
-}
-
-.brand-logo-snapp {
   height: 26px;
   max-height: 26px;
   width: auto;
   object-fit: contain;
-  filter: grayscale(1) brightness(0.6);
-  opacity: 0.70;
-  transition: all 0.25s ease;
+}
+
+.brand-logo-snapp {
+  height: 24px;
+  max-height: 24px;
+  width: auto;
+  object-fit: contain;
 }
 
 .brand-logo-agri {
-  height: 38px;
-  max-height: 38px;
+  height: 36px;
+  max-height: 36px;
   width: auto;
   object-fit: contain;
-  opacity: 0.72;
-  transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
 .brand-logo-ime {
-  height: 32px;
-  max-height: 32px;
+  height: 30px;
+  max-height: 30px;
   width: auto;
   object-fit: contain;
-  opacity: 0.75;
-  border-radius: 4px;
-  transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
 .brand-logo-loreal {
-  height: 20px;
-  max-height: 20px;
+  height: 18px;
+  max-height: 18px;
   width: auto;
   object-fit: contain;
-  opacity: 0.72;
-  transition: opacity 0.25s ease, transform 0.25s ease;
-}
-
-.brand-logo-item:hover .brand-logo-atlas,
-.brand-logo-item:hover .brand-logo-agri,
-.brand-logo-item:hover .brand-logo-ime,
-.brand-logo-item:hover .brand-logo-loreal {
-  opacity: 1;
-  transform: translateY(-1px);
-}
-
-.brand-logo-item:hover .brand-logo-snapp {
-  filter: none;
-  opacity: 1;
-  transform: translateY(-1px);
 }
 
 /* Focus styles */
 a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
-  outline: 2px solid var(--accent-primary);
+  outline: 2px solid var(--accent-blue);
   outline-offset: 2px;
 }
 

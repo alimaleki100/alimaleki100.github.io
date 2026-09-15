@@ -26,22 +26,22 @@
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
-  <!-- Tailwind CSS CDN with Modern Mineral Config -->
+  <!-- Tailwind CSS CDN with Navy Portfolio Config -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            mineralBg: '#F2F1ED',
-            mineralSurface: '#FAFAF7',
-            mineralText: '#202522',
-            mineralSecondary: '#66706C',
-            mineralAccent: '#176B68',
-            mineralDarkAccent: '#105552',
-            mineralBorder: '#D8DAD4',
-            mineralCopper: '#B56F46',
-            mineralDarkSurface: '#172825',
+            navyBg: '#08111F',
+            navyElevated: '#0D1728',
+            navyText: '#F4F7FB',
+            navySecondary: '#9AA8BA',
+            navyBlue: '#3478F6',
+            navyBlueHover: '#2563EB',
+            navyBorder: '#273248',
+            navyTeal: '#20B8A6',
+            navyCard: '#111D30',
           },
           fontFamily: {
             sans: ['Inter', 'system-ui', 'sans-serif'],
@@ -53,38 +53,38 @@
     }
   </script>
   
-  <!-- Custom Modern Mineral Stylesheet -->
+  <!-- Custom Navy Portfolio Stylesheet -->
   <link rel="stylesheet" href="../../styles.css">
 </head>
-<body class="bg-[#F2F1ED] text-[#202522] min-h-screen flex flex-col font-sans selection:bg-[#176B68]/15 selection:text-[#176B68]">
+<body class="bg-[#08111F] text-[#F4F7FB] min-h-screen flex flex-col font-sans selection:bg-[#3478F6]/15 selection:text-[#3478F6]">
 
   <!-- Header -->
-  <header class="sticky top-0 z-50 bg-[#F2F1ED]/95 backdrop-blur-md border-b border-[#D8DAD4] transition-all">
+  <header class="sticky top-0 z-50 bg-[#08111F]/95 backdrop-blur-md border-b border-[#273248] transition-all">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       
       <!-- Brand Monogram & Name -->
       <a href="../../index.html" class="flex items-center gap-3 group text-decoration-none" aria-label="Ali Maleki Homepage">
-        <div class="w-8 h-8 rounded-md bg-[#176B68] flex items-center justify-center font-bold text-[#FAFAF7] text-xs font-mono tracking-wider shadow-sm group-hover:bg-[#105552] transition-colors">
+        <div class="w-8 h-8 rounded-md bg-[#3478F6] flex items-center justify-center font-bold text-[#0D1728] text-xs font-mono tracking-wider shadow-sm group-hover:bg-[#2563EB] transition-colors">
           AM
         </div>
         <div class="flex flex-col">
-          <span class="font-bold text-sm text-[#202522] tracking-tight group-hover:text-[#176B68] transition-colors font-heading">Ali Maleki</span>
-          <span class="text-[11px] text-[#66706C] font-normal leading-none hidden sm:inline">Data Product &amp; Transformation Leader</span>
+          <span class="font-bold text-sm text-[#F4F7FB] tracking-tight group-hover:text-[#3478F6] transition-colors font-heading">Ali Maleki</span>
+          <span class="text-[11px] text-[#9AA8BA] font-normal leading-none hidden sm:inline">Data Product &amp; Project Leader</span>
         </div>
       </a>
 
       <!-- Desktop Nav -->
-      <nav class="hidden md:flex items-center gap-1 text-sm font-medium text-[#66706C]" aria-label="Primary Navigation">
+      <nav class="hidden md:flex items-center gap-1 text-sm font-medium text-[#9AA8BA]" aria-label="Primary Navigation">
         <a href="../../index.html" class="nav-item ">Home</a>
         <a href="../../work/index.html" class="nav-item active">Work</a>
         <a href="../../about/index.html" class="nav-item ">About</a>
         <a href="../../writing/index.html" class="nav-item ">Writing</a>
         <a href="../../consulting/index.html" class="nav-item ">Consulting</a>
         <a href="../../index.html#contact" class="nav-item">Contact</a>
-        <div class="h-4 w-px bg-[#D8DAD4] mx-2"></div>
+        <div class="h-4 w-px bg-[#273248] mx-2"></div>
         <a href="../../ali-maleki-resume.pdf" target="_blank" download class="btn-mineral-secondary text-xs py-2 px-3.5 flex items-center gap-1.5">
           <span>R&eacute;sum&eacute;</span>
-          <i class="fas fa-arrow-down text-[10px] text-[#B56F46]"></i>
+          <i class="fas fa-arrow-down text-[10px] text-[#20B8A6]"></i>
         </a>
       </nav>
 
@@ -93,7 +93,7 @@
         <a href="../../ali-maleki-resume.pdf" target="_blank" download class="btn-mineral-secondary text-xs py-1.5 px-2.5">
           <span>R&eacute;sum&eacute;</span>
         </a>
-        <button id="mobile-nav-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation menu" class="p-2 rounded-md border border-[#D8DAD4] bg-[#FAFAF7] text-[#202522] hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#176B68]">
+        <button id="mobile-nav-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation menu" class="p-2 rounded-md border border-[#273248] bg-[#0D1728] text-[#F4F7FB] hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3478F6]">
           <i class="fas fa-bars text-sm"></i>
         </button>
       </div>
@@ -101,25 +101,25 @@
     </div>
 
     <!-- Mobile Drawer Overlay -->
-    <div id="mobile-nav-backdrop" class="fixed inset-0 bg-[#202522]/40 backdrop-blur-sm z-40 hidden md:hidden"></div>
-    <div id="mobile-nav-menu" class="fixed top-0 right-0 bottom-0 w-72 max-w-[80vw] bg-[#FAFAF7] border-l border-[#D8DAD4] z-50 p-6 flex flex-col justify-between hidden md:hidden shadow-xl" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div id="mobile-nav-backdrop" class="fixed inset-0 bg-[#F4F7FB]/40 backdrop-blur-sm z-40 hidden md:hidden"></div>
+    <div id="mobile-nav-menu" class="fixed top-0 right-0 bottom-0 w-72 max-w-[80vw] bg-[#0D1728] border-l border-[#273248] z-50 p-6 flex flex-col justify-between hidden md:hidden shadow-xl" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
       <div class="space-y-6">
-        <div class="flex items-center justify-between pb-4 border-b border-[#D8DAD4]">
-          <span class="font-bold text-base text-[#202522] font-heading">Navigation</span>
-          <button id="mobile-nav-close" type="button" aria-label="Close menu" class="p-2 text-[#66706C] hover:text-[#202522]">
+        <div class="flex items-center justify-between pb-4 border-b border-[#273248]">
+          <span class="font-bold text-base text-[#F4F7FB] font-heading">Navigation</span>
+          <button id="mobile-nav-close" type="button" aria-label="Close menu" class="p-2 text-[#9AA8BA] hover:text-[#F4F7FB]">
             <i class="fas fa-times text-base"></i>
           </button>
         </div>
         <div class="flex flex-col space-y-3">
-          <a href="../../index.html" class="mobile-nav-link text-sm font-medium py-2 px-3 rounded-md transition-colors text-[#202522] hover:bg-black/5">Home</a>
-          <a href="../../work/index.html" class="mobile-nav-link text-sm font-medium py-2 px-3 rounded-md transition-colors bg-[#176B68]/10 text-[#176B68] font-semibold">Selected Work</a>
-          <a href="../../about/index.html" class="mobile-nav-link text-sm font-medium py-2 px-3 rounded-md transition-colors text-[#202522] hover:bg-black/5">About</a>
-          <a href="../../writing/index.html" class="mobile-nav-link text-sm font-medium py-2 px-3 rounded-md transition-colors text-[#202522] hover:bg-black/5">Writing</a>
-          <a href="../../consulting/index.html" class="mobile-nav-link text-sm font-medium py-2 px-3 rounded-md transition-colors text-[#202522] hover:bg-black/5">Consulting</a>
-          <a href="../../index.html#contact" class="mobile-nav-link text-sm font-medium py-2 px-3 rounded-md text-[#202522] hover:bg-black/5">Contact</a>
+          <a href="../../index.html" class="mobile-nav-link text-sm font-medium py-2 px-3 rounded-md transition-colors text-[#F4F7FB] hover:bg-black/5">Home</a>
+          <a href="../../work/index.html" class="mobile-nav-link text-sm font-medium py-2 px-3 rounded-md transition-colors bg-[#3478F6]/10 text-[#3478F6] font-semibold">Selected Work</a>
+          <a href="../../about/index.html" class="mobile-nav-link text-sm font-medium py-2 px-3 rounded-md transition-colors text-[#F4F7FB] hover:bg-black/5">About</a>
+          <a href="../../writing/index.html" class="mobile-nav-link text-sm font-medium py-2 px-3 rounded-md transition-colors text-[#F4F7FB] hover:bg-black/5">Writing</a>
+          <a href="../../consulting/index.html" class="mobile-nav-link text-sm font-medium py-2 px-3 rounded-md transition-colors text-[#F4F7FB] hover:bg-black/5">Consulting</a>
+          <a href="../../index.html#contact" class="mobile-nav-link text-sm font-medium py-2 px-3 rounded-md text-[#F4F7FB] hover:bg-black/5">Contact</a>
         </div>
       </div>
-      <div class="pt-6 border-t border-[#D8DAD4]">
+      <div class="pt-6 border-t border-[#273248]">
         <a href="../../ali-maleki-resume.pdf" target="_blank" download class="btn-mineral-primary w-full text-xs py-2.5 flex items-center justify-center gap-2">
           <span>Download R&eacute;sum&eacute; (PDF)</span>
           <i class="fas fa-arrow-down text-[11px]"></i>
@@ -131,11 +131,11 @@
   <main class="flex-grow">
     
     <!-- Case Header -->
-    <section class="py-12 md:py-16 border-b border-[#D8DAD4] bg-[#FAFAF7]">
+    <section class="py-12 md:py-16 border-b border-[#273248] bg-[#0D1728]">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="flex items-center gap-2 text-xs font-mono text-[#66706C] mb-4">
-          <a href="../../work/index.html" class="hover:text-[#176B68]">&larr; Selected Work</a>
+        <div class="flex items-center gap-2 text-xs font-mono text-[#9AA8BA] mb-4">
+          <a href="../../work/index.html" class="hover:text-[#3478F6]">&larr; Selected Work</a>
           <span>/</span>
           <span>Ministry of Agriculture</span>
         </div>
@@ -147,30 +147,30 @@
           <span class="badge-neutral text-xs">ETL Pipelines</span>
         </div>
 
-        <h1 class="text-3xl sm:text-4xl font-bold font-heading text-[#202522] tracking-tight mb-4 leading-tight">
-          ICADB: National Agricultural Master Data Platform
+        <h1 class="text-3xl sm:text-4xl font-bold font-heading text-[#F4F7FB] tracking-tight mb-4 leading-tight">
+          ICADB: Iran Comprehensive Agriculture Database
         </h1>
 
-        <p class="text-base sm:text-lg text-[#66706C] leading-relaxed mb-6">
-          Directing the technical architecture and phased implementation of the Iran Comprehensive Agriculture Database (ICADB), consolidating 31 provincial silos into a unified master data management lake.
+        <p class="text-base sm:text-lg text-[#9AA8BA] leading-relaxed mb-6">
+          Managing the delivery of a nationwide BI platform built from scratch for specialists and experts across Iran&rsquo;s Ministry of Agriculture organizations.
         </p>
 
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 p-4 rounded-lg bg-[#F2F1ED] border border-[#D8DAD4] text-xs">
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 p-4 rounded-lg bg-[#08111F] border border-[#273248] text-xs">
           <div>
-            <div class="text-[#66706C] font-mono mb-1">Role</div>
-            <div class="font-bold text-[#202522]">Technical PM &amp; Data Architect</div>
+            <div class="text-[#9AA8BA] font-mono mb-1">Role</div>
+            <div class="font-bold text-[#F4F7FB]">BI Project Manager</div>
           </div>
           <div>
-            <div class="text-[#66706C] font-mono mb-1">Entity</div>
-            <div class="font-bold text-[#202522]">Ministry of Agriculture &amp; ICT</div>
+            <div class="text-[#9AA8BA] font-mono mb-1">Entity</div>
+            <div class="font-bold text-[#F4F7FB]">Iran Ministry of Agriculture</div>
           </div>
           <div>
-            <div class="text-[#66706C] font-mono mb-1">Timeframe</div>
-            <div class="font-bold text-[#202522]">2018 &ndash; 2020</div>
+            <div class="text-[#9AA8BA] font-mono mb-1">Sponsor</div>
+            <div class="font-bold text-[#F4F7FB]">Deputy Minister</div>
           </div>
           <div>
-            <div class="text-[#66706C] font-mono mb-1">Scope</div>
-            <div class="font-bold text-[#202522]">31 Provincial Departments</div>
+            <div class="text-[#9AA8BA] font-mono mb-1">Scope</div>
+            <div class="font-bold text-[#F4F7FB]">Nationwide</div>
           </div>
         </div>
 
@@ -183,57 +183,57 @@
         
         <!-- Context & Problem -->
         <article>
-          <div class="text-xs font-mono font-bold uppercase tracking-wider text-[#176B68] mb-2">01 / Context &amp; National Scale Challenge</div>
-          <h2 class="text-2xl font-bold font-heading text-[#202522] mb-4">Fragmented Provincial Silos &amp; Inconsistent Agricultural Baselines</h2>
-          <div class="prose prose-slate max-w-none text-sm sm:text-base text-[#66706C] leading-relaxed space-y-4">
+          <div class="text-xs font-mono font-bold uppercase tracking-wider text-[#3478F6] mb-2">01 / Context</div>
+          <h2 class="text-2xl font-bold font-heading text-[#F4F7FB] mb-4">A Comprehensive Agricultural Information Platform</h2>
+          <div class="prose prose-slate max-w-none text-sm sm:text-base text-[#9AA8BA] leading-relaxed space-y-4">
             <p>
-              National agricultural planning, subsidy distribution, and food reserve forecasting were historically hampered by extreme data fragmentation. Over 31 provincial agricultural directorates maintained autonomous, non-interoperable databases with conflicting taxonomies, unstandardized producer identifiers, and duplicate land registries.
+              The Iran Comprehensive Agriculture Database was commissioned as a national platform for Ministry specialists and experts, covering agricultural organizations across the country.
             </p>
             <p>
-              Federal policymakers faced month-long reconciliation lags when attempting to estimate crop yields, allocate water rights, or balance strategic grain storage across regions.
+              The initiative was sponsored by the Deputy Minister of Agriculture and built from scratch to provide a shared analytical foundation at nationwide scale.
             </p>
           </div>
         </article>
 
         <!-- Technical Architecture & MDM Strategy -->
         <article>
-          <div class="text-xs font-mono font-bold uppercase tracking-wider text-[#176B68] mb-2">02 / Technical Architecture &amp; Governance</div>
-          <h2 class="text-2xl font-bold font-heading text-[#202522] mb-4">Unified Master Data Lake &amp; Cross-Agency Semantic Standards</h2>
-          <div class="prose prose-slate max-w-none text-sm sm:text-base text-[#66706C] leading-relaxed space-y-4">
+          <div class="text-xs font-mono font-bold uppercase tracking-wider text-[#3478F6] mb-2">02 / Delivery</div>
+          <h2 class="text-2xl font-bold font-heading text-[#F4F7FB] mb-4">End-to-End Business Intelligence Delivery</h2>
+          <div class="prose prose-slate max-w-none text-sm sm:text-base text-[#9AA8BA] leading-relaxed space-y-4">
             <p>
-              As Technical Project Manager and Data Architect, I spearheaded the technical roadmap, data model design, and multi-agency deployment:
+              As BI Project Manager, I was accountable for project delivery across a multidisciplinary team of Data Engineers, BI Engineers, Business Analysts and Data Scientists:
             </p>
-            <ul class="list-disc pl-5 space-y-2 text-sm text-[#66706C]">
-              <li><strong>Semantic Master Data Management (MDM):</strong> Established a standardized national ontology for crop types, producer identities, cadastral parcel mapping, and yield metrics.</li>
-              <li><strong>Automated Ingestion &amp; De-duplication:</strong> Built robust ETL ingestion pipelines equipped with probabilistic record matching and entity resolution algorithms to purge duplicate producer records.</li>
-              <li><strong>Enterprise Data Lake Architecture:</strong> Implemented centralized repository housing multi-terabyte historical and transactional datasets accessible via role-governed APIs.</li>
-              <li><strong>Policy Decision Support Dashboards:</strong> Deployed executive analytics dashboards providing federal planners with real-time visibility into regional commodity supply balances.</li>
+            <ul class="list-disc pl-5 space-y-2 text-sm text-[#9AA8BA]">
+              <li><strong>Data foundation:</strong> Delivered the data warehouse and ETL pipelines.</li>
+              <li><strong>Analytics layer:</strong> Delivered semantic models, dashboards and operational reports.</li>
+              <li><strong>Cross-functional execution:</strong> Coordinated engineering, analytics, business analysis and data-science work.</li>
+              <li><strong>National rollout:</strong> Prepared the platform for hundreds of specialist users and millions of rows of data across Iran.</li>
             </ul>
           </div>
         </article>
 
         <!-- Measurable Outcomes & Value -->
         <article>
-          <div class="text-xs font-mono font-bold uppercase tracking-wider text-[#176B68] mb-2">03 / National Business ROI &amp; Outcomes</div>
-          <h2 class="text-2xl font-bold font-heading text-[#202522] mb-4">Nationwide Data Consolidation &amp; Strategic Policy Precision</h2>
+          <div class="text-xs font-mono font-bold uppercase tracking-wider text-[#3478F6] mb-2">03 / Outcome</div>
+          <h2 class="text-2xl font-bold font-heading text-[#F4F7FB] mb-4">Launched as a National Production Platform</h2>
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
             <div class="surface-card p-5">
-              <div class="text-2xl font-bold font-heading text-[#176B68] mb-1">31 / 31</div>
-              <div class="text-xs text-[#66706C]">Provincial departments consolidated into a single unified data lake.</div>
+              <div class="text-2xl font-bold font-heading text-[#3478F6] mb-1">Nationwide</div>
+              <div class="text-xs text-[#9AA8BA]">Coverage across Iran&rsquo;s agricultural organizations.</div>
             </div>
             <div class="surface-card p-5">
-              <div class="text-2xl font-bold font-heading text-[#176B68] mb-1">100%</div>
-              <div class="text-xs text-[#66706C]">Standardized entity resolution across millions of agricultural producer registries.</div>
+              <div class="text-2xl font-bold font-heading text-[#3478F6] mb-1">Millions</div>
+              <div class="text-xs text-[#9AA8BA]">Rows of agricultural data supported.</div>
             </div>
             <div class="surface-card p-5">
-              <div class="text-2xl font-bold font-heading text-[#176B68] mb-1">Automated</div>
-              <div class="text-xs text-[#66706C]">Real-time strategic reserve forecasting replacing month-long manual reports.</div>
+              <div class="text-2xl font-bold font-heading text-[#3478F6] mb-1">Production</div>
+              <div class="text-xs text-[#9AA8BA]">Launched and inaugurated by the President of Iran.</div>
             </div>
           </div>
         </article>
 
         <!-- Navigation Footer -->
-        <div class="pt-8 border-t border-[#D8DAD4] flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="pt-8 border-t border-[#273248] flex flex-col sm:flex-row items-center justify-between gap-4">
           <a href="../snapp-order-center/index.html" class="btn-mineral-secondary text-xs py-2 px-4 flex items-center gap-2">
             <i class="fas fa-arrow-left text-[10px]"></i>
             <span>Prev: Snapp Order Center</span>
@@ -250,50 +250,50 @@
   </main>
 
   <!-- Footer -->
-  <footer class="mt-auto border-t border-[#D8DAD4] bg-[#FAFAF7] py-12">
+  <footer class="mt-auto border-t border-[#273248] bg-[#0D1728] py-12">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
         
         <!-- Brand / Bio -->
         <div class="md:col-span-2">
           <div class="flex items-center gap-2 mb-3">
-            <div class="w-6 h-6 rounded bg-[#176B68] flex items-center justify-center font-bold text-[#FAFAF7] text-[10px] font-mono">AM</div>
-            <span class="font-bold text-sm text-[#202522] font-heading">Ali Maleki</span>
+            <div class="w-6 h-6 rounded bg-[#3478F6] flex items-center justify-center font-bold text-[#0D1728] text-[10px] font-mono">AM</div>
+            <span class="font-bold text-sm text-[#F4F7FB] font-heading">Ali Maleki</span>
           </div>
-          <p class="text-xs text-[#66706C] max-w-sm leading-relaxed mb-4">
-            Data Product &amp; Transformation Leader specializing in Databricks Lakehouse modernization, semantic layer governance, and agile delivery engineering.
+          <p class="text-xs text-[#9AA8BA] max-w-sm leading-relaxed mb-4">
+            Data Product &amp; Project Leader delivering global analytics, enterprise platforms and transformation programs.
           </p>
-          <div class="text-xs text-[#66706C]">
-            <i class="fas fa-location-dot text-[#176B68] mr-1.5"></i> Czech Republic &middot; Global Hybrid
+          <div class="text-xs text-[#9AA8BA]">
+            <i class="fas fa-location-dot text-[#3478F6] mr-1.5"></i> Czech Republic &middot; Global Hybrid
           </div>
         </div>
 
         <!-- Quick Links -->
         <div>
-          <h4 class="text-xs font-bold uppercase tracking-wider text-[#202522] mb-3 font-mono">Navigation</h4>
-          <ul class="space-y-2 text-xs text-[#66706C]">
-            <li><a href="../../index.html" class="hover:text-[#176B68] transition-colors">Home</a></li>
-            <li><a href="../../work/index.html" class="hover:text-[#176B68] transition-colors">Selected Work</a></li>
-            <li><a href="../../about/index.html" class="hover:text-[#176B68] transition-colors">About &amp; Credentials</a></li>
-            <li><a href="../../writing/index.html" class="hover:text-[#176B68] transition-colors">Writing &amp; Insights</a></li>
-            <li><a href="../../consulting/index.html" class="hover:text-[#176B68] transition-colors">Advisory Services</a></li>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-[#F4F7FB] mb-3 font-mono">Navigation</h4>
+          <ul class="space-y-2 text-xs text-[#9AA8BA]">
+            <li><a href="../../index.html" class="hover:text-[#3478F6] transition-colors">Home</a></li>
+            <li><a href="../../work/index.html" class="hover:text-[#3478F6] transition-colors">Selected Work</a></li>
+            <li><a href="../../about/index.html" class="hover:text-[#3478F6] transition-colors">About &amp; Credentials</a></li>
+            <li><a href="../../writing/index.html" class="hover:text-[#3478F6] transition-colors">Writing &amp; Insights</a></li>
+            <li><a href="../../consulting/index.html" class="hover:text-[#3478F6] transition-colors">Advisory Services</a></li>
           </ul>
         </div>
 
         <!-- Connect -->
         <div>
-          <h4 class="text-xs font-bold uppercase tracking-wider text-[#202522] mb-3 font-mono">Connect</h4>
-          <ul class="space-y-2 text-xs text-[#66706C]">
-            <li><a href="mailto:ali.maleki100@gmail.com" class="hover:text-[#176B68] transition-colors flex items-center gap-1.5"><i class="fas fa-envelope text-[11px] text-[#176B68]"></i> ali.maleki100@gmail.com</a></li>
-            <li><a href="https://www.linkedin.com/in/alimaleki100/" target="_blank" rel="noopener" class="hover:text-[#176B68] transition-colors flex items-center gap-1.5"><i class="fab fa-linkedin text-[11px] text-[#176B68]"></i> LinkedIn</a></li>
-            <li><a href="https://medium.com/@ali.maleki100" target="_blank" rel="noopener" class="hover:text-[#176B68] transition-colors flex items-center gap-1.5"><i class="fab fa-medium text-[11px] text-[#176B68]"></i> Medium (@ali.maleki100)</a></li>
-            <li><a href="../../ali-maleki-resume.pdf" target="_blank" download class="hover:text-[#B56F46] transition-colors flex items-center gap-1.5 font-medium"><i class="fas fa-file-pdf text-[11px] text-[#B56F46]"></i> Download R&eacute;sum&eacute; (PDF)</a></li>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-[#F4F7FB] mb-3 font-mono">Connect</h4>
+          <ul class="space-y-2 text-xs text-[#9AA8BA]">
+            <li><a href="mailto:ali.maleki100@gmail.com" class="hover:text-[#3478F6] transition-colors flex items-center gap-1.5"><i class="fas fa-envelope text-[11px] text-[#3478F6]"></i> ali.maleki100@gmail.com</a></li>
+            <li><a href="https://www.linkedin.com/in/alimaleki100/" target="_blank" rel="noopener" class="hover:text-[#3478F6] transition-colors flex items-center gap-1.5"><i class="fab fa-linkedin text-[11px] text-[#3478F6]"></i> LinkedIn</a></li>
+            <li><a href="https://medium.com/@ali.maleki100" target="_blank" rel="noopener" class="hover:text-[#3478F6] transition-colors flex items-center gap-1.5"><i class="fab fa-medium text-[11px] text-[#3478F6]"></i> Medium (@ali.maleki100)</a></li>
+            <li><a href="../../ali-maleki-resume.pdf" target="_blank" download class="hover:text-[#20B8A6] transition-colors flex items-center gap-1.5 font-medium"><i class="fas fa-file-pdf text-[11px] text-[#20B8A6]"></i> Download R&eacute;sum&eacute; (PDF)</a></li>
           </ul>
         </div>
 
       </div>
 
-      <div class="pt-6 border-t border-[#D8DAD4] flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#66706C]">
+      <div class="pt-6 border-t border-[#273248] flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#9AA8BA]">
         <p>&copy; 2026 Ali Maleki. All rights reserved.</p>
         <p class="mt-2 sm:mt-0">Built with semantic standards, clean typography, and fast static delivery.</p>
       </div>

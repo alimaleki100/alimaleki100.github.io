@@ -1,6 +1,6 @@
 /**
  * Ali Maleki Portfolio - Core Application Logic
- * Modern Mineral Design System
+ * Executive Navy Portfolio Design System
  */
 
 document.addEventListener('DOMContentLoaded', () => {
