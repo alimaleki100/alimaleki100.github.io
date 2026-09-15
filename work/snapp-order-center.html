@@ -4,19 +4,19 @@
   <meta charset="UTF-8">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Snapp Order Center: Event-Driven Streaming Platform | Ali Maleki</title>
-  <meta name="description" content="Case Study: How Ali Maleki led the 5-person Data Engineering workstream handling 10M+ daily events for Snapp Order Center.">
+  <title>Snapp Order Center Data Backbone | Ali Maleki</title>
+  <meta name="description" content="Case study: Ali Maleki managed the five-engineer data workstream behind Snapp SuperApp Order Center.">
   <meta name="author" content="Ali Maleki">
   <link rel="canonical" href="https://alimaleki100.github.io/work/snapp-order-center">
 
   <!-- Open Graph / Meta -->
-  <meta property="og:title" content="Snapp Order Center: Event-Driven Streaming Platform | Ali Maleki">
-  <meta property="og:description" content="Case Study: How Ali Maleki led the 5-person Data Engineering workstream handling 10M+ daily events for Snapp Order Center.">
+  <meta property="og:title" content="Snapp Order Center Data Backbone | Ali Maleki">
+  <meta property="og:description" content="Case study: Ali Maleki managed the five-engineer data workstream behind Snapp SuperApp Order Center.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://alimaleki100.github.io/work/snapp-order-center">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,22 +26,22 @@
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
-  <!-- Tailwind CSS CDN with Modern Mineral Config -->
+  <!-- Tailwind CSS CDN with Navy Portfolio Config -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            mineralBg: '#F2F1ED',
-            mineralSurface: '#FAFAF7',
-            mineralText: '#202522',
-            mineralSecondary: '#66706C',
-            mineralAccent: '#176B68',
-            mineralDarkAccent: '#105552',
-            mineralBorder: '#D8DAD4',
-            mineralCopper: '#B56F46',
-            mineralDarkSurface: '#172825',
+            navyBg: '#08111F',
+            navyElevated: '#0D1728',
+            navyText: '#F4F7FB',
+            navySecondary: '#9AA8BA',
+            navyBlue: '#3478F6',
+            navyBlueHover: '#2563EB',
+            navyBorder: '#273248',
+            navyTeal: '#20B8A6',
+            navyCard: '#111D30',
           },
           fontFamily: {
             sans: ['Inter', 'system-ui', 'sans-serif'],
@@ -53,47 +53,47 @@
     }
   </script>
   
-  <!-- Custom Modern Mineral Stylesheet -->
-  <link rel="stylesheet" href="../../styles.css">
+  <!-- Custom Navy Portfolio Stylesheet -->
+  <link rel="stylesheet" href="../styles.css">
 </head>
-<body class="bg-[#F2F1ED] text-[#202522] min-h-screen flex flex-col font-sans selection:bg-[#176B68]/15 selection:text-[#176B68]">
+<body class="bg-[#08111F] text-[#F4F7FB] min-h-screen flex flex-col font-sans selection:bg-[#3478F6]/15 selection:text-[#3478F6]">
 
   <!-- Header -->
-  <header class="sticky top-0 z-50 bg-[#F2F1ED]/95 backdrop-blur-md border-b border-[#D8DAD4] transition-all">
+  <header class="sticky top-0 z-50 bg-[#08111F]/95 backdrop-blur-md border-b border-[#273248] transition-all">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       
       <!-- Brand Monogram & Name -->
-      <a href="../../index.html" class="flex items-center gap-3 group text-decoration-none" aria-label="Ali Maleki Homepage">
-        <div class="w-8 h-8 rounded-md bg-[#176B68] flex items-center justify-center font-bold text-[#FAFAF7] text-xs font-mono tracking-wider shadow-sm group-hover:bg-[#105552] transition-colors">
+      <a href="../index.html" class="flex items-center gap-3 group text-decoration-none" aria-label="Ali Maleki Homepage">
+        <div class="w-8 h-8 rounded-md bg-[#3478F6] flex items-center justify-center font-bold text-[#0D1728] text-xs font-mono tracking-wider shadow-sm group-hover:bg-[#2563EB] transition-colors">
           AM
         </div>
         <div class="flex flex-col">
-          <span class="font-bold text-sm text-[#202522] tracking-tight group-hover:text-[#176B68] transition-colors font-heading">Ali Maleki</span>
-          <span class="text-[11px] text-[#66706C] font-normal leading-none hidden sm:inline">Data Product &amp; Transformation Leader</span>
+          <span class="font-bold text-sm text-[#F4F7FB] tracking-tight group-hover:text-[#3478F6] transition-colors font-heading">Ali Maleki</span>
+          <span class="text-[11px] text-[#9AA8BA] font-normal leading-none hidden sm:inline">Data Product &amp; Project Leader</span>
         </div>
       </a>
 
       <!-- Desktop Nav -->
-      <nav class="hidden md:flex items-center gap-1 text-sm font-medium text-[#66706C]" aria-label="Primary Navigation">
-        <a href="../../index.html" class="nav-item ">Home</a>
-        <a href="../../work/index.html" class="nav-item active">Work</a>
-        <a href="../../about/index.html" class="nav-item ">About</a>
-        <a href="../../writing/index.html" class="nav-item ">Writing</a>
-        <a href="../../consulting/index.html" class="nav-item ">Consulting</a>
-        <a href="../../index.html#contact" class="nav-item">Contact</a>
-        <div class="h-4 w-px bg-[#D8DAD4] mx-2"></div>
-        <a href="../../ali-maleki-resume.pdf" target="_blank" download class="btn-mineral-secondary text-xs py-2 px-3.5 flex items-center gap-1.5">
+      <nav class="hidden md:flex items-center gap-1 text-sm font-medium text-[#9AA8BA]" aria-label="Primary Navigation">
+        <a href="../index.html" class="nav-item ">Home</a>
+        <a href="../work/index.html" class="nav-item active">Work</a>
+        <a href="../about/index.html" class="nav-item ">About</a>
+        <a href="../writing/index.html" class="nav-item ">Writing</a>
+        <a href="../consulting/index.html" class="nav-item ">Consulting</a>
+        <a href="../index.html#contact" class="nav-item">Contact</a>
+        <div class="h-4 w-px bg-[#273248] mx-2"></div>
+        <a href="../ali-maleki-resume.pdf" target="_blank" download class="btn-mineral-secondary text-xs py-2 px-3.5 flex items-center gap-1.5">
           <span>R&eacute;sum&eacute;</span>
-          <i class="fas fa-arrow-down text-[10px] text-[#B56F46]"></i>
+          <i class="fas fa-arrow-down text-[10px] text-[#20B8A6]"></i>
         </a>
       </nav>
 
       <!-- Mobile Nav Controls -->
       <div class="flex items-center gap-2 md:hidden">
-        <a href="../../ali-maleki-resume.pdf" target="_blank" download class="btn-mineral-secondary text-xs py-1.5 px-2.5">
+        <a href="../ali-maleki-resume.pdf" target="_blank" download class="btn-mineral-secondary text-xs py-1.5 px-2.5">
           <span>R&eacute;sum&eacute;</span>
         </a>
-        <button id="mobile-nav-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation menu" class="p-2 rounded-md border border-[#D8DAD4] bg-[#FAFAF7] text-[#202522] hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#176B68]">
+        <button id="mobile-nav-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation menu" class="p-2 rounded-md border border-[#273248] bg-[#0D1728] text-[#F4F7FB] hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3478F6]">
           <i class="fas fa-bars text-sm"></i>
         </button>
       </div>
@@ -101,26 +101,26 @@
     </div>
 
     <!-- Mobile Drawer Overlay -->
-    <div id="mobile-nav-backdrop" class="fixed inset-0 bg-[#202522]/40 backdrop-blur-sm z-40 hidden md:hidden"></div>
-    <div id="mobile-nav-menu" class="fixed top-0 right-0 bottom-0 w-72 max-w-[80vw] bg-[#FAFAF7] border-l border-[#D8DAD4] z-50 p-6 flex flex-col justify-between hidden md:hidden shadow-xl" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div id="mobile-nav-backdrop" class="fixed inset-0 bg-[#F4F7FB]/40 backdrop-blur-sm z-40 hidden md:hidden"></div>
+    <div id="mobile-nav-menu" class="fixed top-0 right-0 bottom-0 w-72 max-w-[80vw] bg-[#0D1728] border-l border-[#273248] z-50 p-6 flex flex-col justify-between hidden md:hidden shadow-xl" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
       <div class="space-y-6">
-        <div class="flex items-center justify-between pb-4 border-b border-[#D8DAD4]">
-          <span class="font-bold text-base text-[#202522] font-heading">Navigation</span>
-          <button id="mobile-nav-close" type="button" aria-label="Close menu" class="p-2 text-[#66706C] hover:text-[#202522]">
+        <div class="flex items-center justify-between pb-4 border-b border-[#273248]">
+          <span class="font-bold text-base text-[#F4F7FB] font-heading">Navigation</span>
+          <button id="mobile-nav-close" type="button" aria-label="Close menu" class="p-2 text-[#9AA8BA] hover:text-[#F4F7FB]">
             <i class="fas fa-times text-base"></i>
           </button>
         </div>
         <div class="flex flex-col space-y-3">
-          <a href="../../index.html" class="mobile-nav-link text-sm font-medium py-2 px-3 rounded-md transition-colors text-[#202522] hover:bg-black/5">Home</a>
-          <a href="../../work/index.html" class="mobile-nav-link text-sm font-medium py-2 px-3 rounded-md transition-colors bg-[#176B68]/10 text-[#176B68] font-semibold">Selected Work</a>
-          <a href="../../about/index.html" class="mobile-nav-link text-sm font-medium py-2 px-3 rounded-md transition-colors text-[#202522] hover:bg-black/5">About</a>
-          <a href="../../writing/index.html" class="mobile-nav-link text-sm font-medium py-2 px-3 rounded-md transition-colors text-[#202522] hover:bg-black/5">Writing</a>
-          <a href="../../consulting/index.html" class="mobile-nav-link text-sm font-medium py-2 px-3 rounded-md transition-colors text-[#202522] hover:bg-black/5">Consulting</a>
-          <a href="../../index.html#contact" class="mobile-nav-link text-sm font-medium py-2 px-3 rounded-md text-[#202522] hover:bg-black/5">Contact</a>
+          <a href="../index.html" class="mobile-nav-link text-sm font-medium py-2 px-3 rounded-md transition-colors text-[#F4F7FB] hover:bg-black/5">Home</a>
+          <a href="../work/index.html" class="mobile-nav-link text-sm font-medium py-2 px-3 rounded-md transition-colors bg-[#3478F6]/10 text-[#3478F6] font-semibold">Selected Work</a>
+          <a href="../about/index.html" class="mobile-nav-link text-sm font-medium py-2 px-3 rounded-md transition-colors text-[#F4F7FB] hover:bg-black/5">About</a>
+          <a href="../writing/index.html" class="mobile-nav-link text-sm font-medium py-2 px-3 rounded-md transition-colors text-[#F4F7FB] hover:bg-black/5">Writing</a>
+          <a href="../consulting/index.html" class="mobile-nav-link text-sm font-medium py-2 px-3 rounded-md transition-colors text-[#F4F7FB] hover:bg-black/5">Consulting</a>
+          <a href="../index.html#contact" class="mobile-nav-link text-sm font-medium py-2 px-3 rounded-md text-[#F4F7FB] hover:bg-black/5">Contact</a>
         </div>
       </div>
-      <div class="pt-6 border-t border-[#D8DAD4]">
-        <a href="../../ali-maleki-resume.pdf" target="_blank" download class="btn-mineral-primary w-full text-xs py-2.5 flex items-center justify-center gap-2">
+      <div class="pt-6 border-t border-[#273248]">
+        <a href="../ali-maleki-resume.pdf" target="_blank" download class="btn-mineral-primary w-full text-xs py-2.5 flex items-center justify-center gap-2">
           <span>Download R&eacute;sum&eacute; (PDF)</span>
           <i class="fas fa-arrow-down text-[11px]"></i>
         </a>
@@ -131,46 +131,46 @@
   <main class="flex-grow">
     
     <!-- Case Header -->
-    <section class="py-12 md:py-16 border-b border-[#D8DAD4] bg-[#FAFAF7]">
+    <section class="py-12 md:py-16 border-b border-[#273248] bg-[#0D1728]">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="flex items-center gap-2 text-xs font-mono text-[#66706C] mb-4">
-          <a href="../../work/index.html" class="hover:text-[#176B68]">&larr; Selected Work</a>
+        <div class="flex items-center gap-2 text-xs font-mono text-[#9AA8BA] mb-4">
+          <a href="../work/index.html" class="hover:text-[#3478F6]">&larr; Selected Work</a>
           <span>/</span>
           <span>Snapp</span>
         </div>
 
         <div class="flex flex-wrap items-center gap-2 mb-4">
-          <span class="badge-mineral">Tech Unicorn Scale</span>
+          <span class="badge-mineral">SuperApp Data Product</span>
           <span class="badge-neutral text-xs">Apache Kafka</span>
-          <span class="badge-neutral text-xs">PostgreSQL</span>
-          <span class="badge-neutral text-xs">Elasticsearch</span>
+          <span class="badge-neutral text-xs">ClickHouse</span>
+          <span class="badge-neutral text-xs">Grafana</span>
         </div>
 
-        <h1 class="text-3xl sm:text-4xl font-bold font-heading text-[#202522] tracking-tight mb-4 leading-tight">
-          Snapp Order Center: Event-Driven Streaming Data Platform
+        <h1 class="text-3xl sm:text-4xl font-bold font-heading text-[#F4F7FB] tracking-tight mb-4 leading-tight">
+          Snapp Order Center Data Backbone
         </h1>
 
-        <p class="text-base sm:text-lg text-[#66706C] leading-relaxed mb-6">
-          Directing the 5-person Data Engineering workstream for the core Order Center microservice ecosystem, processing 10M+ daily transactional events with sub-second SLAs and real-time dispatch observability.
+        <p class="text-base sm:text-lg text-[#9AA8BA] leading-relaxed mb-6">
+          Managing the data workstream that enabled Snapp users to see orders from multiple ventures in one place, from data pipelines and services to quality monitoring.
         </p>
 
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 p-4 rounded-lg bg-[#F2F1ED] border border-[#D8DAD4] text-xs">
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 p-4 rounded-lg bg-[#08111F] border border-[#273248] text-xs">
           <div>
-            <div class="text-[#66706C] font-mono mb-1">Role</div>
-            <div class="font-bold text-[#202522]">Data Engineering Team Lead</div>
+            <div class="text-[#9AA8BA] font-mono mb-1">Role</div>
+            <div class="font-bold text-[#F4F7FB]">Data Product Manager</div>
           </div>
           <div>
-            <div class="text-[#66706C] font-mono mb-1">Company</div>
-            <div class="font-bold text-[#202522]">Snapp (Middle East Unicorn)</div>
+            <div class="text-[#9AA8BA] font-mono mb-1">Company</div>
+            <div class="font-bold text-[#F4F7FB]">Snapp SuperApp</div>
           </div>
           <div>
-            <div class="text-[#66706C] font-mono mb-1">Timeframe</div>
-            <div class="font-bold text-[#202522]">2020 &ndash; 2022</div>
+            <div class="text-[#9AA8BA] font-mono mb-1">Timeframe</div>
+            <div class="font-bold text-[#F4F7FB]">Built from scratch</div>
           </div>
           <div>
-            <div class="text-[#66706C] font-mono mb-1">Team Size</div>
-            <div class="font-bold text-[#202522]">5 Data Engineers</div>
+            <div class="text-[#9AA8BA] font-mono mb-1">Team Size</div>
+            <div class="font-bold text-[#F4F7FB]">5 Data Engineers</div>
           </div>
         </div>
 
@@ -183,52 +183,52 @@
         
         <!-- Context & Problem -->
         <article>
-          <div class="text-xs font-mono font-bold uppercase tracking-wider text-[#176B68] mb-2">01 / Context &amp; Operational Scale</div>
-          <h2 class="text-2xl font-bold font-heading text-[#202522] mb-4">Handling 10M+ Daily Orders Across Ride-Hailing and Super-App Services</h2>
-          <div class="prose prose-slate max-w-none text-sm sm:text-base text-[#66706C] leading-relaxed space-y-4">
+          <div class="text-xs font-mono font-bold uppercase tracking-wider text-[#3478F6] mb-2">01 / Product Context</div>
+          <h2 class="text-2xl font-bold font-heading text-[#F4F7FB] mb-4">One Order History Across Snapp Ventures</h2>
+          <div class="prose prose-slate max-w-none text-sm sm:text-base text-[#9AA8BA] leading-relaxed space-y-4">
             <p>
-              Snapp operates as the premier super-app in the region, orchestrating ride-hailing, food delivery, grocery fulfillment, and freight logistics. As transaction volumes expanded to millions of orders per day, the core Order Center microservice faced unprecedented demand for real-time order state propagation, fraud monitoring, and operational tracking.
+              Order Center was designed as a Snapp SuperApp feature where users could see orders from different ventures—including cab, box, shop, market and doctor—in one place.
             </p>
             <p>
-              Legacy batch ingestion processes struggled to keep pace with flash traffic spikes, creating database lock contention on transactional PostgreSQL clusters and delaying critical operational telemetry for dispatch operations.
+              The data workstream was responsible for the backbone behind that experience. Application feature development was owned by a separate team, so success depended on clear contracts and close coordination between data and application product managers and team leads.
             </p>
           </div>
         </article>
 
         <!-- Technical Architecture & Team Leadership -->
         <article>
-          <div class="text-xs font-mono font-bold uppercase tracking-wider text-[#176B68] mb-2">02 / Technical Architecture &amp; Team Leadership</div>
-          <h2 class="text-2xl font-bold font-heading text-[#202522] mb-4">High-Throughput Streaming Ingestion &amp; Real-Time Search Indexes</h2>
-          <div class="prose prose-slate max-w-none text-sm sm:text-base text-[#66706C] leading-relaxed space-y-4">
+          <div class="text-xs font-mono font-bold uppercase tracking-wider text-[#3478F6] mb-2">02 / Data Delivery</div>
+          <h2 class="text-2xl font-bold font-heading text-[#F4F7FB] mb-4">Pipelines, Data Services and Quality Monitoring</h2>
+          <div class="prose prose-slate max-w-none text-sm sm:text-base text-[#9AA8BA] leading-relaxed space-y-4">
             <p>
-              I led a dedicated 5-person Data Engineering team within the Order Center domain, designing and executing a resilient event-driven data pipeline:
+              As Data Product Manager, I led a five-person Data Engineering team and coordinated delivery with the application organization using Scrum:
             </p>
-            <ul class="list-disc pl-5 space-y-2 text-sm text-[#66706C]">
-              <li><strong>Change Data Capture (CDC) &amp; Kafka Streaming:</strong> Implemented real-time transactional replication from PostgreSQL using Debezium and Apache Kafka, eliminating heavy polling loads on primary databases.</li>
-              <li><strong>Distributed Elasticsearch Indexing:</strong> Built high-speed indexing pipelines allowing operational teams to search, filter, and analyze multi-million order lifecycles in real time.</li>
-              <li><strong>Data Contracts &amp; Schema Registry:</strong> Enforced strict schema validation using Avro and Schema Registry, ensuring microservice releases never broke downstream streaming consumers.</li>
-              <li><strong>Observability &amp; Dead-Letter Queues:</strong> Configured comprehensive lag monitoring, automated failover mechanisms, and dead-letter queues to guarantee zero message loss during peak load surges.</li>
+            <ul class="list-disc pl-5 space-y-2 text-sm text-[#9AA8BA]">
+              <li><strong>Data foundation:</strong> Delivered Kafka pipelines and a ClickHouse analytical store for cross-venture order data.</li>
+              <li><strong>Application enablement:</strong> Provided APIs and data services consumed by the Order Center application team.</li>
+              <li><strong>Quality and observability:</strong> Established data-quality monitoring and operational visibility with Grafana.</li>
+              <li><strong>Dependency management:</strong> Worked through delays where individual ventures were not ready to provide the required source data.</li>
             </ul>
           </div>
 
           <!-- Architecture Highlight Callout -->
-          <div class="mt-6 p-6 rounded-lg bg-[#FAFAF7] border border-[#D8DAD4]">
-            <h3 class="text-sm font-bold font-heading text-[#202522] mb-2 flex items-center gap-2">
-              <i class="fas fa-network-wired text-[#176B68]"></i>
-              Core Pipeline Architecture
+          <div class="mt-6 p-6 rounded-lg bg-[#0D1728] border border-[#273248]">
+            <h3 class="text-sm font-bold font-heading text-[#F4F7FB] mb-2 flex items-center gap-2">
+              <i class="fas fa-network-wired text-[#3478F6]"></i>
+              Data Backbone
             </h3>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs text-[#66706C] mt-3">
-              <div class="p-3 rounded bg-white border border-[#D8DAD4]">
-                <strong class="text-[#202522] block mb-1">PostgreSQL &rarr; Debezium</strong>
-                Non-blocking CDC streaming capture of row-level order state mutations.
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs text-[#9AA8BA] mt-3">
+              <div class="p-3 rounded bg-white border border-[#273248]">
+                <strong class="text-[#F4F7FB] block mb-1">Snapp Ventures</strong>
+                Order data supplied by participating services across the SuperApp.
               </div>
-              <div class="p-3 rounded bg-white border border-[#D8DAD4]">
-                <strong class="text-[#202522] block mb-1">Apache Kafka Cluster</strong>
-                High-throughput partitioned event topics handling 10,000+ msgs/sec.
+              <div class="p-3 rounded bg-white border border-[#273248]">
+                <strong class="text-[#F4F7FB] block mb-1">Kafka &rarr; ClickHouse</strong>
+                Streaming pipelines and analytical storage designed for high-volume data.
               </div>
-              <div class="p-3 rounded bg-white border border-[#D8DAD4]">
-                <strong class="text-[#202522] block mb-1">Elasticsearch &amp; Kibana</strong>
-                Sub-second operational query engine for fleet dispatchers and customer support.
+              <div class="p-3 rounded bg-white border border-[#273248]">
+                <strong class="text-[#F4F7FB] block mb-1">APIs &amp; Monitoring</strong>
+                Data services for the application team, supported by quality checks and Grafana.
               </div>
             </div>
           </div>
@@ -236,31 +236,31 @@
 
         <!-- Measurable Outcomes & Value -->
         <article>
-          <div class="text-xs font-mono font-bold uppercase tracking-wider text-[#176B68] mb-2">03 / Measurable Impact</div>
-          <h2 class="text-2xl font-bold font-heading text-[#202522] mb-4">Sub-Second Visibility &amp; Operational Reliability Under Peak Scale</h2>
+          <div class="text-xs font-mono font-bold uppercase tracking-wider text-[#3478F6] mb-2">03 / Outcome</div>
+          <h2 class="text-2xl font-bold font-heading text-[#F4F7FB] mb-4">A Production Data Product at SuperApp Scale</h2>
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
             <div class="surface-card p-5">
-              <div class="text-2xl font-bold font-heading text-[#176B68] mb-1">10M+</div>
-              <div class="text-xs text-[#66706C]">Daily transactional order events processed reliably without data loss.</div>
+              <div class="text-2xl font-bold font-heading text-[#3478F6] mb-1">100M+</div>
+              <div class="text-xs text-[#9AA8BA]">Order records supported at production scale.</div>
             </div>
             <div class="surface-card p-5">
-              <div class="text-2xl font-bold font-heading text-[#176B68] mb-1">-40%</div>
-              <div class="text-xs text-[#66706C]">Reduction in operational dispatch and customer support incident triage latency.</div>
+              <div class="text-2xl font-bold font-heading text-[#3478F6] mb-1">5</div>
+              <div class="text-xs text-[#9AA8BA]">Data engineers in the delivery team.</div>
             </div>
             <div class="surface-card p-5">
-              <div class="text-2xl font-bold font-heading text-[#176B68] mb-1">&lt; 1 sec</div>
-              <div class="text-xs text-[#66706C]">End-to-end data propagation delay from order mutation to analytics index.</div>
+              <div class="text-2xl font-bold font-heading text-[#3478F6] mb-1">Live</div>
+              <div class="text-xs text-[#9AA8BA]">Launched into production for the Order Center experience.</div>
             </div>
           </div>
         </article>
 
         <!-- Navigation Footer -->
-        <div class="pt-8 border-t border-[#D8DAD4] flex flex-col sm:flex-row items-center justify-between gap-4">
-          <a href="../global-sourcing-data-product/index.html" class="btn-mineral-secondary text-xs py-2 px-4 flex items-center gap-2">
+        <div class="pt-8 border-t border-[#273248] flex flex-col sm:flex-row items-center justify-between gap-4">
+          <a href="global-sourcing-data-product/index.html" class="btn-mineral-secondary text-xs py-2 px-4 flex items-center gap-2">
             <i class="fas fa-arrow-left text-[10px]"></i>
             <span>Prev: Atlas Copco</span>
           </a>
-          <a href="../icadb/index.html" class="btn-mineral-primary text-xs py-2 px-4 flex items-center gap-2">
+          <a href="icadb/index.html" class="btn-mineral-primary text-xs py-2 px-4 flex items-center gap-2">
             <span>Next: ICADB Agricultural Platform</span>
             <i class="fas fa-arrow-right text-[10px]"></i>
           </a>
@@ -272,56 +272,56 @@
   </main>
 
   <!-- Footer -->
-  <footer class="mt-auto border-t border-[#D8DAD4] bg-[#FAFAF7] py-12">
+  <footer class="mt-auto border-t border-[#273248] bg-[#0D1728] py-12">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
         
         <!-- Brand / Bio -->
         <div class="md:col-span-2">
           <div class="flex items-center gap-2 mb-3">
-            <div class="w-6 h-6 rounded bg-[#176B68] flex items-center justify-center font-bold text-[#FAFAF7] text-[10px] font-mono">AM</div>
-            <span class="font-bold text-sm text-[#202522] font-heading">Ali Maleki</span>
+            <div class="w-6 h-6 rounded bg-[#3478F6] flex items-center justify-center font-bold text-[#0D1728] text-[10px] font-mono">AM</div>
+            <span class="font-bold text-sm text-[#F4F7FB] font-heading">Ali Maleki</span>
           </div>
-          <p class="text-xs text-[#66706C] max-w-sm leading-relaxed mb-4">
-            Data Product &amp; Transformation Leader specializing in Databricks Lakehouse modernization, semantic layer governance, and agile delivery engineering.
+          <p class="text-xs text-[#9AA8BA] max-w-sm leading-relaxed mb-4">
+            Data Product &amp; Project Leader delivering global analytics, enterprise platforms and transformation programs.
           </p>
-          <div class="text-xs text-[#66706C]">
-            <i class="fas fa-location-dot text-[#176B68] mr-1.5"></i> Czech Republic &middot; Global Hybrid
+          <div class="text-xs text-[#9AA8BA]">
+            <i class="fas fa-location-dot text-[#3478F6] mr-1.5"></i> Czech Republic &middot; Global Hybrid
           </div>
         </div>
 
         <!-- Quick Links -->
         <div>
-          <h4 class="text-xs font-bold uppercase tracking-wider text-[#202522] mb-3 font-mono">Navigation</h4>
-          <ul class="space-y-2 text-xs text-[#66706C]">
-            <li><a href="../../index.html" class="hover:text-[#176B68] transition-colors">Home</a></li>
-            <li><a href="../../work/index.html" class="hover:text-[#176B68] transition-colors">Selected Work</a></li>
-            <li><a href="../../about/index.html" class="hover:text-[#176B68] transition-colors">About &amp; Credentials</a></li>
-            <li><a href="../../writing/index.html" class="hover:text-[#176B68] transition-colors">Writing &amp; Insights</a></li>
-            <li><a href="../../consulting/index.html" class="hover:text-[#176B68] transition-colors">Advisory Services</a></li>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-[#F4F7FB] mb-3 font-mono">Navigation</h4>
+          <ul class="space-y-2 text-xs text-[#9AA8BA]">
+            <li><a href="../index.html" class="hover:text-[#3478F6] transition-colors">Home</a></li>
+            <li><a href="../work/index.html" class="hover:text-[#3478F6] transition-colors">Selected Work</a></li>
+            <li><a href="../about/index.html" class="hover:text-[#3478F6] transition-colors">About &amp; Credentials</a></li>
+            <li><a href="../writing/index.html" class="hover:text-[#3478F6] transition-colors">Writing &amp; Insights</a></li>
+            <li><a href="../consulting/index.html" class="hover:text-[#3478F6] transition-colors">Advisory Services</a></li>
           </ul>
         </div>
 
         <!-- Connect -->
         <div>
-          <h4 class="text-xs font-bold uppercase tracking-wider text-[#202522] mb-3 font-mono">Connect</h4>
-          <ul class="space-y-2 text-xs text-[#66706C]">
-            <li><a href="mailto:ali.maleki100@gmail.com" class="hover:text-[#176B68] transition-colors flex items-center gap-1.5"><i class="fas fa-envelope text-[11px] text-[#176B68]"></i> ali.maleki100@gmail.com</a></li>
-            <li><a href="https://www.linkedin.com/in/alimaleki100/" target="_blank" rel="noopener" class="hover:text-[#176B68] transition-colors flex items-center gap-1.5"><i class="fab fa-linkedin text-[11px] text-[#176B68]"></i> LinkedIn</a></li>
-            <li><a href="https://medium.com/@ali.maleki100" target="_blank" rel="noopener" class="hover:text-[#176B68] transition-colors flex items-center gap-1.5"><i class="fab fa-medium text-[11px] text-[#176B68]"></i> Medium (@ali.maleki100)</a></li>
-            <li><a href="../../ali-maleki-resume.pdf" target="_blank" download class="hover:text-[#B56F46] transition-colors flex items-center gap-1.5 font-medium"><i class="fas fa-file-pdf text-[11px] text-[#B56F46]"></i> Download R&eacute;sum&eacute; (PDF)</a></li>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-[#F4F7FB] mb-3 font-mono">Connect</h4>
+          <ul class="space-y-2 text-xs text-[#9AA8BA]">
+            <li><a href="mailto:ali.maleki100@gmail.com" class="hover:text-[#3478F6] transition-colors flex items-center gap-1.5"><i class="fas fa-envelope text-[11px] text-[#3478F6]"></i> ali.maleki100@gmail.com</a></li>
+            <li><a href="https://www.linkedin.com/in/alimaleki100/" target="_blank" rel="noopener" class="hover:text-[#3478F6] transition-colors flex items-center gap-1.5"><i class="fab fa-linkedin text-[11px] text-[#3478F6]"></i> LinkedIn</a></li>
+            <li><a href="https://medium.com/@ali.maleki100" target="_blank" rel="noopener" class="hover:text-[#3478F6] transition-colors flex items-center gap-1.5"><i class="fab fa-medium text-[11px] text-[#3478F6]"></i> Medium (@ali.maleki100)</a></li>
+            <li><a href="../ali-maleki-resume.pdf" target="_blank" download class="hover:text-[#20B8A6] transition-colors flex items-center gap-1.5 font-medium"><i class="fas fa-file-pdf text-[11px] text-[#20B8A6]"></i> Download R&eacute;sum&eacute; (PDF)</a></li>
           </ul>
         </div>
 
       </div>
 
-      <div class="pt-6 border-t border-[#D8DAD4] flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#66706C]">
+      <div class="pt-6 border-t border-[#273248] flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#9AA8BA]">
         <p>&copy; 2026 Ali Maleki. All rights reserved.</p>
         <p class="mt-2 sm:mt-0">Built with semantic standards, clean typography, and fast static delivery.</p>
       </div>
     </div>
   </footer>
 
-  <script src="../../app.js"></script>
+  <script src="../app.js"></script>
 </body>
 </html>
