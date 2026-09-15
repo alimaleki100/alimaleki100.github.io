@@ -190,7 +190,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Surfaces & Cards */
 .surface-card {
-  background-color: var(--bg-card);
+  background-color: #111D30 !important;
+  color: #F4F7FB;
   border: 1px solid var(--border-color);
   border-radius: 0.75rem;
   transition: border-color 0.2s ease, transform 0.2s ease;
@@ -286,15 +287,23 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-  filter: brightness(0) invert(0.85);
-  opacity: 0.70;
+  opacity: 0.82;
   transition: opacity 0.2s ease, filter 0.2s ease, transform 0.2s ease;
 }
 
 .brand-logo-item:hover {
-  filter: brightness(0) invert(1);
   opacity: 1;
   transform: translateY(-1px);
+}
+
+.brand-logo-item img {
+  filter: grayscale(1) brightness(0) invert(1);
+}
+
+/* Raster IME mark: invert its light background into the navy surface. */
+.brand-logo-item .brand-logo-ime {
+  filter: invert(1) grayscale(1) contrast(2.2);
+  mix-blend-mode: screen;
 }
 
 .brand-logo-atlas {

@@ -21,7 +21,7 @@
       <path
          id="path2"
          d="M 8914.12,0 H 0 V 3366.13 H 8914.12 V 0"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         style="fill:none;fill-opacity:0;fill-rule:nonzero;stroke:none"
          transform="matrix(0.13333333,0,0,-0.13333333,0,448.81333)" />
       <path
          id="path3"
