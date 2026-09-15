@@ -545,7 +545,7 @@
           <p class="text-sm text-[#9AA8BA] mt-2">Your message will be delivered to my inbox.</p>
         </div>
 
-        <form id="contact-form" action="https://formsubmit.co/ajax/ali.maleki100@gmail.com" method="POST" class="space-y-4">
+        <form id="contact-form" action="https://formsubmit.co/ali.maleki100@gmail.com" method="POST" target="contact-submit-frame" class="space-y-4">
           <input type="hidden" name="_subject" value="New portfolio inquiry">
           <input type="hidden" name="_template" value="table">
           <input type="hidden" name="_captcha" value="false">
@@ -576,10 +576,11 @@
             </button>
           </div>
         </form>
+        <iframe id="contact-submit-frame" name="contact-submit-frame" title="Contact form response" class="hidden"></iframe>
       </div>
     </div>
   </div>
 
-  <script src="app.js?v=20260915-3"></script>
+  <script src="app.js?v=20260915-4"></script>
 </body>
 </html>

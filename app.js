@@ -100,9 +100,13 @@ function initContactForm() {
   const openButtons = document.querySelectorAll('[data-contact-open]');
   const closeButtons = document.querySelectorAll('[data-contact-close]');
   const status = document.getElementById('contact-form-status');
+  const responseFrame = document.getElementById('contact-submit-frame');
   if (!modal || !form || !openButtons.length) return;
 
   let previouslyFocused = null;
+  let submissionPending = false;
+  let submitButton = null;
+  let originalButtonLabel = '';
 
   function openModal() {
     previouslyFocused = document.activeElement;
@@ -124,41 +128,33 @@ function initContactForm() {
     if (event.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
   });
 
-  form.addEventListener('submit', async (event) => {
-    event.preventDefault();
-    const submitButton = form.querySelector('button[type="submit"]');
-    const originalLabel = submitButton?.innerHTML;
+  function finishSubmission() {
+    if (!submissionPending) return;
+    submissionPending = false;
+    form.reset();
+
+    if (status) {
+      status.textContent = 'Thank you. Your message has been submitted successfully.';
+      status.className = 'rounded-lg px-3 py-2.5 text-xs border border-[#20B8A6]/30 bg-[#20B8A6]/10 text-[#20B8A6]';
+    }
+
+    if (submitButton) {
+      submitButton.disabled = false;
+      submitButton.innerHTML = originalButtonLabel;
+    }
+  }
+
+  if (responseFrame) responseFrame.addEventListener('load', finishSubmission);
+
+  form.addEventListener('submit', () => {
+    submissionPending = true;
+    submitButton = form.querySelector('button[type="submit"]');
+    originalButtonLabel = submitButton?.innerHTML || '';
 
     if (submitButton) {
       submitButton.disabled = true;
       submitButton.innerHTML = '<i class="fas fa-circle-notch fa-spin text-xs"></i><span>Sending...</span>';
     }
     if (status) status.classList.add('hidden');
-
-    try {
-      const response = await fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { Accept: 'application/json' }
-      });
-
-      if (!response.ok) throw new Error('Message delivery failed');
-
-      form.reset();
-      if (status) {
-        status.textContent = 'Message sent successfully. Thank you — I will respond by email.';
-        status.className = 'rounded-lg px-3 py-2.5 text-xs border border-[#20B8A6]/30 bg-[#20B8A6]/10 text-[#20B8A6]';
-      }
-    } catch (error) {
-      if (status) {
-        status.textContent = 'The message could not be sent. Please try WhatsApp or LinkedIn instead.';
-        status.className = 'rounded-lg px-3 py-2.5 text-xs border border-red-400/30 bg-red-400/10 text-red-300';
-      }
-    } finally {
-      if (submitButton) {
-        submitButton.disabled = false;
-        submitButton.innerHTML = originalLabel;
-      }
-    }
   });
 }
