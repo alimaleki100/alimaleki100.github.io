@@ -104,34 +104,35 @@
 
     </div>
 
-    <!-- Mobile Drawer Overlay -->
-    <div id="mobile-nav-backdrop" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 hidden md:hidden"></div>
-    <div id="mobile-nav-menu" class="fixed top-0 left-0 bottom-0 w-72 max-w-[80vw] bg-[#0D1728] border-r border-white/10 z-50 p-6 flex flex-col justify-between hidden md:hidden shadow-2xl" role="dialog" aria-modal="true" aria-label="منوی موبایل">
-      <div class="space-y-6">
-        <div class="flex items-center justify-between pb-4 border-b border-white/10">
-          <span class="font-bold text-base text-[#F4F7FB] font-heading">منو</span>
-          <button id="mobile-nav-close" type="button" aria-label="بستن منو" class="p-2 text-[#9AA8BA] hover:text-[#F4F7FB]">
-            <i class="fas fa-times text-base"></i>
-          </button>
-        </div>
-        <div class="flex flex-col space-y-2">
-          <a href="./" class="mobile-nav-link text-sm font-medium py-2.5 px-3 rounded-md transition-colors bg-[#3478F6]/15 text-[#3478F6] font-semibold">خانه</a>
-          <a href="../work/index.html" class="mobile-nav-link text-sm font-medium py-2.5 px-3 rounded-md transition-colors text-[#F4F7FB] hover:bg-white/5">پروژه‌های منتخب</a>
-          <a href="../about/index.html" class="mobile-nav-link text-sm font-medium py-2.5 px-3 rounded-md transition-colors text-[#F4F7FB] hover:bg-white/5">درباره من</a>
-          <a href="../writing/index.html" class="mobile-nav-link text-sm font-medium py-2.5 px-3 rounded-md transition-colors text-[#F4F7FB] hover:bg-white/5">نوشته‌ها</a>
-          <a href="../consulting-fa.html" class="mobile-nav-link text-sm font-medium py-2.5 px-3 rounded-md transition-colors text-[#F4F7FB] hover:bg-white/5">مشاوره</a>
-          <a href="#contact" class="mobile-nav-link text-sm font-medium py-2.5 px-3 rounded-md text-[#F4F7FB] hover:bg-white/5">ارتباط</a>
-          <a href="../index.html" lang="en" dir="ltr" class="mobile-nav-link text-sm font-medium py-2.5 px-3 rounded-md text-[#20B8A6] hover:bg-white/5">English</a>
-        </div>
-      </div>
-      <div class="pt-6 border-t border-white/10">
-        <a href="../ali-maleki-resume.pdf" target="_blank" download class="btn-primary w-full text-xs py-2.5 flex items-center justify-center gap-2">
-          <span>دانلود رزومه (PDF)</span>
-          <i class="fas fa-arrow-down text-[11px]"></i>
-        </a>
-      </div>
-    </div>
   </header>
+
+  <!-- Mobile Navigation Overlay: outside blurred header so fixed positioning uses viewport -->
+  <div id="mobile-nav-backdrop" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-[90] hidden md:hidden"></div>
+  <aside id="mobile-nav-menu" class="fixed inset-y-0 left-0 w-[82vw] max-w-sm bg-[#0D1728] border-r border-white/10 z-[100] px-5 py-5 flex flex-col hidden md:hidden shadow-2xl overflow-y-auto" role="dialog" aria-modal="true" aria-label="منوی موبایل">
+    <div class="flex items-center justify-between pb-4 border-b border-white/10">
+      <span class="font-bold text-base text-[#F4F7FB] font-heading">منو</span>
+      <button id="mobile-nav-close" type="button" aria-label="بستن منو" class="w-9 h-9 inline-flex items-center justify-center rounded-md border border-white/10 text-[#9AA8BA] hover:text-[#F4F7FB] hover:bg-white/5">
+        <i class="fas fa-times text-base"></i>
+      </button>
+    </div>
+
+    <nav class="flex flex-col gap-1.5 py-5 text-right">
+      <a href="./" class="mobile-nav-link block w-full text-right text-sm font-semibold py-3 px-3.5 rounded-lg bg-[#3478F6]/15 text-[#3478F6]">خانه</a>
+      <a href="../work/index.html" class="mobile-nav-link block w-full text-right text-sm font-medium py-3 px-3.5 rounded-lg text-[#F4F7FB] hover:bg-white/5">پروژه‌های منتخب</a>
+      <a href="../about/index.html" class="mobile-nav-link block w-full text-right text-sm font-medium py-3 px-3.5 rounded-lg text-[#F4F7FB] hover:bg-white/5">درباره من</a>
+      <a href="../writing/index.html" class="mobile-nav-link block w-full text-right text-sm font-medium py-3 px-3.5 rounded-lg text-[#F4F7FB] hover:bg-white/5">نوشته‌ها</a>
+      <a href="../consulting-fa.html" class="mobile-nav-link block w-full text-right text-sm font-medium py-3 px-3.5 rounded-lg text-[#F4F7FB] hover:bg-white/5">مشاوره</a>
+      <a href="#contact" class="mobile-nav-link block w-full text-right text-sm font-medium py-3 px-3.5 rounded-lg text-[#F4F7FB] hover:bg-white/5">ارتباط</a>
+      <a href="../index.html" lang="en" dir="ltr" class="mobile-nav-link block w-full text-left text-sm font-semibold py-3 px-3.5 rounded-lg text-[#20B8A6] hover:bg-white/5">English</a>
+    </nav>
+
+    <div class="mt-auto pt-5 border-t border-white/10">
+      <a href="../ali-maleki-resume.pdf" target="_blank" download class="btn-primary w-full text-xs py-3 flex items-center justify-center gap-2">
+        <span>دانلود رزومه (PDF)</span>
+        <i class="fas fa-arrow-down text-[11px]"></i>
+      </a>
+    </div>
+  </aside>
 
   <main class="flex-grow">
     
