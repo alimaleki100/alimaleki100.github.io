@@ -148,3 +148,19 @@ button,input,textarea{font:inherit}
   *{scroll-behavior:auto!important;animation:none!important;transition:none!important}
   .reveal{opacity:1;transform:none}
 }
+
+/* Consulting mobile conversion refinements */
+.consulting-hero-actions{margin-top:24px}
+@media (max-width:640px){
+  .consulting-hero{padding:52px 0 46px}
+  .consulting-hero h1{font-size:clamp(2.35rem,11vw,3.05rem);line-height:1.02;margin-top:12px}
+  .consulting-hero p{margin-top:20px;font-size:1.03rem;line-height:1.6}
+  .consulting-hero-actions{margin-top:24px}
+  .consulting-hero-actions .btn{width:100%;padding:14px 18px}
+  .consulting-hero + .section{padding-top:58px;padding-bottom:58px}
+  .consulting-hero + .section .section-head{gap:22px;margin-bottom:30px}
+  .consulting-hero + .section .section-title{font-size:clamp(2rem,9vw,2.65rem);line-height:1.06}
+  .consulting-hero + .section .cards{gap:14px}
+  .consulting-hero + .section .card{min-height:0;padding:24px 22px}
+  .consulting-hero + .section .card h3{margin:16px 0 10px;font-size:1.42rem}
+}
