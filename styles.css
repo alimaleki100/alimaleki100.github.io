@@ -180,3 +180,15 @@ button,input,textarea{font:inherit}
   .signal-row strong{font-size:1rem}
   .signal-row span:last-child{grid-column:2;font-size:.9rem;line-height:1.5}
 }
+
+/* Cleaner homepage hero without decorative panel */
+.home-hero{padding-top:76px;padding-bottom:60px}
+.home-hero-copy{max-width:920px}
+.home-hero-copy h1{font-size:clamp(3rem,6.2vw,6.4rem);max-width:920px}
+.home-hero-copy .lead{max-width:760px}
+@media (max-width:640px){
+  .home-hero{padding-top:46px;padding-bottom:42px}
+  .home-hero-copy h1{font-size:clamp(2.75rem,12vw,3.65rem);line-height:1.02}
+  .home-hero-copy .lead{margin-top:22px}
+  .home-hero + .band{padding-top:26px;padding-bottom:26px}
+}
