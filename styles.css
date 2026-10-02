@@ -164,3 +164,19 @@ button,input,textarea{font:inherit}
   .consulting-hero + .section .card{min-height:0;padding:24px 22px}
   .consulting-hero + .section .card h3{margin:16px 0 10px;font-size:1.42rem}
 }
+
+/* Compact consulting problem signals */
+.consulting-signals{padding-top:72px;padding-bottom:72px}
+.consulting-signals .compact-head{margin-bottom:28px}
+.signal-list{border-top:1px solid var(--line)}
+.signal-row{display:grid;grid-template-columns:54px 220px 1fr;gap:18px;align-items:start;padding:18px 0;border-bottom:1px solid var(--line)}
+.signal-num{font-size:.74rem;letter-spacing:.14em;color:#9a6d23;padding-top:3px}
+.signal-row strong{font-family:'Manrope';font-size:1rem;letter-spacing:-.02em}
+.signal-row span:last-child{color:var(--ink-soft);font-size:.95rem}
+@media (max-width:640px){
+  .consulting-signals{padding-top:48px;padding-bottom:48px}
+  .consulting-signals .compact-head{margin-bottom:20px}
+  .signal-row{grid-template-columns:34px 1fr;gap:8px 12px;padding:14px 0}
+  .signal-row strong{font-size:1rem}
+  .signal-row span:last-child{grid-column:2;font-size:.9rem;line-height:1.5}
+}
