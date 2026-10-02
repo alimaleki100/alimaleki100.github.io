@@ -192,3 +192,25 @@ button,input,textarea{font:inherit}
   .home-hero-copy .lead{margin-top:22px}
   .home-hero + .band{padding-top:26px;padding-bottom:26px}
 }
+
+
+/* Persian / RTL adaptation */
+.fa-page{font-family:'Vazirmatn','DM Sans',system-ui,sans-serif;direction:rtl}
+.fa-page h1,.fa-page h2,.fa-page h3,.fa-page h4,.fa-page .brand,.fa-page .btn,.fa-page .nav-cta{font-family:'Vazirmatn','Manrope',system-ui,sans-serif;letter-spacing:0}
+.fa-page .eyebrow{letter-spacing:.08em}
+.fa-page .nav{direction:rtl}
+.fa-page .nav-links{direction:rtl}
+.fa-page .mobile-menu{text-align:right}
+.fa-page .hero-copy h1,.fa-page .section-title,.fa-page .page-hero h1{letter-spacing:-.02em}
+.fa-page .service-row,.fa-page .step,.fa-page .section-head,.fa-page .split,.fa-page .band-grid,.fa-page .cta-row{direction:rtl}
+.fa-page .contact-form input,.fa-page .contact-form textarea{text-align:right}
+.fa-page .case-meta{letter-spacing:.04em}
+.fa-page .article{border-top-color:var(--gold)}
+@media (max-width:640px){
+  .fa-page .home-hero-copy h1{font-size:clamp(2.55rem,11vw,3.5rem);line-height:1.18}
+  .fa-page .home-hero-copy .lead{line-height:1.9}
+  .fa-page .section-title{line-height:1.2}
+  .fa-page .eyebrow{font-size:.72rem}
+  .fa-page .btn{width:100%}
+  .fa-page .hero-actions{display:grid;grid-template-columns:1fr;gap:10px}
+}
