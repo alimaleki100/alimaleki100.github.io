@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=Vazirmatn:wght@300;400;500;600;700&display=swap');
 
 :root{
   --ink:#0b1a2a;
@@ -213,4 +213,53 @@ button,input,textarea{font:inherit}
   .fa-page .eyebrow{font-size:.72rem}
   .fa-page .btn{width:100%}
   .fa-page .hero-actions{display:grid;grid-template-columns:1fr;gap:10px}
+}
+
+
+/* Persian typography refinement */
+.fa-page{
+  font-family:'Vazirmatn',system-ui,sans-serif;
+  font-weight:400;
+}
+.fa-page h1,
+.fa-page h2,
+.fa-page h3,
+.fa-page h4,
+.fa-page .brand,
+.fa-page .section-title,
+.fa-page .btn,
+.fa-page .nav-cta{
+  font-family:'Vazirmatn',system-ui,sans-serif;
+}
+.fa-page h1{font-weight:700;line-height:1.28}
+.fa-page h2{font-weight:700;line-height:1.32}
+.fa-page h3{font-weight:600;line-height:1.45}
+.fa-page p,
+.fa-page .lead,
+.fa-page .signal-row span:last-child,
+.fa-page .service-row p{
+  font-weight:400;
+  line-height:1.95;
+}
+.fa-page .eyebrow{
+  font-weight:600;
+  letter-spacing:.06em;
+}
+.fa-page .nav-links,
+.fa-page .mobile-menu{
+  font-weight:500;
+}
+.fa-page .cta .section-title{
+  font-size:clamp(2.3rem,4.5vw,4.6rem);
+  line-height:1.35;
+}
+.fa-page .contact-form input,
+.fa-page .contact-form textarea,
+.fa-page .contact-form button{
+  font-family:'Vazirmatn',system-ui,sans-serif;
+}
+@media (max-width:640px){
+  .fa-page h1{font-size:clamp(2.35rem,10vw,3.3rem);line-height:1.28}
+  .fa-page .section-title{font-size:clamp(2rem,8.5vw,2.8rem);line-height:1.34}
+  .fa-page .cta .section-title{font-size:clamp(2.15rem,9vw,3rem)}
 }
