@@ -2,9 +2,27 @@
 <title>Writing | Ali Maleki</title><meta name="description" content="Articles by Ali Maleki on internal products, data documentation and delivery."><meta name="author" content="Ali Maleki">
 <link rel="icon" href="../favicon.svg"><link rel="stylesheet" href="../styles.css"></head><body><header class="site-header"><div class="shell nav"><a class="brand" href="../index.html">ALI MALEKI</a><nav class="nav-links"><a class="" href="../index.html">Home</a><a class="" href="../work/index.html">Work</a><a class="" href="../about/index.html">About</a><a class="active" href="../writing/index.html">Writing</a><a class="" href="../consulting/index.html">Consulting</a><a href="../fa/" lang="fa">فارسی</a><a class="nav-cta" href="../index.html#contact">Start a conversation →</a></nav><button class="menu-btn" data-menu aria-expanded="false" aria-label="Open navigation">☰</button></div><nav class="mobile-menu"><a href="../index.html">Home</a><a href="../work/index.html">Work</a><a href="../about/index.html">About</a><a href="../writing/index.html">Writing</a><a href="../consulting/index.html">Consulting</a><a href="../fa/" lang="fa">فارسی</a><a href="../index.html#contact">Start a conversation →</a></nav></header>
 <main><section class="page-hero"><div class="shell reveal"><div class="eyebrow">Writing</div><h1>Notes on product thinking, <span class="gold">data and delivery.</span></h1><p>I write about the less visible parts of digital work: internal products, documentation, adoption and the operating choices that shape delivery.</p></div></section>
-<section class="section"><div class="shell"><div class="article-grid">
-<article class="article reveal"><div class="eyebrow">Internal products · Part 3</div><h3>How to Measure the Success of Internal Tools</h3><p>Why usage alone is not enough and how to think about value, adoption and operational impact.</p><a href="https://medium.com/@ali.maleki100/internal-products-part-3-how-to-measure-the-success-of-internal-tools-0d8d2d788726">Read on Medium →</a></article>
-<article class="article reveal"><div class="eyebrow">Internal products · Part 2</div><h3>Why Internal Products Deserve Product Management</h3><p>Internal tools still have users, outcomes and trade-offs—and should be managed accordingly.</p><a href="https://medium.com/@ali.maleki100/internal-products-part-2-why-internal-products-deserve-product-management-a63d5a19401f">Read on Medium →</a></article>
-<article class="article reveal"><div class="eyebrow">Data delivery</div><h3>The Hidden Cost of Poor Data Documentation</h3><p>How documentation gaps turn into delivery friction, dependency risk and slower decisions.</p><a href="https://medium.com/@ali.maleki100/the-hidden-cost-of-poor-data-documentation-fae4a8e84e63">Read on Medium →</a></article>
-</div></div></section>
-<section class="cta"><div class="shell cta-row"><div><div class="eyebrow">More</div><h2 class="section-title">Follow the writing on Medium.</h2></div><a class="btn gold-btn" href="https://medium.com/@ali.maleki100">Open Medium →</a></div></section></main><footer class="footer"><div class="shell footer-grid"><div><div class="brand">ALI MALEKI</div><small>Data Product & Transformation Leader · Czech Republic</small></div><div class="footer-links"><a href="https://www.linkedin.com/in/alimaleki100/">LinkedIn</a><a href="https://medium.com/@ali.maleki100">Medium</a><a href="../ali-maleki-resume.pdf">Résumé</a></div></div></footer><script src="../site.js"></script></body></html>
+<section class="section"><div class="shell">
+<div id="medium-articles" class="article-grid" aria-live="polite"></div>
+<noscript><p><a href="https://medium.com/@ali.maleki100">View the latest articles on Medium →</a></p></noscript>
+</div></section>
+<section class="cta"><div class="shell cta-row"><div><div class="eyebrow">More</div><h2 class="section-title">Follow the writing on Medium.</h2></div><a class="btn gold-btn" href="https://medium.com/@ali.maleki100">Open Medium →</a></div></section></main><footer class="footer"><div class="shell footer-grid"><div><div class="brand">ALI MALEKI</div><small>Data Product & Transformation Leader · Czech Republic</small></div><div class="footer-links"><a href="https://www.linkedin.com/in/alimaleki100/">LinkedIn</a><a href="https://medium.com/@ali.maleki100">Medium</a><a href="../ali-maleki-resume.pdf">Résumé</a></div></div></footer><script src="../site.js"></script><script>
+(async function(){
+  const target=document.getElementById('medium-articles');
+  if(!target) return;
+  try{
+    const res=await fetch('../data/medium.json?v='+Date.now(),{cache:'no-store'});
+    if(!res.ok) throw new Error('feed');
+    const data=await res.json();
+    const posts=(data.posts||[]).slice(0,6);
+    target.innerHTML=posts.map((p,i)=>{
+      const d=p.published ? new Date(p.published) : null;
+      const date=d && !Number.isNaN(d.valueOf()) ? d.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}) : 'Latest';
+      const tag=(p.categories&&p.categories[0]) || (i===0 ? 'Latest' : 'Article');
+      return '<article class="article reveal visible"><div class="eyebrow">'+tag+' · '+date+'</div><h3>'+p.title+'</h3><p>'+p.excerpt+'</p><a href="'+p.url+'">Read on Medium →</a></article>';
+    }).join('');
+  }catch(e){
+    target.innerHTML='<article class="article"><div class="eyebrow">Medium</div><h3>Latest writing</h3><p>Open the Medium profile to see the newest articles.</p><a href="https://medium.com/@ali.maleki100">Open Medium →</a></article>';
+  }
+})();
+</script></body></html>
