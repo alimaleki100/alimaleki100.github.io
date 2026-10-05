@@ -1,0 +1,44 @@
+{
+  "posts": [
+    {
+      "title": "From Prototyper to Builder",
+      "url": "https://medium.com/@ali.maleki100",
+      "published": "2026-10-05",
+      "excerpt": "A short reflection on moving from an idea to a working product through a first real vibe-coding journey, using VibeMatcher as the side project.",
+      "categories": [
+        "Vibe Coding",
+        "Product Building"
+      ]
+    },
+    {
+      "title": "Internal Products: Part 3 — How to Measure the Success of Internal Tools",
+      "url": "https://medium.com/@ali.maleki100/internal-products-part-3-how-to-measure-the-success-of-internal-tools-0d8d2d788726",
+      "published": "2025-08-21",
+      "excerpt": "Why usage alone is not enough and how to think about value, adoption and operational impact.",
+      "categories": [
+        "Internal Products",
+        "Product Management"
+      ]
+    },
+    {
+      "title": "Internal Products: Part 2 — Why Internal Products Deserve Product Management",
+      "url": "https://medium.com/@ali.maleki100/internal-products-part-2-why-internal-products-deserve-product-management-a63d5a19401f",
+      "published": "2025-08-04",
+      "excerpt": "Internal tools still have users, outcomes and trade-offs—and should be managed accordingly.",
+      "categories": [
+        "Internal Products",
+        "Product Management"
+      ]
+    },
+    {
+      "title": "The Hidden Cost of Poor Data Documentation",
+      "url": "https://medium.com/@ali.maleki100/the-hidden-cost-of-poor-data-documentation-fae4a8e84e63",
+      "published": "2025-07-17",
+      "excerpt": "How documentation gaps turn into delivery friction, dependency risk and slower decisions.",
+      "categories": [
+        "Data",
+        "Delivery"
+      ]
+    }
+  ]
+}
