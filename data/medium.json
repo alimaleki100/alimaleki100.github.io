@@ -1,43 +1,91 @@
 {
   "posts": [
     {
-      "title": "From Prototyper to Builder",
-      "url": "https://medium.com/@ali.maleki100",
-      "published": "2026-10-05",
-      "excerpt": "A short reflection on moving from an idea to a working product through a first real vibe-coding journey, using VibeMatcher as the side project.",
+      "title": "From Idea to Product: My First Vibe Coding Journey, Part I : From Prototyper to Builder",
+      "url": "https://medium.com/@ali.maleki100/from-idea-to-product-my-first-vibe-coding-journey-part-i-from-prototyper-to-builder-ee1e58b27752",
+      "published": "Mon, 05 Oct 2026 10:02:09 GMT",
+      "excerpt": "A few weeks ago, I had a simple idea: What if choosing a movie started with your mood rather than a scrolling catalog? That idea turned into VibeMatcher — a lightweight tool designed to help people decide what to watch…",
       "categories": [
-        "Vibe Coding",
-        "Product Building"
+        "movies",
+        "product-management",
+        "ai"
       ]
     },
     {
-      "title": "Internal Products: Part 3 — How to Measure the Success of Internal Tools",
+      "title": "Internal Products: Part 3 — How to Measure the Success of Internal Tools",
       "url": "https://medium.com/@ali.maleki100/internal-products-part-3-how-to-measure-the-success-of-internal-tools-0d8d2d788726",
-      "published": "2025-08-21",
-      "excerpt": "Why usage alone is not enough and how to think about value, adoption and operational impact.",
+      "published": "Thu, 21 Aug 2025 11:41:00 GMT",
+      "excerpt": "📏 Internal Products: Part 3 — How to Measure the Success of Internal Tools New here? Start with Part 1 and Part 2 You’ve built or bought an internal tool. It’s live. People are using it — or at least, you hope they are.…",
       "categories": [
-        "Internal Products",
-        "Product Management"
+        "internal-tools",
+        "product-management",
+        "data-analysis"
       ]
     },
     {
-      "title": "Internal Products: Part 2 — Why Internal Products Deserve Product Management",
+      "title": "Internal Products: Part 2 — Why Internal Products Deserve Product Management",
       "url": "https://medium.com/@ali.maleki100/internal-products-part-2-why-internal-products-deserve-product-management-a63d5a19401f",
-      "published": "2025-08-04",
-      "excerpt": "Internal tools still have users, outcomes and trade-offs—and should be managed accordingly.",
+      "published": "Mon, 04 Aug 2025 08:50:16 GMT",
+      "excerpt": "Internal Products: Part 2 — Why Internal Products Deserve Product Management 📖 Missed Part 1? Read it here Internal Products: Part 1 — What is an Internal Product? In Part 1, we explored what internal products are and…",
       "categories": [
-        "Internal Products",
-        "Product Management"
+        "software-development",
+        "data-analysis",
+        "internal-tools"
       ]
     },
     {
       "title": "The Hidden Cost of Poor Data Documentation",
       "url": "https://medium.com/@ali.maleki100/the-hidden-cost-of-poor-data-documentation-fae4a8e84e63",
-      "published": "2025-07-17",
-      "excerpt": "How documentation gaps turn into delivery friction, dependency risk and slower decisions.",
+      "published": "Thu, 17 Jul 2025 09:26:25 GMT",
+      "excerpt": "Data isn’t just stored. It’s explained — or it’s ignored. 📝 Introduction In the world of data products, we often obsess over tools, pipelines, and performance. But there’s one quiet culprit behind stalled projects,…",
       "categories": [
-        "Data",
-        "Delivery"
+        "data-analysis",
+        "documentation",
+        "business-intelligence"
+      ]
+    },
+    {
+      "title": "Internal Products: Part 1 — What is an Internal Product?",
+      "url": "https://medium.com/@ali.maleki100/internal-products-part-1-what-is-an-internal-product-12f865109905",
+      "published": "Fri, 20 Jan 2023 23:51:36 GMT",
+      "excerpt": "Internal Products: Part 1 — What is an Internal Product? An internal product is a tool that your organization uses internally without offering it to external clients or customers. Internal tools can be used to support…",
+      "categories": [
+        "product-management",
+        "software-development",
+        "internal-product"
+      ]
+    },
+    {
+      "title": "Product Manager vs Project Manager",
+      "url": "https://medium.com/@ali.maleki100/product-manager-vs-project-manager-d81adaee2f65",
+      "published": "Wed, 14 Dec 2022 11:11:24 GMT",
+      "excerpt": "What do they look like? A product manager’s role is strategic. A project manager’s role is more tactical, focusing primarily on the execution side. What do They deliver? A product manager delivers a product that fits…",
+      "categories": [
+        "product",
+        "project-management",
+        "product-manager"
+      ]
+    },
+    {
+      "title": "What is feature Store — Part 2",
+      "url": "https://medium.com/@ali.maleki100/what-is-feature-store-part-2-1c5940604bd2",
+      "published": "Sun, 07 Aug 2022 21:27:24 GMT",
+      "excerpt": "What is feature Store — Part 2 Part 1 Why do we need Feature Store? There are some feature-related challenges data teams and data consumers in organizations face that using a feature store can help: Different Feature…",
+      "categories": [
+        "feature-engineering",
+        "feature-store",
+        "product"
+      ]
+    },
+    {
+      "title": "What is a feature store?",
+      "url": "https://medium.com/@ali.maleki100/what-is-a-feature-store-f99fd069b7ee",
+      "published": "Mon, 18 Jul 2022 12:43:00 GMT",
+      "excerpt": "What is Feature Store? — Part 1 A feature store is a tool for storing commonly used features. When users define features, those features can be added to the feature store. This makes those features available for reuse.…",
+      "categories": [
+        "data-serving",
+        "feature-store",
+        "data-science"
       ]
     }
   ]
