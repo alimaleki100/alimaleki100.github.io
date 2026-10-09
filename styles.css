@@ -263,3 +263,33 @@ button,input,textarea{font:inherit}
   .fa-page .section-title{font-size:clamp(2rem,8.5vw,2.8rem);line-height:1.34}
   .fa-page .cta .section-title{font-size:clamp(2.15rem,9vw,3rem)}
 }
+
+/* Consulting proof link and conversion polish — 2026-10-09 */
+.nav-links .nav-cta{padding:10px 15px;border-radius:12px;background:transparent;color:var(--ink);border:1px solid rgba(11,26,42,.24);font-size:.84rem;white-space:nowrap;line-height:1.2;box-shadow:none}
+.nav-links .nav-cta:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.nav-links .nav-cta::after{display:none}
+.consulting-proof{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:28px 0 0;margin-top:38px;border-top:1px solid var(--line)}
+.consulting-proof p{margin-top:7px;max-width:510px;font-size:.95rem}
+.proof-link{flex-shrink:0;display:inline-flex;align-items:center;justify-content:center;gap:14px;border:1px solid rgba(11,26,42,.25);border-radius:12px;padding:13px 18px;font-weight:700;font-size:.9rem;transition:.2s}
+.proof-link:hover{background:var(--ink);color:#fff}
+.diagnostic-independent{display:block;color:#506274;font-size:.92rem;line-height:1.5}
+.cta:has(.contact-form){padding:72px 0}
+.cta:has(.contact-form) .cta-row{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(340px,.8fr);align-items:center;gap:clamp(32px,5vw,90px)}
+.cta:has(.contact-form) .section-title{font-size:clamp(2.2rem,4vw,4.2rem);max-width:730px;line-height:1.1}
+.contact-form{width:100%;max-width:none;background:#fffdf8;color:var(--ink);padding:clamp(22px,3vw,36px);border:1px solid #e4ded3;border-radius:22px;box-shadow:0 20px 55px rgba(0,0,0,.13);gap:19px}
+.contact-form-heading .eyebrow{font-size:.69rem}
+.contact-form-heading p{margin-top:7px;color:#66727d;font-size:.91rem}
+.contact-form-fields{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.contact-field{display:grid;gap:7px;font-size:.85rem;font-weight:700;color:var(--ink)}
+.contact-field em{font-style:normal;color:#b27d25}
+.contact-form .contact-field input,.contact-form .contact-field textarea{background:#f7f3ea;border:1px solid #dfd8cc;border-radius:10px;padding:13px 14px;font-weight:400;font-size:.94rem;outline:none;transition:border .2s,box-shadow .2s}
+.contact-form .contact-field textarea{min-height:135px;resize:vertical}
+.contact-form input::placeholder,.contact-form textarea::placeholder{color:#858b91}
+.contact-form .contact-field input:focus,.contact-form .contact-field textarea:focus{border-color:#b88937;box-shadow:0 0 0 3px rgba(201,154,70,.17)}
+.contact-form-footer{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.contact-form-footer p{font-size:.77rem;color:#78818a}
+.contact-submit{display:inline-flex;align-items:center;justify-content:center;gap:22px;padding:13px 19px;border:0;border-radius:10px;background:var(--ink);color:white;font-weight:700;cursor:pointer;transition:.2s}
+.contact-submit:hover{background:#203d55;transform:translateY(-1px)}
+.contact-submit:focus-visible,.proof-link:focus-visible,.nav-cta:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+@media(max-width:900px){.cta:has(.contact-form) .cta-row{grid-template-columns:1fr}.contact-form{max-width:640px}.consulting-proof{align-items:flex-start}}
+@media(max-width:560px){.contact-form-fields{grid-template-columns:1fr}.contact-form{padding:22px 18px}.contact-form-footer{align-items:stretch;flex-direction:column}.contact-submit{width:100%;justify-content:space-between}.consulting-proof{flex-direction:column;gap:18px}.proof-link{width:100%;justify-content:space-between}}
