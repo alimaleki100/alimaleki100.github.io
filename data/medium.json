@@ -1,6 +1,17 @@
 {
   "posts": [
     {
+      "title": "Not Every Project Is Ready to Start",
+      "url": "https://medium.com/@ali.maleki100/not-every-project-is-ready-to-start-ca0822678ccb",
+      "published": "Fri, 09 Oct 2026 00:09:40 GMT",
+      "excerpt": "Having a budget, a team, and a deadline doesn't mean you're ready for delivery. I've seen projects where the delivery date was agreed upon before some of the most important questions had been answered. What exactly are…",
+      "categories": [
+        "project-management",
+        "project-delivery",
+        "leadership"
+      ]
+    },
+    {
       "title": "From Idea to Product: My First Vibe Coding Journey, Part I : From Prototyper to Builder",
       "url": "https://medium.com/@ali.maleki100/from-idea-to-product-my-first-vibe-coding-journey-part-i-from-prototyper-to-builder-ee1e58b27752",
       "published": "Mon, 05 Oct 2026 10:02:09 GMT",
@@ -75,17 +86,6 @@
         "feature-engineering",
         "feature-store",
         "product"
-      ]
-    },
-    {
-      "title": "What is a feature store?",
-      "url": "https://medium.com/@ali.maleki100/what-is-a-feature-store-f99fd069b7ee",
-      "published": "Mon, 18 Jul 2022 12:43:00 GMT",
-      "excerpt": "What is Feature Store? — Part 1 A feature store is a tool for storing commonly used features. When users define features, those features can be added to the feature store. This makes those features available for reuse.…",
-      "categories": [
-        "data-serving",
-        "feature-store",
-        "data-science"
       ]
     }
   ]
