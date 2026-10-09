@@ -293,3 +293,20 @@ button,input,textarea{font:inherit}
 .contact-submit:focus-visible,.proof-link:focus-visible,.nav-cta:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
 @media(max-width:900px){.cta:has(.contact-form) .cta-row{grid-template-columns:1fr}.contact-form{max-width:640px}.consulting-proof{align-items:flex-start}}
 @media(max-width:560px){.contact-form-fields{grid-template-columns:1fr}.contact-form{padding:22px 18px}.contact-form-footer{align-items:stretch;flex-direction:column}.contact-submit{width:100%;justify-content:space-between}.consulting-proof{flex-direction:column;gap:18px}.proof-link{width:100%;justify-content:space-between}}
+
+/* Balanced typographic scale for English and Persian — Oct 2026 */
+.section-title{font-size:clamp(1.85rem,3vw,3.2rem);line-height:1.16}
+.page-hero h1{font-size:clamp(2.35rem,4.1vw,4.25rem);line-height:1.13}
+.home-hero-copy h1{font-size:clamp(2.55rem,4.8vw,4.75rem);line-height:1.09}
+.cta:has(.contact-form) .section-title{font-size:clamp(2rem,3vw,3rem);line-height:1.18}
+.fa-page .section-title{font-size:clamp(1.9rem,2.8vw,3rem);line-height:1.42}
+.fa-page .hero-copy h1,.fa-page .page-hero h1{font-size:clamp(2.25rem,3.8vw,3.95rem);line-height:1.38}
+.fa-page .cta .section-title,.fa-page .cta:has(.contact-form) .section-title{font-size:clamp(1.95rem,2.8vw,2.9rem);line-height:1.48}
+@media(max-width:640px){
+.section-title{font-size:clamp(1.75rem,7.5vw,2.4rem)}
+.home-hero-copy h1,.page-hero h1{font-size:clamp(2.15rem,9vw,3rem)}
+.cta:has(.contact-form) .section-title{font-size:clamp(1.9rem,7.6vw,2.5rem)}
+.fa-page .section-title{font-size:clamp(1.75rem,7.2vw,2.3rem);line-height:1.5}
+.fa-page .hero-copy h1,.fa-page .page-hero h1{font-size:clamp(2.05rem,8.2vw,2.75rem);line-height:1.42}
+.fa-page .cta .section-title{font-size:clamp(1.8rem,7.2vw,2.35rem);line-height:1.52}
+}
