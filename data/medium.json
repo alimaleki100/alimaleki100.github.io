@@ -1,6 +1,17 @@
 {
   "posts": [
     {
+      "title": "Why Good Teams Still Deliver Bad Projects",
+      "url": "https://medium.com/@ali.maleki100/why-good-teams-still-deliver-bad-projects-82a74a62ffea",
+      "published": "Thu, 15 Oct 2026 07:58:52 GMT",
+      "excerpt": "When capable teams struggle, the root cause is rarely execution alone. It is usually the delivery system around them. I’ve worked with capable, motivated teams on projects that were significantly harder to deliver than…",
+      "categories": [
+        "delivery-management",
+        "project-management",
+        "strategy"
+      ]
+    },
+    {
       "title": "From Idea to Product: My First Vibe Coding Journey, Part I : From Prototyper to Builder",
       "url": "https://medium.com/@ali.maleki100/from-idea-to-product-my-first-vibe-coding-journey-part-i-from-prototyper-to-builder-ee1e58b27752",
       "published": "Mon, 05 Oct 2026 10:02:09 GMT",
@@ -75,17 +86,6 @@
         "feature-engineering",
         "feature-store",
         "product"
-      ]
-    },
-    {
-      "title": "What is a feature store?",
-      "url": "https://medium.com/@ali.maleki100/what-is-a-feature-store-f99fd069b7ee",
-      "published": "Mon, 18 Jul 2022 12:43:00 GMT",
-      "excerpt": "What is Feature Store? — Part 1 A feature store is a tool for storing commonly used features. When users define features, those features can be added to the feature store. This makes those features available for reuse.…",
-      "categories": [
-        "data-serving",
-        "feature-store",
-        "data-science"
       ]
     }
   ]
